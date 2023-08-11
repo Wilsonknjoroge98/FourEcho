@@ -1,44 +1,27 @@
-import { StyleSheet } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { NavigationContainer } from '@react-navigation/native';
+import InspectionNavigator from '../components/nav/Navigator';
+import { AppProvider } from '../components/context/AppContext';
 import { useFonts } from 'expo-font';
-import { useCallback } from 'react';
-import StartButton from '../components/StartButton';
-import TitleLogo from '../components/TitleLogo';
-import { LayoutAnimation } from 'react-native';
+import { Image } from 'react-native';
+import * as SplashScreen from 'expo-splash-screen';
+import { useEffect, useCallback } from 'react';
 
-const Home = () => {
-  // returns a boolean of the font's load status
-  const [fontsLoaded] = useFonts({
-    'Kite-One': require('../assets/fonts/Kite_One/kite__one.ttf'),
-    'Open-Sans': require('../assets/fonts/Open_Sans/open__sans.ttf'),
-  });
+const Index = () => {
+  // const preLoadAssets = async () => {
+  //   await Image.prefetch('../assets/images/homelogo.png');
+  // };
 
-  // The useCallback hook is a built-in hook in React that is used for memoizing functions.
-  // If any of the dependencies in the array change, the memoized function will be recreated
-  const onLayoutRootView = useCallback(async () => {
-    if (fontsLoaded) {
-      // hide the apps splash screen, render the component
-      await SplashScreen.hideAsync();
-    }
-  }, [fontsLoaded]);
+  // useEffect(() => {
+  //   preLoadAssets();
+  // });
 
-  // fonts not finished loading
-  if (!fontsLoaded) {
-    return null;
-  }
   return (
-    <SafeAreaView style={style}>
-      <TitleLogo />
-      <StartButton />
-    </SafeAreaView>
+    <AppProvider>
+      <NavigationContainer independent={true}>
+        <InspectionNavigator />
+      </NavigationContainer>
+    </AppProvider>
   );
 };
 
-const style = StyleSheet.create({
-  alignItems: 'center',
-  justifyContent: 'center',
-  backgroundColor: 'white',
-  height: '100%',
-});
-
-export default Home;
+export default Index;

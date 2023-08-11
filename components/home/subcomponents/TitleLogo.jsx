@@ -1,12 +1,13 @@
 import { View, Text, Image, StyleSheet } from 'react-native';
 
-const TitleLogo = () => {
+const TitleLogo = ({ setImageLoaded }) => {
   return (
     <View style={styles.titleAndLogoContainer}>
       <Text style={styles.title}>Public Health</Text>
       <Image
+        onLoadEnd={() => setImageLoaded(true)}
         style={styles.logo}
-        source={require('../assets/images/homelogo.png')}
+        source={require('../../../assets/images/homelogo.png')}
       />
     </View>
   );
@@ -18,9 +19,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   title: {
-    fontFamily: 'Kite-One',
+    fontFamily: 'Cairo',
     color: 'black',
-    fontWeight: 'bold',
     fontSize: 50,
   },
   logo: { width: 150, height: 150 },

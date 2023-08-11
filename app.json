@@ -4,7 +4,8 @@
     "web": {
       "bundler": "metro"
     },
-    "name": "ph__app",
-    "slug": "ph__app"
+    "name": "fourEcho",
+    "slug": "fourEcho",
+    "version": "1.0.0"
   }
 }
