@@ -1,0 +1,27 @@
+{
+  "cli": {
+    "version": ">= 4.1.2"
+  },
+  "build": {
+    "development": {
+      "distribution": "internal",
+      "developmentClient": true,
+      "ios": {
+        "resourceClass": "m-medium"
+      },
+      "android": {
+        "buildType": "apk"
+      }
+    },
+    "production": {}
+  },
+  "submit": {
+    "production": {
+      "ios": {
+        "appleId": "Wilsonknjoroge98@gmail.com",
+        "ascAppId": "6461215739",
+        "appleTeamId": "L78354Q282"
+      }
+    }
+  }
+}

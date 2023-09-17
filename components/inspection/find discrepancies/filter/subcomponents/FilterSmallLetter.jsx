@@ -14,7 +14,7 @@ const FilterSmallLetter = ({
   numberItem,
 }) => {
   const [expandedSmallLetter, setExpandedSmallLetter] = useState({});
-  const { setModalVisible, setDiscrepancy } = useContext(AppContext);
+  const { setDiscrepancyModalVisible, setDiscrepancy } = useContext(AppContext);
 
   const handlePress = index => {
     setExpandedSmallLetter(prevState => ({
@@ -36,7 +36,7 @@ const FilterSmallLetter = ({
 
       return discrepancy;
     });
-    setModalVisible(true);
+    setDiscrepancyModalVisible(true);
   };
 
   const searchObjects = (arr, search) => {

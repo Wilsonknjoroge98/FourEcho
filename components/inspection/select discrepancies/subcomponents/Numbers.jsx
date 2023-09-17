@@ -12,7 +12,7 @@ import { AppContext } from '../../../context/AppContext';
 
 const Numbers = ({ items, expandedBigLetter, parentIndex, bigLetterItem }) => {
   const [expandedNumbers, setExpandedNumbers] = useState({});
-  const { setModalVisible, setDiscrepancy } = useContext(AppContext);
+  const { setDiscrepancyModalVisible, setDiscrepancy } = useContext(AppContext);
 
   const handlePress = parentIndex => {
     setExpandedNumbers(prevState => ({
@@ -29,7 +29,7 @@ const Numbers = ({ items, expandedBigLetter, parentIndex, bigLetterItem }) => {
       });
       return discrepancy;
     });
-    setModalVisible(true);
+    setDiscrepancyModalVisible(true);
   };
 
   const renderItem = ({ item, index }) => (

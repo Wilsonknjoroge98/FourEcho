@@ -12,8 +12,7 @@ import { AppContext } from '../../../context/AppContext';
 
 const BigLetter = ({ items, expandedSection, parentIndex }) => {
   const [expandedBigLetter, setExpandedBigLetter] = useState({});
-  const { discrepancy, setDiscrepancy, setModalVisible } =
-    useContext(AppContext);
+  const { setDiscrepancy, setDiscrepancyModalVisible } = useContext(AppContext);
 
   const handleBigLetterPress = index => {
     setExpandedBigLetter(prevState => ({
@@ -24,7 +23,7 @@ const BigLetter = ({ items, expandedSection, parentIndex }) => {
 
   const handleLongPress = item => {
     setDiscrepancy(item);
-    setModalVisible(true);
+    setDiscrepancyModalVisible(true);
   };
 
   const renderItem = ({ item, index }) => (

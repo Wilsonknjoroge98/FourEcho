@@ -1,11 +1,29 @@
 {
   "expo": {
+    "name": "FourEcho",
+    "slug": "FourEcho",
+    "version": "1.0.0",
     "scheme": "acme",
+    "icon": "./assets/images/icon.png",
     "web": {
       "bundler": "metro"
     },
-    "name": "fourEcho",
-    "slug": "fourEcho",
-    "version": "1.0.0"
+    "plugins": [
+      "@config-plugins/react-native-blob-util",
+      "@config-plugins/react-native-pdf"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "cb4602ba-c178-4444-9fdc-cf4f4c0d834f"
+      }
+    },
+    "ios": {
+      "bundleIdentifier": "com.wilsonknjoroge98.FourEcho",
+      "buildNumber": "7"
+    },
+    "android": {
+      "package": "com.wilsonknjoroge98.FourEcho",
+      "versionCode": 1
+    }
   }
 }

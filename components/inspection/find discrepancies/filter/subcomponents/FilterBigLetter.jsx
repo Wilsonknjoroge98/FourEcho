@@ -18,7 +18,7 @@ const FilterBigLetter = ({
   parentIndex,
 }) => {
   const [expandedBigLetter, setExpandedBigLetter] = useState({});
-  const { setModalVisible, setDiscrepancy } = useContext(AppContext);
+  const { setDiscrepancyModalVisible, setDiscrepancy } = useContext(AppContext);
 
   const handleBigLetterPress = index => {
     setExpandedBigLetter(prevState => ({
@@ -29,7 +29,7 @@ const FilterBigLetter = ({
 
   const handleLongPress = item => {
     setDiscrepancy(item);
-    setModalVisible(true);
+    setDiscrepancyModalVisible(true);
   };
 
   const searchObjects = (arr, search) => {

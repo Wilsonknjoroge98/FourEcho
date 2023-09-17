@@ -1,12 +1,16 @@
-import React, { createContext, useState, useEffect } from 'react';
-import axios from 'axios';
+import React, { createContext, useState } from 'react';
 
 export const AppContext = createContext();
 
 export const AppProvider = ({ children }) => {
   const [pdf, setPdf] = useState(null);
+  const [base64Pdf, setBase64Pdf] = useState(null);
   const [discrepanciesList, setDiscrepanciesList] = useState([]);
   const [backgroundValues, setBackgroundValues] = useState([]);
+  const [inspectionTypeOther, setInspectionTypeOther] = useState(false);
+  const [inspectionTypeOtherText, setInspectionTypeOtherText] = useState('');
+  const [validEmailPIC, setValidEmailPIC] = useState(false);
+  const [validEmailInspector, setValidEmailInspector] = useState(false);
   const [tempValues, setTempValues] = useState([{}]);
   const [sanitizingConcentrationValues, setSanitizingConcentrationValues] =
     useState([{}]);
@@ -16,15 +20,23 @@ export const AppProvider = ({ children }) => {
   const [itemId, setItemId] = useState('');
   const [filterLoading, setFilterLoading] = useState(false);
   const [discrepancy, setDiscrepancy] = useState({});
-  const [modalVisible, setModalVisible] = useState(false);
+  const [discrepancyModalVisible, setDiscrepancyModalVisible] = useState(false);
+  const [nanoModalVisible, setNanoModalVisible] = useState(false);
+  const [nanoInfo, setNanoInfo] = useState(false);
   const [iHH, setIHH] = useState('');
   const [startTime, setStartTime] = useState('');
+  const [inspectorSignature, setInspectorSignature] = useState(null);
+  const [picSignature, setPICSignature] = useState(null);
+  const [freeText, setFreeText] = useState('');
+  const [nanoValues, setNanoValues] = useState([]);
 
   return (
     <AppContext.Provider
       value={{
         pdf,
         setPdf,
+        base64Pdf,
+        setBase64Pdf,
         iHH,
         setIHH,
         startTime,
@@ -33,6 +45,14 @@ export const AppProvider = ({ children }) => {
         setDiscrepanciesList,
         backgroundValues,
         setBackgroundValues,
+        inspectionTypeOther,
+        setInspectionTypeOther,
+        inspectionTypeOtherText,
+        setInspectionTypeOtherText,
+        validEmailInspector,
+        validEmailPIC,
+        setValidEmailInspector,
+        setValidEmailPIC,
         sanitizingConcentrationValues,
         setSanitizingConcentrationValues,
         sanitizingTempValues,
@@ -49,8 +69,20 @@ export const AppProvider = ({ children }) => {
         setFilterLoading,
         discrepancy,
         setDiscrepancy,
-        modalVisible,
-        setModalVisible,
+        discrepancyModalVisible,
+        setDiscrepancyModalVisible,
+        inspectorSignature,
+        setInspectorSignature,
+        picSignature,
+        setPICSignature,
+        freeText,
+        setFreeText,
+        nanoValues,
+        setNanoValues,
+        nanoModalVisible,
+        setNanoModalVisible,
+        nanoInfo,
+        setNanoInfo,
       }}
     >
       {children}

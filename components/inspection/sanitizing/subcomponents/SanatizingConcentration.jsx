@@ -15,8 +15,6 @@ const chemicalSanitizerFields = [
   'Sanitizer -- food contact surfaces',
 ];
 
-const solutionTypes = ['Quats', 'Bleach'];
-
 const SanatizingConcetration = () => {
   const { sanitizingConcentrationValues, setSanitizingConcentrationValues } =
     useContext(AppContext);
@@ -76,7 +74,7 @@ const SanatizingConcetration = () => {
           </View>
         </View>
         <SelectDropdown
-          data={solutionTypes}
+          data={['Quats', 'Bleach']}
           defaultValue={''}
           onSelect={text => handleInput(text, i, 'solution')}
           buttonStyle={
@@ -87,7 +85,7 @@ const SanatizingConcetration = () => {
         />
         <View style={styles.ppmContentContainer}>
           <View>
-            <Text style={styles.ppmLabel}>ppm</Text>
+            <Text style={styles.ppmLabel}>PPM</Text>
           </View>
           <TextInput
             style={styles.ppmTextInput}
@@ -111,6 +109,14 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     margin: 3,
     justifyContent: 'space-between',
+    backgroundColor: '#ffffff',
+    shadowColor: 'black',
+    shadowOffset: {
+      width: 1,
+      height: 1,
+    },
+    shadowOpacity: 0.5,
+    shadowRadius: 2,
   },
   solutionCardNA: {
     borderWidth: 1,
@@ -136,21 +142,22 @@ const styles = StyleSheet.create({
     width: 175,
     borderRadius: 5,
     height: 40,
-    backgroundColor: '#ffeb3b75',
+    marginTop: 15,
   },
   solutionSelectDropDownPressed: {
     width: 175,
     borderRadius: 5,
     height: 40,
     backgroundColor: '#000000',
+    marginTop: 15,
   },
   ppmContentContainer: {
-    flexDirection: 'row',
+    marginBottom: 10,
   },
   ppmLabel: {
-    marginTop: 25,
-    marginRight: 2,
-    fontSize: 13,
+    alignSelf: 'center',
+    fontSize: 15,
+    fontFamily: 'Raj',
   },
   ppmTextInput: {
     height: 40,
@@ -158,10 +165,12 @@ const styles = StyleSheet.create({
     padding: 10,
     borderWidth: 1,
     borderRadius: 5,
-    fontFamily: 'Open-Sans',
+    fontFamily: 'Raj',
     fontSize: 15,
     textAlign: 'center',
     margin: 3,
+    marginTop: 5,
+    marginBottom: 5,
   },
   NAContainer: {
     flexDirection: 'row',
@@ -172,6 +181,7 @@ const styles = StyleSheet.create({
     height: 30,
     width: 30,
     margin: 3,
+    marginTop: 20,
     borderRadius: 5,
   },
   NAButtonPressed: {
@@ -179,12 +189,15 @@ const styles = StyleSheet.create({
     height: 30,
     width: 30,
     margin: 3,
+    marginTop: 15,
     borderRadius: 5,
     backgroundColor: '#dd2c00',
   },
   NALabel: {
     margin: 3,
-    marginTop: 10,
+    marginTop: 27,
+    fontSize: 15,
+    fontFamily: 'Raj',
   },
 });
 

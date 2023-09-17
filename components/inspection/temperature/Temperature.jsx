@@ -11,8 +11,6 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
-const tempMetrics = ['F', 'C'];
-
 const Temperature = ({ navigation }) => {
   const { tempValues, setTempValues, tempArr, setTempArr } =
     useContext(AppContext);
@@ -29,69 +27,71 @@ const Temperature = ({ navigation }) => {
   };
 
   const handleAddField = tempArr => {
-    const length = tempArr.length;
-    setTempArr(Array.from(Array(length + 1).keys()));
+    const len = tempArr.length;
+    if (len < 10) setTempArr(Array.from(Array(len + 1).keys()));
   };
 
   return (
     <SafeAreaView style={styles.parentContainer}>
       <ScrollView>
-        {tempArr.map((el, i) => (
-          <View key={i} style={styles.contentContainer}>
-            <View style={styles.descriptionContainers}>
-              <View>
-                <Text style={styles.label}>Food Item & Location</Text>
+        <View style={styles.listContainer}>
+          {tempArr.map((el, i) => (
+            <View key={i} style={styles.contentContainer}>
+              <View style={styles.descriptionContainers}>
+                <View>
+                  <Text style={styles.label}>Food Item & Location</Text>
+                </View>
+                <View>
+                  <TextInput
+                    style={styles.descriptionTextInput}
+                    onChangeText={text => handleInput(text, i, 'description')}
+                    value={tempValues[i]?.description ?? ''}
+                  />
+                </View>
               </View>
-              <View>
-                <TextInput
-                  style={styles.descriptionTextInput}
-                  onChangeText={text => handleInput(text, i, 'description')}
-                  value={tempValues[i]?.description ?? ''}
+              <View style={styles.tempContainers}>
+                <View>
+                  <Text style={styles.label}>Temp</Text>
+                </View>
+                <View>
+                  <TextInput
+                    style={styles.tempTextInput}
+                    keyboardType="numbers-and-punctuation"
+                    onChangeText={text => handleInput(text, i, 'temp')}
+                    value={tempValues[i]?.temp ?? ''}
+                  />
+                </View>
+              </View>
+              <View style={styles.metricContainer}>
+                <View>
+                  <Text style={styles.label}>Metric</Text>
+                </View>
+                <SelectDropdown
+                  data={['F', 'C']}
+                  defaultValue={''}
+                  onSelect={text => handleInput(text, i, 'metric')}
+                  buttonStyle={{
+                    width: 50,
+                    borderRadius: 5,
+                    height: 40,
+                  }}
                 />
               </View>
             </View>
-            <View style={styles.tempContainers}>
-              <View>
-                <Text style={styles.label}>Temp</Text>
-              </View>
-              <View>
-                <TextInput
-                  style={styles.tempTextInput}
-                  keyboardType="numeric"
-                  onChangeText={text => handleInput(text, i, 'temp')}
-                  value={tempValues[i]?.temp ?? ''}
-                />
-              </View>
-            </View>
-            <View style={styles.metricContainer}>
-              <View>
-                <Text style={styles.label}>Metric</Text>
-              </View>
-              <SelectDropdown
-                data={tempMetrics}
-                defaultValue={'F'}
-                onSelect={text => handleInput(text, i, 'metric')}
-                buttonStyle={{
-                  width: 50,
-                  borderRadius: 5,
-                  height: 40,
-                }}
-              />
-            </View>
-          </View>
-        ))}
-        <TouchableOpacity
-          style={styles.addFieldButton}
-          onPress={() => handleAddField(tempArr)}
-        >
-          <Text style={styles.addFieldButtonText}>+</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={styles.naivgateButton}
-          onPress={() => navigation.push('nav')}
-        >
-          <Text style={styles.navigateButtonText}>Move On To...</Text>
-        </TouchableOpacity>
+          ))}
+          <TouchableOpacity
+            style={styles.addFieldButton}
+            onPress={() => handleAddField(tempArr)}
+          >
+            <Text style={styles.addFieldButtonText}>+</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.naivgateButton}
+            onPress={() => navigation.push('nav')}
+          >
+            <Text style={styles.navigateButtonText}>Move On To...</Text>
+          </TouchableOpacity>
+        </View>
       </ScrollView>
     </SafeAreaView>
   );
@@ -104,6 +104,9 @@ const styles = StyleSheet.create({
     alignContent: 'center',
     backgroundColor: '#ffffff',
     flex: 1,
+  },
+  listContainer: {
+    marginBottom: 400,
   },
   contentContainer: { flexDirection: 'row', margin: 5 },
   descriptionContainers: { margin: 5 },
@@ -148,7 +151,7 @@ const styles = StyleSheet.create({
     color: 'black',
     fontSize: 15,
     textAlign: 'center',
-    fontFamily: 'Open-Sans',
+    fontFamily: 'Raj',
   },
   addFieldButton: {
     textTransform: 'uppercase',

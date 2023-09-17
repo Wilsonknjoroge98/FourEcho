@@ -95,7 +95,7 @@ const Static = ({ navigation }) => {
       {sectionText[index].map((itemText, i) => (
         <TouchableOpacity
           key={i}
-          style={styles.button}
+          style={styles.card}
           onPress={() => handleSectionClick(itemText)}
         >
           <Text>{itemText}</Text>
@@ -105,34 +105,15 @@ const Static = ({ navigation }) => {
   );
 
   return (
-    <View style={styles.parentContainer}>
-      <FlatList
-        data={sectionHeaders}
-        renderItem={renderItem}
-        keyExtractor={sectionHeader => sectionHeader.id}
-        contentContainerStyle={styles.contentContainerStyle}
-        maxToRenderPerBatch={20}
-        initialNumToRender={20}
-      />
-    </View>
+    <FlatList
+      data={sectionHeaders}
+      renderItem={renderItem}
+      keyExtractor={sectionHeader => sectionHeader.id}
+      contentContainerStyle={styles.contentContainerStyle}
+    />
   );
 };
 const styles = StyleSheet.create({
-  switchSortButton: {
-    width: 100,
-    borderRadius: 5,
-    height: 35,
-    margin: 5,
-    padding: 7,
-    alignSelf: 'flex-end',
-    backgroundColor: '#64b5f6',
-  },
-  switchSortButtonText: {
-    alignSelf: 'center',
-  },
-  parentContainer: {
-    backgroundColor: '#ffffff',
-  },
   contentContainerStyle: {
     paddingBottom: 400,
   },
@@ -153,7 +134,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontFamily: 'Kite-One',
   },
-  button: {
+  card: {
     backgroundColor: '#ffffff',
     width: 'auto',
     marginLeft: 30,

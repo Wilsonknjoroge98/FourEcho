@@ -10,26 +10,12 @@ import { AppContext } from '../../../../context/AppContext';
 
 const FormModal = ({
   discrepancy,
-  setFormModal,
+  setBinaryModal,
   modalLabel,
   setModalLabel,
 }) => {
-  const {
-    setDiscrepancy,
-    discrepanciesList,
-    setDiscrepanciesList,
-    setModalVisible,
-  } = useContext(AppContext);
+  const { setDiscrepancy } = useContext(AppContext);
   const [text, setText] = useState('');
-
-  useEffect(() => {
-    if (discrepancy.corrective) {
-      setDiscrepanciesList([...discrepanciesList, discrepancy]);
-      setFormModal(false);
-      setModalVisible(false);
-      setModalLabel('Corrected on site?');
-    }
-  }, [discrepancy]);
 
   const onPress = () => {
     if (modalLabel === 'Description of the observation') {
@@ -44,6 +30,8 @@ const FormModal = ({
         ...discrepancy,
         corrective: text,
       });
+      setModalLabel('Corrected on site?');
+      setBinaryModal(true);
     }
   };
 
@@ -81,14 +69,14 @@ const styles = StyleSheet.create({
   },
   modalButtonText: {
     textAlign: 'center',
-    fontWeight: 'bold',
+    fontFamily: 'Raj',
   },
   textInput: {
     borderColor: 'black',
     borderWidth: 1,
     padding: 15,
     margin: 10,
-    height: 100,
+    height: 200,
     borderRadius: 15,
     fontSize: 15,
     paddingTop: 20,

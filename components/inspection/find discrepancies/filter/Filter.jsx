@@ -8,13 +8,13 @@ import {
 } from 'react-native';
 import FilterBigLetter from './subcomponents/FilterBigLetter';
 import HighlightText from '@sanar/react-native-highlight-text';
-import DiscrepancyModal from '../../select discrepancies/modal/DiscrepancyModal';
+import DiscrepancyModal from '../../select discrepancies/discrepancy modal/DiscrepancyModal';
 import { AppContext } from '../../../context/AppContext';
 import { Skeleton } from '@rneui/themed';
 
 const Filter = ({ data, searchQuery, navigation }) => {
   const [expandedSection, setExpandedSection] = useState({});
-  const { filterLoading, setModalVisible, setDiscrepancy } =
+  const { filterLoading, setDiscrepancyModalVisible, setDiscrepancy } =
     useContext(AppContext);
 
   const handleSectionPress = parentIndex => {
@@ -25,8 +25,8 @@ const Filter = ({ data, searchQuery, navigation }) => {
   };
 
   const handleLongPress = item => {
-    setModalVisible(true);
     setDiscrepancy(item);
+    setDiscrepancyModalVisible(true);
   };
 
   const renderItem = ({ item, index }) => (
@@ -40,7 +40,7 @@ const Filter = ({ data, searchQuery, navigation }) => {
           }}
           onLongPress={() => {
             if (item.length === 1) {
-              () => handleLongPress(item[index]);
+              handleLongPress(item[0]);
             }
           }}
         >
@@ -61,19 +61,21 @@ const Filter = ({ data, searchQuery, navigation }) => {
           </View>
         </TouchableOpacity>
       </View>
-      <FilterBigLetter
-        items={item}
-        searchQuery={searchQuery}
-        navigation={navigation}
-        expandedSection={expandedSection}
-        parentIndex={index}
-      />
+      {item.length > 1 && (
+        <FilterBigLetter
+          items={item}
+          searchQuery={searchQuery}
+          navigation={navigation}
+          expandedSection={expandedSection}
+          parentIndex={index}
+        />
+      )}
     </>
   );
 
   if (!filterLoading) {
     return (
-      <View style={styles.background}>
+      <View>
         {/* <View>
           <Text style={styles.title}>
             Press and Hold Discrepancy To Continue
@@ -113,7 +115,6 @@ const styles = StyleSheet.create({
     padding: 5,
     justifyContent: 'center',
     alignContent: 'center',
-    backgroundColor: '#ffffff',
   },
   skeleton: {
     width: 'auto',
@@ -128,9 +129,7 @@ const styles = StyleSheet.create({
   contentContainerStyle: {
     paddingBottom: 300,
   },
-  background: {
-    backgroundColor: '#ffffff',
-  },
+
   activityIndicator: {
     marginTop: 500,
   },

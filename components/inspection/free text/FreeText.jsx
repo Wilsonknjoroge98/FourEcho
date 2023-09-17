@@ -9,8 +9,8 @@ import {
 import { useContext } from 'react';
 import { AppContext } from '../../context/AppContext';
 
-const IHH = () => {
-  const { iHH, setIHH } = useContext(AppContext);
+const FreeText = ({ navigation }) => {
+  const { freeText, setFreeText } = useContext(AppContext);
 
   return (
     <>
@@ -22,12 +22,12 @@ const IHH = () => {
         }}
       >
         <View style={styles.contentContainer}>
-          <Text style={styles.label}>Describe the Imminent Health Hazard</Text>
+          <Text style={styles.label}>Free Text / Notes</Text>
           <TextInput
             onChangeText={text => {
-              setIHH(text);
+              setFreeText(text);
             }}
-            value={iHH}
+            value={freeText}
             multiline={true}
             style={styles.textInput}
           />
@@ -87,4 +87,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default IHH;
+export default FreeText;

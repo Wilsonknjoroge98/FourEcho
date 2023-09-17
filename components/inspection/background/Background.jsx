@@ -9,9 +9,10 @@ import {
   ScrollView,
 } from 'react-native';
 import { AppContext } from '../../context/AppContext';
-import SelectDropdown from 'react-native-select-dropdown';
+import EmailFields from './EmailFields';
+import InspectionType from './InsepctionType';
 
-const fields = [
+const backgroundFields = [
   {
     type: 'text',
     displayName: 'FACILITY NAME',
@@ -29,7 +30,7 @@ const fields = [
   },
   {
     type: 'select',
-    displayName: 'INSPECITON TYPE',
+    displayName: 'INSPECTION TYPE',
     formId: val => {
       switch (val) {
         case 'Routine':
@@ -79,21 +80,18 @@ const fields = [
   },
   {
     type: 'text',
-    displayName: 'Person In Charge E-MAIL',
+    displayName: 'Person In Charge EMAIL',
     formId: 'PIC__email',
   },
 ];
 
-const inpectionTypes = [
-  'Routine',
-  'Follow-up',
-  'Complaint',
-  'Preoperational',
-  'Other',
-];
-
 const BackgroundForm = ({ navigation }) => {
-  const { backgroundValues, setBackgroundValues } = useContext(AppContext);
+  const {
+    backgroundValues,
+    setBackgroundValues,
+    setInspectionTypeOther,
+    setInspectionTypeOtherText,
+  } = useContext(AppContext);
 
   const handleInput = (text, i) => {
     setBackgroundValues(prevBackgroundValues => {
@@ -101,33 +99,47 @@ const BackgroundForm = ({ navigation }) => {
       updatedBackgroundValues[i] = {
         ...prevBackgroundValues[i],
         text: text,
-        type: fields[i].type,
-        formid: fields[i].formId,
+        type: backgroundFields[i].type,
+        formid: backgroundFields[i].formId,
       };
-
       return updatedBackgroundValues;
     });
+
+    if (i === 3) {
+      if (text === 'Other') {
+        setInspectionTypeOther(true);
+      } else {
+        setInspectionTypeOther(false);
+        setInspectionTypeOtherText('');
+      }
+    }
   };
 
   return (
     <SafeAreaView style={styles.parentContainer}>
       <ScrollView>
         <View style={styles.listContainer}>
-          {fields.map((el, i) => (
+          {backgroundFields.map((el, i) => (
             <View key={i} style={styles.contentContainer}>
               <Text style={styles.label}>{el.displayName}</Text>
               {el.type === 'select' ? (
-                <SelectDropdown
-                  data={inpectionTypes}
-                  onSelect={text => handleInput(text, i)}
-                  buttonStyle={{ width: 350 }}
-                />
+                <InspectionType index={i} handleInput={handleInput} />
               ) : (
-                <TextInput
-                  style={styles.textBox}
-                  onChangeText={text => handleInput(text, i)}
-                  value={backgroundValues[i]?.text ?? ''}
-                />
+                <>
+                  {i === 6 || i === 10 ? (
+                    <EmailFields
+                      index={i}
+                      handleInput={handleInput}
+                      backgroundValues={backgroundValues}
+                    />
+                  ) : (
+                    <TextInput
+                      style={styles.textBox}
+                      onChangeText={text => handleInput(text, i)}
+                      value={backgroundValues[i]?.text ?? ''}
+                    />
+                  )}
+                </>
               )}
             </View>
           ))}
@@ -151,7 +163,7 @@ const styles = StyleSheet.create({
   parentContainer: {
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: 'white',
+    backgroundColor: '#ffffff',
     flex: 1,
   },
   label: {
@@ -185,7 +197,7 @@ const styles = StyleSheet.create({
     color: 'black',
     fontSize: 15,
     textAlign: 'center',
-    fontFamily: 'Open-Sans',
+    fontFamily: 'Raj',
   },
   contentContainer: {
     marginTop: 5,

@@ -9,7 +9,10 @@ import Sanitizing from '../inspection/sanitizing/Sanitizing';
 import Home from '../home/Home';
 import Nav from './Navigation';
 import IHH from '../inspection/ihh/IHH';
+import FreeText from '../inspection/free text/FreeText';
 import Done from '../done/Done';
+import Nano from '../inspection/nano/Nano';
+import PdfView from '../done/pdf/PdfView';
 
 const Stack = createNativeStackNavigator();
 
@@ -141,6 +144,23 @@ const Navigator = () => {
         })}
       />
       <Stack.Screen
+        name="review"
+        component={PdfView}
+        options={({ navigation }) => ({
+          headerTitleStyle: {
+            fontFamily: 'Open-Sans',
+            backgroundColor: '#ffffff',
+          },
+          headerRight: () => (
+            <Button
+              onPress={() => navigation.push('nav')}
+              title="☰"
+              color="black"
+            />
+          ),
+        })}
+      />
+      <Stack.Screen
         name="nav"
         component={Nav}
         options={{
@@ -154,6 +174,40 @@ const Navigator = () => {
       <Stack.Screen
         name="done"
         component={Done}
+        options={({ navigation }) => ({
+          headerTitleStyle: {
+            fontFamily: 'Open-Sans',
+            backgroundColor: '#ffffff',
+          },
+          headerRight: () => (
+            <Button
+              onPress={() => navigation.push('nav')}
+              title="☰"
+              color="black"
+            />
+          ),
+        })}
+      />
+      <Stack.Screen
+        name="free text"
+        component={FreeText}
+        options={({ navigation }) => ({
+          headerTitleStyle: {
+            fontFamily: 'Open-Sans',
+            backgroundColor: '#ffffff',
+          },
+          headerRight: () => (
+            <Button
+              onPress={() => navigation.push('nav')}
+              title="☰"
+              color="black"
+            />
+          ),
+        })}
+      />
+      <Stack.Screen
+        name="nano"
+        component={Nano}
         options={({ navigation }) => ({
           headerTitleStyle: {
             fontFamily: 'Open-Sans',

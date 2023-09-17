@@ -13,7 +13,7 @@ const FilterNumber = ({
   bigLetterItem,
 }) => {
   const [expandedNumber, setExpandedNumber] = useState({});
-  const { setModalVisible, setDiscrepancy } = useContext(AppContext);
+  const { setDiscrepancyModalVisible, setDiscrepancy } = useContext(AppContext);
 
   const handlePress = index => {
     setExpandedNumber(prevState => ({
@@ -30,7 +30,7 @@ const FilterNumber = ({
       });
       return discrepancy;
     });
-    setModalVisible(true);
+    setDiscrepancyModalVisible(true);
   };
 
   const renderItem = ({ item, index }) => (

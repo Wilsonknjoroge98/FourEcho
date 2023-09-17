@@ -13,7 +13,6 @@ const waterTempFields = [
   'Dishwasher hot temperature',
   '3-compartment sink hot temperature',
 ];
-const tempMetrics = ['F', 'C'];
 
 const SanatizingTemperature = () => {
   const { sanitizingTempValues, setSanitizingTempValues } =
@@ -78,7 +77,7 @@ const SanatizingTemperature = () => {
           <View>
             <TextInput
               style={styles.tempTextInput}
-              keyboardType="numeric"
+              keyboardType="numbers-and-punctuation"
               onChangeText={text => handleInput(text, i, 'temp')}
               value={sanitizingTempValues[i]?.temp ?? ''}
             />
@@ -89,7 +88,7 @@ const SanatizingTemperature = () => {
             <Text style={styles.label}>Metric</Text>
           </View>
           <SelectDropdown
-            data={tempMetrics}
+            data={['F', 'C']}
             defaultValue={''}
             onSelect={text => handleInput(text, i, 'metric')}
             buttonStyle={
@@ -114,6 +113,14 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     margin: 3,
     justifyContent: 'space-between',
+    backgroundColor: '#ffffff',
+    shadowColor: 'black',
+    shadowOffset: {
+      width: 1,
+      height: 1,
+    },
+    shadowOpacity: 0.5,
+    shadowRadius: 2,
   },
   tempCardNA: {
     borderWidth: 1,
@@ -144,7 +151,7 @@ const styles = StyleSheet.create({
     padding: 10,
     borderWidth: 1,
     borderRadius: 5,
-    fontFamily: 'Open-Sans',
+    fontFamily: 'Raj',
     fontSize: 15,
     textAlign: 'center',
     margin: 3,
@@ -153,8 +160,8 @@ const styles = StyleSheet.create({
     margin: 3,
   },
   label: {
-    fontFamily: 'Open-Sans',
-    fontSize: 13,
+    fontFamily: 'Raj',
+    fontSize: 15,
     marginBottom: 3,
     textAlign: 'center',
   },
@@ -162,7 +169,6 @@ const styles = StyleSheet.create({
     width: 75,
     borderRadius: 5,
     height: 40,
-    backgroundColor: '#ffeb3b75',
   },
   metricSelectDropDownNA: {
     width: 75,
@@ -192,6 +198,8 @@ const styles = StyleSheet.create({
   NALabel: {
     margin: 3,
     marginTop: 10,
+    fontSize: 15,
+    fontFamily: 'Raj',
   },
 });
 

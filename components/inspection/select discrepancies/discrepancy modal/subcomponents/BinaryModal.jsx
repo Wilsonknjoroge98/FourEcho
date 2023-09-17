@@ -1,9 +1,24 @@
-import { useContext, useState } from 'react';
+import { useContext, useEffect } from 'react';
 import { Text, View, TouchableOpacity, StyleSheet } from 'react-native';
 import { AppContext } from '../../../../context/AppContext';
 
-const BinaryModal = ({ modalLabel, setModalLabel, setFormModal }) => {
-  const { discrepancy, setDiscrepancy } = useContext(AppContext);
+const BinaryModal = ({ modalLabel, setModalLabel, setBinaryModal }) => {
+  const {
+    discrepancy,
+    setDiscrepancy,
+    discrepanciesList,
+    setDiscrepanciesList,
+    setDiscrepancyModalVisible,
+  } = useContext(AppContext);
+
+  useEffect(() => {
+    if (discrepancy.repeat != undefined) {
+      setDiscrepanciesList([...discrepanciesList, discrepancy]);
+      setBinaryModal(false);
+      setDiscrepancyModalVisible(false);
+      setModalLabel('Corrected on site?');
+    }
+  }, [discrepancy]);
 
   const handleYes = () => {
     if (modalLabel === 'Corrected on site?') {
@@ -17,7 +32,6 @@ const BinaryModal = ({ modalLabel, setModalLabel, setFormModal }) => {
         ...discrepancy,
         repeat: true,
       });
-      setFormModal(true);
       setModalLabel('Description of the observation');
     }
   };
@@ -27,14 +41,13 @@ const BinaryModal = ({ modalLabel, setModalLabel, setFormModal }) => {
       setModalLabel('Repeat finding?');
       setDiscrepancy({
         ...discrepancy,
-        COR: false,
+        COS: false,
       });
     } else if (modalLabel === 'Repeat finding?') {
       setDiscrepancy({
         ...discrepancy,
         repeat: false,
       });
-      setFormModal(true);
       setModalLabel('Description of the observation');
     }
   };
@@ -69,14 +82,13 @@ const styles = StyleSheet.create({
     borderColor: 'black',
     backgroundColor: '#d50000',
   },
-
   modalButtonContainer: {
     flexDirection: 'row',
     justifyContent: 'center',
   },
   modalButtonText: {
     textAlign: 'center',
-    fontWeight: 'bold',
+    fontFamily: 'Raj',
   },
 });
 

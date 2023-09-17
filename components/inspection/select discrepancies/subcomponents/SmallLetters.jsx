@@ -18,8 +18,7 @@ const SmallLetters = ({
   numberItem,
 }) => {
   const [expandedSmallLetters, setExpandedSmallLetters] = useState({});
-  const { setModalVisible, setDiscrepancy, discrepancy } =
-    useContext(AppContext);
+  const { setDiscrepancyModalVisible, setDiscrepancy } = useContext(AppContext);
 
   const handlePress = index => {
     setExpandedSmallLetters(prevState => ({
@@ -41,7 +40,7 @@ const SmallLetters = ({
       return discrepancy;
     });
 
-    setModalVisible(true);
+    setDiscrepancyModalVisible(true);
   };
 
   const renderItem = ({ item, index }) => (

@@ -1,20 +1,19 @@
 import { View, Text, Image, StyleSheet } from 'react-native';
 
-const TitleLogo = ({ setImageLoaded }) => {
+const TitleLogo = () => {
   return (
-    <View style={styles.titleAndLogoContainer}>
-      <Text style={styles.title}>Public Health</Text>
+    <View style={styles.contentContainer}>
+      <Text style={styles.title}>Four Echo</Text>
       <Image
-        onLoadEnd={() => setImageLoaded(true)}
         style={styles.logo}
-        source={require('../../../assets/images/homelogo.png')}
+        source={require('../../../assets/images/homelogo.jpg')}
       />
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  titleAndLogoContainer: {
+  contentContainer: {
     justifyContent: 'center',
     alignItems: 'center',
   },

@@ -19,18 +19,18 @@ const StartButton = ({ navigation }) => {
 
 const styles = StyleSheet.create({
   startButton: {
-    textTransofrm: 'uppercase',
     borderRadius: 10,
     borderColor: 'black',
     backgroundColor: '#76ff03',
     padding: 15,
     marginTop: 10,
+    width: 300,
   },
   startButtonText: {
     color: 'black',
     fontSize: 25,
     textAlign: 'center',
-    fontFamily: 'Cairo',
+    fontFamily: 'Raj',
   },
 });
 

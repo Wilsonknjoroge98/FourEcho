@@ -13,7 +13,7 @@ const FilterEyes = ({
   numberItem,
   smallLetterItem,
 }) => {
-  const { setModalVisible, setDiscrepancy } = useContext(AppContext);
+  const { setDiscrepancyModalVisible, setDiscrepancy } = useContext(AppContext);
   const handleLongPress = item => {
     setDiscrepancy(() => {
       const discrepancy = { ...bigLetterItem };
@@ -33,7 +33,7 @@ const FilterEyes = ({
 
       return discrepancy;
     });
-    setModalVisible(true);
+    setDiscrepancyModalVisible(true);
   };
   const expand = obj => {
     const textMatch = obj.text

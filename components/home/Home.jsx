@@ -1,13 +1,11 @@
 import { View, StyleSheet } from 'react-native';
-import { SafeAreaView, Image } from 'react-native';
+import { SafeAreaView } from 'react-native';
 import { useFonts } from 'expo-font';
-import { useCallback, useState } from 'react';
+import { useCallback } from 'react';
 import StartButton from './subcomponents/StartButton';
 import TitleLogo from './subcomponents/TitleLogo';
 
 const Home = ({ navigation }) => {
-  const [imageLoaded, setImageLoaded] = useState(false);
-
   const [fontsLoaded] = useFonts({
     'Kite-One': require('../../assets/fonts/Kite_One/kite__one.ttf'),
     'Open-Sans': require('../../assets/fonts/Open_Sans/open__sans.ttf'),
@@ -28,7 +26,7 @@ const Home = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.parentContainer}>
       <View style={styles.contentContainer}>
-        <TitleLogo setImageLoaded={setImageLoaded} />
+        <TitleLogo />
         <StartButton navigation={navigation} />
       </View>
     </SafeAreaView>

@@ -8,21 +8,24 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { ScrollView } from 'react-native-gesture-handler';
 
 const DiscrepancyModal = ({}) => {
-  const { discrepancy, modalVisible, setModalVisible } = useContext(AppContext);
-  const [modalLabel, setModalLabel] = useState('Corrected on site?');
-  const [formModal, setFormModal] = useState(false);
+  const { discrepancy, discrepancyModalVisible, setDiscrepancyModalVisible } =
+    useContext(AppContext);
+  const [modalLabel, setModalLabel] = useState(
+    'Description of the observation'
+  );
+  const [binaryModal, setBinaryModal] = useState(false);
 
   const handleCancel = () => {
-    setModalVisible(false);
-    setModalLabel('Corrected on site?');
-    setFormModal(false);
+    setDiscrepancyModalVisible(false);
+    setModalLabel('Description of the observation');
+    setBinaryModal(false);
   };
 
   return (
     <>
       <Modal
         animationType="slide"
-        visible={modalVisible}
+        visible={discrepancyModalVisible}
         onRequestClose={() => console.log('close')}
       >
         <View>
@@ -40,18 +43,18 @@ const DiscrepancyModal = ({}) => {
             </View>
             <View>
               <Text style={styles.modalLabel}>{modalLabel}</Text>
-              {formModal ? (
-                <FormModal
-                  discrepancy={discrepancy}
-                  setFormModal={setFormModal}
-                  modalLabel={modalLabel}
-                  setModalLabel={setModalLabel}
-                />
-              ) : (
+              {binaryModal ? (
                 <BinaryModal
                   modalLabel={modalLabel}
                   setModalLabel={setModalLabel}
-                  setFormModal={setFormModal}
+                  setBinaryModal={setBinaryModal}
+                />
+              ) : (
+                <FormModal
+                  discrepancy={discrepancy}
+                  setBinaryModal={setBinaryModal}
+                  modalLabel={modalLabel}
+                  setModalLabel={setModalLabel}
                 />
               )}
             </View>
@@ -80,11 +83,11 @@ const styles = StyleSheet.create({
     marginBottom: 400,
   },
   modalLabel: {
-    fontSize: 20,
+    fontSize: 22,
     margin: 10,
     fontWeight: 'bold',
     textAlign: 'center',
-    fontFamily: 'Open-Sans',
+    fontFamily: 'Raj',
   },
   cancelButton: {
     borderRadius: 15,

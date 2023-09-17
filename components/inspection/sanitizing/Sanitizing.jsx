@@ -32,7 +32,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     alignContent: 'center',
-    backgroundColor: '#ffffff',
     flex: 1,
   },
   naivgateButton: {
@@ -49,7 +48,7 @@ const styles = StyleSheet.create({
     color: 'black',
     fontSize: 15,
     textAlign: 'center',
-    fontFamily: 'Open-Sans',
+    fontFamily: 'Raj',
   },
 });
 

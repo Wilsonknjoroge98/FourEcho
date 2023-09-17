@@ -29,7 +29,7 @@ export default sortedData = [
   ],
   [
     {
-      text: '(A) Complying with this publication by having S',
+      text: '(A) Complying with this publication by having- S',
       type: 'uppercase_letter',
       header:
         '2-102.11 Demonstration* Based on the RISKS inherent to the FOOD operation, during inspections and upon request the PIC shall demonstrate to the REGULATORY AUTHORITY knowledge of foodborne disease prevention, application of the Hazardous Analysis Critical Control Point (HACCP) principles, and the requirements of this publication. Demonstration of knowledge is achieved by-',
@@ -1842,7 +1842,7 @@ export default sortedData = [
           item: '5',
         },
         {
-          text: '(2) Norovirus diagnosisadjusting exclusion for food employee who was symptomatic and is now asymptomatic. If a FOOD EMPLOYEE was diagnosed with an infection from Norovirus and EXCLUDED as specified under Subparagraph 2-201.12(A)(2):',
+          text: '(2) Norovirus diagnosis-adjusting exclusion for food employee who was symptomatic and is now asymptomatic. If a FOOD EMPLOYEE was diagnosed with an infection from Norovirus and EXCLUDED as specified under Subparagraph 2-201.12(A)(2):',
           type: 'number',
           header:
             '2-201.13 Removal, adjustment, or retention of exclusions and restrictions* The PIC shall adhere to the following conditions when removing, adjusting, or retaining the EXCLUSION or RESTRICTION of a FOOD EMPLOYEE-',
@@ -1885,7 +1885,7 @@ export default sortedData = [
           item: '5',
         },
         {
-          text: '(3) Shigella spp. diagnosisadjusting exclusion for food employee who was symptomatic and is now asymptomatic. If a FOOD EMPLOYEE was diagnosed with an infection from Shigella spp. and EXCLUDED as specified under Subparagraph 2-201.12(A)(2)-',
+          text: '(3) Shigella spp. diagnosis-adjusting exclusion for food employee who was symptomatic and is now asymptomatic. If a FOOD EMPLOYEE was diagnosed with an infection from Shigella spp. and EXCLUDED as specified under Subparagraph 2-201.12(A)(2)-',
           type: 'number',
           header:
             '2-201.13 Removal, adjustment, or retention of exclusions and restrictions* The PIC shall adhere to the following conditions when removing, adjusting, or retaining the EXCLUSION or RESTRICTION of a FOOD EMPLOYEE-',
@@ -2018,7 +2018,7 @@ export default sortedData = [
       item: '5',
     },
     {
-      text: '(B) Hepatitis A virus or jaundice diagnosisremoving exclusions. Reinstate a FOOD EMPLOYEE who was EXCLUDED as specified under  2-201.12(B) if the PIC obtains APPROVAL from the REGULATORY AUTHORITY and one of the following conditions is met',
+      text: '(B) Hepatitis A virus or jaundice diagnosis-removing exclusions. Reinstate a FOOD EMPLOYEE who was EXCLUDED as specified under  2-201.12(B) if the PIC obtains APPROVAL from the REGULATORY AUTHORITY and one of the following conditions is met-',
       type: 'uppercase_letter',
       header:
         '2-201.13 Removal, adjustment, or retention of exclusions and restrictions* The PIC shall adhere to the following conditions when removing, adjusting, or retaining the EXCLUSION or RESTRICTION of a FOOD EMPLOYEE-',
@@ -2075,7 +2075,7 @@ export default sortedData = [
       item: '5',
     },
     {
-      text: '(C) Typhoid fever diagnosisremoving exclusions. Reinstate a FOOD EMPLOYEE who was EXCLUDED as specified under  2-201.12(C) if-',
+      text: '(C) Typhoid fever diagnosis-removing exclusions. Reinstate a FOOD EMPLOYEE who was EXCLUDED as specified under  2-201.12(C) if-',
       type: 'uppercase_letter',
       header:
         '2-201.13 Removal, adjustment, or retention of exclusions and restrictions* The PIC shall adhere to the following conditions when removing, adjusting, or retaining the EXCLUSION or RESTRICTION of a FOOD EMPLOYEE-',
@@ -2118,7 +2118,7 @@ export default sortedData = [
       item: '5',
     },
     {
-      text: '(D) Norovirus diagnosisremoving exclusion or restriction. Reinstate a FOOD EMPLOYEE who was EXCLUDED as specified under Subparagraphs 2-201.12(A)(2) or (D)(1) who was RESTRICTED under Subparagraph 2-201.12(D)(2) if the PIC obtains APPROVAL from the REGULATORY AUTHORITY and one of the following conditions is met:',
+      text: '(D) Norovirus diagnosis-removing exclusion or restriction. Reinstate a FOOD EMPLOYEE who was EXCLUDED as specified under Subparagraphs 2-201.12(A)(2) or (D)(1) who was RESTRICTED under Subparagraph 2-201.12(D)(2) if the PIC obtains APPROVAL from the REGULATORY AUTHORITY and one of the following conditions is met:',
       type: 'uppercase_letter',
       header:
         '2-201.13 Removal, adjustment, or retention of exclusions and restrictions* The PIC shall adhere to the following conditions when removing, adjusting, or retaining the EXCLUSION or RESTRICTION of a FOOD EMPLOYEE-',
@@ -2175,7 +2175,7 @@ export default sortedData = [
       item: '5',
     },
     {
-      text: '(E) Shigella spp. diagnosisremoving exclusion or restriction. Reinstate a FOOD EMPLOYEE who was EXCLUDED as specified under Subparagraphs 2-201.12(A)(2) or (E)(1) or who was RESTRICTED under Subparagraph 2-201.12(E)(2) if the PIC obtains APPROVAL from the REGULATORY AUTHORITY and one of the following conditions is met:',
+      text: '(E) Shigella spp. diagnosis-removing exclusion or restriction. Reinstate a FOOD EMPLOYEE who was EXCLUDED as specified under Subparagraphs 2-201.12(A)(2) or (E)(1) or who was RESTRICTED under Subparagraph 2-201.12(E)(2) if the PIC obtains APPROVAL from the REGULATORY AUTHORITY and one of the following conditions is met:',
       type: 'uppercase_letter',
       header:
         '2-201.13 Removal, adjustment, or retention of exclusions and restrictions* The PIC shall adhere to the following conditions when removing, adjusting, or retaining the EXCLUSION or RESTRICTION of a FOOD EMPLOYEE-',
@@ -2261,7 +2261,7 @@ export default sortedData = [
       item: '5',
     },
     {
-      text: '(F) STEC diagnosisremoving exclusion or restriction. Reinstate a FOOD EMPLOYEE who was EXCLUDED or RESTRICTED as specified under Subparagraphs 2-201.12(A)(2) or (F)(1) or who was RESTRICTED under Subparagraph 2-201.12(F)(2) if the PIC obtains APPROVAL from the REGULATORY AUTHORITY and one of the following conditions is met:',
+      text: '(F) STEC diagnosis-removing exclusion or restriction. Reinstate a FOOD EMPLOYEE who was EXCLUDED or RESTRICTED as specified under Subparagraphs 2-201.12(A)(2) or (F)(1) or who was RESTRICTED under Subparagraph 2-201.12(F)(2) if the PIC obtains APPROVAL from the REGULATORY AUTHORITY and one of the following conditions is met:',
       type: 'uppercase_letter',
       header:
         '2-201.13 Removal, adjustment, or retention of exclusions and restrictions* The PIC shall adhere to the following conditions when removing, adjusting, or retaining the EXCLUSION or RESTRICTION of a FOOD EMPLOYEE-',
@@ -2347,7 +2347,7 @@ export default sortedData = [
       item: '5',
     },
     {
-      text: '(G) Nontyphoidal Salmonellaremoving exclusion or restriction. Reinstate a FOOD EMPLOYEE who was EXCLUDED as specified under Subparagraph 2-201.12(A)(2) or who was RESTRICTED as specified under  2-201.12(G) if the PIC obtains APPROVAL from the REGULATORY AUTHORITY and one of the following conditions is met:',
+      text: '(G) Nontyphoidal Salmonella-removing exclusion or restriction. Reinstate a FOOD EMPLOYEE who was EXCLUDED as specified under Subparagraph 2-201.12(A)(2) or who was RESTRICTED as specified under  2-201.12(G) if the PIC obtains APPROVAL from the REGULATORY AUTHORITY and one of the following conditions is met:',
       type: 'uppercase_letter',
       header:
         '2-201.13 Removal, adjustment, or retention of exclusions and restrictions* The PIC shall adhere to the following conditions when removing, adjusting, or retaining the EXCLUSION or RESTRICTION of a FOOD EMPLOYEE-',
@@ -2358,7 +2358,7 @@ export default sortedData = [
       selectable: false,
       children: [
         {
-          text: '(1) The EXCLUDED or RESTRICTED FOOD EMPLOYEE provides to the PIC written medical documentation (in English and the employees native language, if applicable) from a HEALTH PRACTITIONER stating that the FOOD EMPLOYEE is free of Salmonella (nontyphoidal) infection based on test results showing 2 consecutive negative stool specimen cultures that are taken',
+          text: '(1) The EXCLUDED or RESTRICTED FOOD EMPLOYEE provides to the PIC written medical documentation (in English and the employees native language, if applicable) from a HEALTH PRACTITIONER stating that the FOOD EMPLOYEE is free of Salmonella (nontyphoidal) infection based on test results showing 2 consecutive negative stool specimen cultures that are taken-',
           type: 'number',
           header:
             '2-201.13 Removal, adjustment, or retention of exclusions and restrictions* The PIC shall adhere to the following conditions when removing, adjusting, or retaining the EXCLUSION or RESTRICTION of a FOOD EMPLOYEE-',
@@ -2433,7 +2433,7 @@ export default sortedData = [
       item: '5',
     },
     {
-      text: '(H) Sore throat with feverremoving exclusion or restriction. Reinstate a FOOD EMPLOYEE who was EXCLUDED or RESTRICTED as specified under Subparagraphs 2-201.12(H)(1) or (H)(2) if the FOOD EMPLOYEE provides to the PIC written medical documentation (in English and the employees native language, if applicable) from a HEALTH PRACTITIONER stating that the FOOD EMPLOYEE meets one of the following conditions:',
+      text: '(H) Sore throat with fever-removing exclusion or restriction. Reinstate a FOOD EMPLOYEE who was EXCLUDED or RESTRICTED as specified under Subparagraphs 2-201.12(H)(1) or (H)(2) if the FOOD EMPLOYEE provides to the PIC written medical documentation (in English and the employees native language, if applicable) from a HEALTH PRACTITIONER stating that the FOOD EMPLOYEE meets one of the following conditions:',
       type: 'uppercase_letter',
       header:
         '2-201.13 Removal, adjustment, or retention of exclusions and restrictions* The PIC shall adhere to the following conditions when removing, adjusting, or retaining the EXCLUSION or RESTRICTION of a FOOD EMPLOYEE-',
@@ -2490,7 +2490,7 @@ export default sortedData = [
       item: '5',
     },
     {
-      text: '(I) Uncovered infected wound or pustular boilremoving restriction. Reinstate a FOOD EMPLOYEE who was RESTRICTED as specified under  2-201.12(I) if the skin, infected wound, cut, or pustular boil is properly covered with one of the following:',
+      text: '(I) Uncovered infected wound or pustular boil-removing restriction. Reinstate a FOOD EMPLOYEE who was RESTRICTED as specified under  2-201.12(I) if the skin, infected wound, cut, or pustular boil is properly covered with one of the following:',
       type: 'uppercase_letter',
       header:
         '2-201.13 Removal, adjustment, or retention of exclusions and restrictions* The PIC shall adhere to the following conditions when removing, adjusting, or retaining the EXCLUSION or RESTRICTION of a FOOD EMPLOYEE-',
@@ -2547,7 +2547,7 @@ export default sortedData = [
       item: '5',
     },
     {
-      text: '(J) Exposure to foodborne pathogen and works in food establishment serving HSPremoving restriction. Reinstate a FOOD EMPLOYEE who was RESTRICTED as specified under  2-201.12(J) and was exposed to one of the following pathogens as specified under Subparagraphs 2-201.11(A)(4)(a-d) or 2-201.11(A)(5)(a-d):',
+      text: '(J) Exposure to foodborne pathogen and works in food establishment serving HSP-removing restriction. Reinstate a FOOD EMPLOYEE who was RESTRICTED as specified under  2-201.12(J) and was exposed to one of the following pathogens as specified under Subparagraphs 2-201.11(A)(4)(a-d) or 2-201.11(A)(5)(a-d):',
       type: 'uppercase_letter',
       header:
         '2-201.13 Removal, adjustment, or retention of exclusions and restrictions* The PIC shall adhere to the following conditions when removing, adjusting, or retaining the EXCLUSION or RESTRICTION of a FOOD EMPLOYEE-',
@@ -3946,7 +3946,7 @@ export default sortedData = [
   ],
   [
     {
-      text: '(A) Except as specified in  (B) of this section, temporary FOOD EMPLOYEES shall',
+      text: '(A) Except as specified in  (B) of this section, temporary FOOD EMPLOYEES shall-',
       type: 'uppercase_letter',
       header: '2-503.13 Temporary employees',
       section: '2-503.13',
@@ -4345,7 +4345,7 @@ export default sortedData = [
       item: '9',
     },
     {
-      text: '(F) WHOLE-MUSCLE, INTACT BEEF steaks that are intended for consumption in an undercooked form without a CONSUMER advisory as specified in  3-401.11(C) shall be',
+      text: '(F) WHOLE-MUSCLE, INTACT BEEF steaks that are intended for consumption in an undercooked form without a CONSUMER advisory as specified in  3-401.11(C) shall be-',
       type: 'uppercase_letter',
       header: '3-201.11 Compliance with food law*',
       section: '3-201.11',
@@ -4498,7 +4498,7 @@ export default sortedData = [
   ],
   [
     {
-      text: '(A) Except as specified under  (C) of this section and  3-201.17(C), FISH that are received for sale or service shall be',
+      text: '(A) Except as specified under  (C) of this section and  3-201.17(C), FISH that are received for sale or service shall be-',
       type: 'uppercase_letter',
       header: '3-201.14 Fish*',
       section: '3-201.14',
@@ -4609,7 +4609,7 @@ export default sortedData = [
   ],
   [
     {
-      text: '(A) If GAME ANIMALS are received for sale or service they shall be',
+      text: '(A) If GAME ANIMALS are received for sale or service they shall be-',
       type: 'uppercase_letter',
       header: '3-201.17 Game animals*',
       section: '3-201.17',
@@ -5171,7 +5171,7 @@ export default sortedData = [
   ],
   [
     {
-      text: '(A) Raw SHUCKED SHELLFISH shall be obtained in nonreturnable packages which bear a legible label that identifies the',
+      text: '(A) Raw SHUCKED SHELLFISH shall be obtained in nonreturnable packages which bear a legible label that identifies the-',
       type: 'uppercase_letter',
       header: '3-202.17 Shucked shellfish, packaging and identification',
       section: '3-202.17',
@@ -5226,7 +5226,7 @@ export default sortedData = [
   ],
   [
     {
-      text: '(A) SHELLSTOCK shall be obtained in containers bearing legible source identification tags or labels that are affixed by the harvester or DEALER that depurates, ships, or reships the SHELLSTOCK, as specified in the National Shellfish Sanitation Program Guide for the Control of Molluscan Shellfish, and that list',
+      text: '(A) SHELLSTOCK shall be obtained in containers bearing legible source identification tags or labels that are affixed by the harvester or DEALER that depurates, ships, or reships the SHELLSTOCK, as specified in the National Shellfish Sanitation Program Guide for the Control of Molluscan Shellfish, and that list-',
       type: 'uppercase_letter',
       header: '3-202.18 Shellstock identification*',
       section: '3-202.18',
@@ -5442,7 +5442,7 @@ export default sortedData = [
   ],
   [
     {
-      text: '(A) Except as specified in  (B)-',
+      text: '(A) Except as specified in  (B)-(D) of this section, MOLLUSCAN SHELLFISH may not be removed from the container in which they are received other than immediately before sale or preparation for service.',
       type: 'uppercase_letter',
       header: '3-203.11 Molluscan shellfish, original container',
       section: '3-203.11',
@@ -5455,20 +5455,7 @@ export default sortedData = [
       item: '12',
     },
     {
-      text: '(D) of this section, MOLLUSCAN SHELLFISH may not be removed from the container in which they are received other than immediately before sale or preparation for service.',
-      type: 'uppercase_letter',
-      header: '3-203.11 Molluscan shellfish, original container',
-      section: '3-203.11',
-      uppercase_letter_id: '(D)',
-      number_id: '',
-      lowercase_letter_id: '',
-      selectable: true,
-      children: [],
-      id: 1,
-      item: '12',
-    },
-    {
-      text: '(B) For display purposes, SHELLSTOCK may be removed from the container in which they are received, displayed on drained ice, or held in a display container, and a quantity specified by a CONSUMER may be removed from the display or display container and provided to the CONSUMER if',
+      text: '(B) For display purposes, SHELLSTOCK may be removed from the container in which they are received, displayed on drained ice, or held in a display container, and a quantity specified by a CONSUMER may be removed from the display or display container and provided to the CONSUMER if-',
       type: 'uppercase_letter',
       header: '3-203.11 Molluscan shellfish, original container',
       section: '3-203.11',
@@ -5504,11 +5491,11 @@ export default sortedData = [
           item: '12',
         },
       ],
-      id: 2,
+      id: 1,
       item: '12',
     },
     {
-      text: '(C) SHUCKED SHELLFISH may be removed from the container in which they were received and held in a display container from which individual servings are dispensed upon a CONSUMERS request if',
+      text: '(C) SHUCKED SHELLFISH may be removed from the container in which they were received and held in a display container from which individual servings are dispensed upon a CONSUMERS request if-',
       type: 'uppercase_letter',
       header: '3-203.11 Molluscan shellfish, original container',
       section: '3-203.11',
@@ -5544,11 +5531,11 @@ export default sortedData = [
           item: '12',
         },
       ],
-      id: 3,
+      id: 2,
       item: '12',
     },
     {
-      text: '(D) SHUCKED SHELLFISH may be removed from the container in which they were received and repacked in CONSUMER self-service containers where allowed by LAW if',
+      text: '(D) SHUCKED SHELLFISH may be removed from the container in which they were received and repacked in CONSUMER self-service containers where allowed by LAW if-',
       type: 'uppercase_letter',
       header: '3-203.11 Molluscan shellfish, original container',
       section: '3-203.11',
@@ -5610,7 +5597,7 @@ export default sortedData = [
           item: '12',
         },
       ],
-      id: 4,
+      id: 3,
       item: '12',
     },
   ],
@@ -5642,7 +5629,7 @@ export default sortedData = [
       item: '11',
     },
     {
-      text: '(C) The identity of the source of SHELLSTOCK that is sold or served shall be maintained by retaining SHELLSTOCK tags or labels for 90 calendar days from the date that is recorded on the tag or label, as specified under  (B) of this section, by',
+      text: '(C) The identity of the source of SHELLSTOCK that is sold or served shall be maintained by retaining SHELLSTOCK tags or labels for 90 calendar days from the date that is recorded on the tag or label, as specified under  (B) of this section, by-',
       type: 'uppercase_letter',
       header: '3-203.12 Shellstock, maintaining identification*',
       section: '3-203.12',
@@ -5796,7 +5783,7 @@ export default sortedData = [
       noncritical: false,
     },
     {
-      text: '(E) FOOD EMPLOYEES not serving a HIGHLY SUSCEPTIBLE POPULATION may contact exposed, RTE FOOD with their bare hands if',
+      text: '(E) FOOD EMPLOYEES not serving a HIGHLY SUSCEPTIBLE POPULATION may contact exposed, RTE FOOD with their bare hands if-',
       type: 'uppercase_letter',
       header: '3-301.11 Preventing contamination from hands*',
       section: '3-301.11',
@@ -5863,7 +5850,7 @@ export default sortedData = [
           noncritical: false,
         },
         {
-          text: '(3) A written EMPLOYEE health policy that details how the FOOD ESTABLISHMENT complies with  2-201.11, 2-201.12, and 2-201.13 including',
+          text: '(3) A written EMPLOYEE health policy that details how the FOOD ESTABLISHMENT complies with  2-201.11, 2-201.12, and 2-201.13 including-',
           type: 'number',
           header: '3-301.11 Preventing contamination from hands*',
           section: '3-301.11',
@@ -6169,10 +6156,10 @@ export default sortedData = [
   ],
   [
     {
-      text: '(A) FOOD shall be protected from cross-contamination by',
+      text: '(A) FOOD shall be protected from cross-contamination by-',
       type: 'uppercase_letter',
       header:
-        '3-302.11 Packaged and unpackaged foodseparation, packaging, and segregation*',
+        '3-302.11 Packaged and unpackaged food-separation, packaging, and segregation*',
       section: '3-302.11',
       uppercase_letter_id: '(A)',
       number_id: '',
@@ -6183,7 +6170,7 @@ export default sortedData = [
           text: '(1) Except as specified in Subparagraph',
           type: 'number',
           header:
-            '3-302.11 Packaged and unpackaged foodseparation, packaging, and segregation*',
+            '3-302.11 Packaged and unpackaged food-separation, packaging, and segregation*',
           section: '3-302.11',
           uppercase_letter_id: '(A)',
           number_id: '(1)',
@@ -6194,10 +6181,10 @@ export default sortedData = [
           item: '15',
         },
         {
-          text: '(2) Except when combined as ingredients, separating types of raw animal FOODS from each other such as beef, FISH, lamb, pork, and POULTRY during storage, preparation, holding, and display by',
+          text: '(2) Except when combined as ingredients, separating types of raw animal FOODS from each other such as beef, FISH, lamb, pork, and POULTRY during storage, preparation, holding, and display by-',
           type: 'number',
           header:
-            '3-302.11 Packaged and unpackaged foodseparation, packaging, and segregation*',
+            '3-302.11 Packaged and unpackaged food-separation, packaging, and segregation*',
           section: '3-302.11',
           uppercase_letter_id: '(A)',
           number_id: '(2)',
@@ -6208,7 +6195,7 @@ export default sortedData = [
               text: '(a) Using separate EQUIPMENT for each type, or',
               type: 'lowercase_letter',
               header:
-                '3-302.11 Packaged and unpackaged foodseparation, packaging, and segregation*',
+                '3-302.11 Packaged and unpackaged food-separation, packaging, and segregation*',
               section: '3-302.11',
               uppercase_letter_id: '(A)',
               number_id: '(2)',
@@ -6222,7 +6209,7 @@ export default sortedData = [
               text: '(b) Arranging each type of FOOD in EQUIPMENT so that cross-contamination of one type with another is prevented, and',
               type: 'lowercase_letter',
               header:
-                '3-302.11 Packaged and unpackaged foodseparation, packaging, and segregation*',
+                '3-302.11 Packaged and unpackaged food-separation, packaging, and segregation*',
               section: '3-302.11',
               uppercase_letter_id: '(A)',
               number_id: '(2)',
@@ -6236,7 +6223,7 @@ export default sortedData = [
               text: '(c) Preparing each type of FOOD at different times or in separate areas;',
               type: 'lowercase_letter',
               header:
-                '3-302.11 Packaged and unpackaged foodseparation, packaging, and segregation*',
+                '3-302.11 Packaged and unpackaged food-separation, packaging, and segregation*',
               section: '3-302.11',
               uppercase_letter_id: '(A)',
               number_id: '(2)',
@@ -6254,7 +6241,7 @@ export default sortedData = [
           text: '(3) Cleaning EQUIPMENT and UTENSILS as specified under  4-602.11(A) and SANITIZING as specified under  4-703.11;',
           type: 'number',
           header:
-            '3-302.11 Packaged and unpackaged foodseparation, packaging, and segregation*',
+            '3-302.11 Packaged and unpackaged food-separation, packaging, and segregation*',
           section: '3-302.11',
           uppercase_letter_id: '(A)',
           number_id: '(3)',
@@ -6268,7 +6255,7 @@ export default sortedData = [
           text: '(4) Except as specified under Subparagraph 3-501.15(B)(2) and in  (B) of this section, storing the FOOD in packages, covered containers, or wrappings;',
           type: 'number',
           header:
-            '3-302.11 Packaged and unpackaged foodseparation, packaging, and segregation*',
+            '3-302.11 Packaged and unpackaged food-separation, packaging, and segregation*',
           section: '3-302.11',
           uppercase_letter_id: '(A)',
           number_id: '(4)',
@@ -6282,7 +6269,7 @@ export default sortedData = [
           text: '(5) Cleaning HERMETICALLY SEALED CONTAINERS of FOOD of visible soil before opening;',
           type: 'number',
           header:
-            '3-302.11 Packaged and unpackaged foodseparation, packaging, and segregation*',
+            '3-302.11 Packaged and unpackaged food-separation, packaging, and segregation*',
           section: '3-302.11',
           uppercase_letter_id: '(A)',
           number_id: '(5)',
@@ -6296,7 +6283,7 @@ export default sortedData = [
           text: '(6) Protecting FOOD containers that are received packaged together in a case or overwrap from cuts when the case or overwrap is opened;',
           type: 'number',
           header:
-            '3-302.11 Packaged and unpackaged foodseparation, packaging, and segregation*',
+            '3-302.11 Packaged and unpackaged food-separation, packaging, and segregation*',
           section: '3-302.11',
           uppercase_letter_id: '(A)',
           number_id: '(6)',
@@ -6310,7 +6297,7 @@ export default sortedData = [
           text: '(7) Storing damaged, spoiled, or recalled FOOD being held in the FOOD ESTABLISHMENT as specified under  6-404.11; and',
           type: 'number',
           header:
-            '3-302.11 Packaged and unpackaged foodseparation, packaging, and segregation*',
+            '3-302.11 Packaged and unpackaged food-separation, packaging, and segregation*',
           section: '3-302.11',
           uppercase_letter_id: '(A)',
           number_id: '(7)',
@@ -6324,7 +6311,7 @@ export default sortedData = [
           text: '(8) Separating fruits and vegetables, before they are washed as specified under  3-302.15 from RTE FOOD.',
           type: 'number',
           header:
-            '3-302.11 Packaged and unpackaged foodseparation, packaging, and segregation*',
+            '3-302.11 Packaged and unpackaged food-separation, packaging, and segregation*',
           section: '3-302.11',
           uppercase_letter_id: '(A)',
           number_id: '(8)',
@@ -6339,10 +6326,10 @@ export default sortedData = [
       item: '15',
     },
     {
-      text: '(B) Subparagraph (A)(4) of this section does not apply to',
+      text: '(B) Subparagraph (A)(4) of this section does not apply to-',
       type: 'uppercase_letter',
       header:
-        '3-302.11 Packaged and unpackaged foodseparation, packaging, and segregation*',
+        '3-302.11 Packaged and unpackaged food-separation, packaging, and segregation*',
       section: '3-302.11',
       uppercase_letter_id: '(B)',
       number_id: '',
@@ -6353,7 +6340,7 @@ export default sortedData = [
           text: '(1) Whole, uncut, raw fruits and vegetables and nuts in the shell, that require peeling or hulling before consumption;',
           type: 'number',
           header:
-            '3-302.11 Packaged and unpackaged foodseparation, packaging, and segregation*',
+            '3-302.11 Packaged and unpackaged food-separation, packaging, and segregation*',
           section: '3-302.11',
           uppercase_letter_id: '(B)',
           number_id: '(1)',
@@ -6367,7 +6354,7 @@ export default sortedData = [
           text: '(2) PRIMAL CUTS, quarters, or sides of raw MEAT or slab bacon that are hung on clean, SANITIZED hooks or placed on clean, SANITIZED racks;',
           type: 'number',
           header:
-            '3-302.11 Packaged and unpackaged foodseparation, packaging, and segregation*',
+            '3-302.11 Packaged and unpackaged food-separation, packaging, and segregation*',
           section: '3-302.11',
           uppercase_letter_id: '(B)',
           number_id: '(2)',
@@ -6381,7 +6368,7 @@ export default sortedData = [
           text: '(3) Whole, uncut, processed MEATS such as country hams, and smoked or cured sausages that are placed on clean, SANITIZED racks;',
           type: 'number',
           header:
-            '3-302.11 Packaged and unpackaged foodseparation, packaging, and segregation*',
+            '3-302.11 Packaged and unpackaged food-separation, packaging, and segregation*',
           section: '3-302.11',
           uppercase_letter_id: '(B)',
           number_id: '(3)',
@@ -6395,7 +6382,7 @@ export default sortedData = [
           text: '(4) FOOD being cooled as specified under Subparagraph 3-501.15(B)(2); or',
           type: 'number',
           header:
-            '3-302.11 Packaged and unpackaged foodseparation, packaging, and segregation*',
+            '3-302.11 Packaged and unpackaged food-separation, packaging, and segregation*',
           section: '3-302.11',
           uppercase_letter_id: '(B)',
           number_id: '(4)',
@@ -6409,7 +6396,7 @@ export default sortedData = [
           text: '(5) SHELLSTOCK.',
           type: 'number',
           header:
-            '3-302.11 Packaged and unpackaged foodseparation, packaging, and segregation*',
+            '3-302.11 Packaged and unpackaged food-separation, packaging, and segregation*',
           section: '3-302.11',
           uppercase_letter_id: '(B)',
           number_id: '(5)',
@@ -7894,7 +7881,7 @@ export default sortedData = [
   ],
   [
     {
-      text: '(A) Except for retail food sales (that is, commissary, shoppette), milk and milk products for drinking purposes shall be provided to the CONSUMER',
+      text: '(A) Except for retail food sales (that is, commissary, shoppette), milk and milk products for drinking purposes shall be provided to the CONSUMER-',
       type: 'uppercase_letter',
       header: '3-306.15 Dispensing of milk, cream, and nondairy products',
       section: '3-306.15',
@@ -7947,7 +7934,7 @@ export default sortedData = [
       item: '19',
     },
     {
-      text: '(C) Cream or half-and-half shall be',
+      text: '(C) Cream or half-and-half shall be-',
       type: 'uppercase_letter',
       header: '3-306.15 Dispensing of milk, cream, and nondairy products',
       section: '3-306.15',
@@ -8547,7 +8534,7 @@ export default sortedData = [
           item: '27',
         },
         {
-          text: '(3) Describe how the requirements specified under  (A)-',
+          text: '(3) Describe how the requirements specified under  (A)-(E) of this Section are to be monitored and documented by the PIC and the corrective actions to be taken if the requirements are not met;',
           type: 'number',
           header:
             '3-401.14 Noncontinuous cooking of raw animal foods* Raw animal FOODS that are cooked using a NONCONTINUOUS COOKING process shall be-',
@@ -8560,33 +8547,18 @@ export default sortedData = [
           id: 2,
           item: '27',
         },
-      ],
-      id: 5,
-      item: '27',
-    },
-    {
-      text: '(E) of this Section are to be monitored and documented by the PIC and the corrective actions to be taken if the requirements are not met;',
-      type: 'uppercase_letter',
-      header:
-        '3-401.14 Noncontinuous cooking of raw animal foods* Raw animal FOODS that are cooked using a NONCONTINUOUS COOKING process shall be-',
-      section: '3-401.14',
-      uppercase_letter_id: '(E)',
-      number_id: '',
-      lowercase_letter_id: '',
-      selectable: false,
-      children: [
         {
           text: '(4) Describe how the FOODS, after initial heating, but prior to complete cooking, are to be marked or otherwise identified as FOODS that must be cooked as specified under  (D) of this section prior to being offered for sale or service; and',
           type: 'number',
           header:
             '3-401.14 Noncontinuous cooking of raw animal foods* Raw animal FOODS that are cooked using a NONCONTINUOUS COOKING process shall be-',
           section: '3-401.14',
-          uppercase_letter_id: '(E)',
+          uppercase_letter_id: '(F)',
           number_id: '(4)',
           lowercase_letter_id: '',
           selectable: true,
           children: [],
-          id: 0,
+          id: 3,
           item: '27',
         },
         {
@@ -8595,16 +8567,16 @@ export default sortedData = [
           header:
             '3-401.14 Noncontinuous cooking of raw animal foods* Raw animal FOODS that are cooked using a NONCONTINUOUS COOKING process shall be-',
           section: '3-401.14',
-          uppercase_letter_id: '(E)',
+          uppercase_letter_id: '(F)',
           number_id: '(5)',
           lowercase_letter_id: '',
           selectable: true,
           children: [],
-          id: 1,
+          id: 4,
           item: '27',
         },
       ],
-      id: 6,
+      id: 5,
       item: '27',
     },
   ],
@@ -8878,7 +8850,7 @@ export default sortedData = [
       item: '27',
     },
     {
-      text: '(D) Reheating for hot holding as specified under  (A)-',
+      text: '(D) Reheating for hot holding as specified under  (A)-(C) of this section shall be done rapidly, and the length of time in which the temperature of the FOOD is between 41F (5C) and the temperatures specified under  (A)-',
       type: 'uppercase_letter',
       header: '3-403.11 Reheating for hot holding*',
       section: '3-403.11',
@@ -8891,7 +8863,7 @@ export default sortedData = [
       item: '27',
     },
     {
-      text: '(C) of this section shall be done rapidly, and the length of time in which the temperature of the FOOD is between 41F (5C) and the temperatures specified under  (A)-',
+      text: '(C) of this section may not exceed 2 hours.',
       type: 'uppercase_letter',
       header: '3-403.11 Reheating for hot holding*',
       section: '3-403.11',
@@ -8904,19 +8876,6 @@ export default sortedData = [
       item: '27',
     },
     {
-      text: '(C) of this section may not exceed 2 hours.',
-      type: 'uppercase_letter',
-      header: '3-403.11 Reheating for hot holding*',
-      section: '3-403.11',
-      uppercase_letter_id: '(C)',
-      number_id: '',
-      lowercase_letter_id: '',
-      selectable: true,
-      children: [],
-      id: 5,
-      item: '27',
-    },
-    {
       text: '(E) Remaining unsliced portions of MEAT roasts that are cooked as specified under  3-401.11(B) may be reheated for hot holding using the oven parameters and minimum time and temperature conditions specified under  3-401.11(B).',
       type: 'uppercase_letter',
       header: '3-403.11 Reheating for hot holding*',
@@ -8926,7 +8885,7 @@ export default sortedData = [
       lowercase_letter_id: '',
       selectable: true,
       children: [],
-      id: 6,
+      id: 5,
       item: '27',
     },
   ],
@@ -9945,7 +9904,7 @@ export default sortedData = [
   ],
   [
     {
-      text: '(A) On-premises preparationprepare and hold cold. ADVANCED PREPARED TCS FOODS. Except when PACKAGING FOOD using a REDUCED OXYGEN PACKAGING (ROP) method as specified under  3-502.12, and except as specified in  (E) and (F) of this section and  3-502.13, refrigerated ADVANCED PREPARED TCS FOOD held in a FOOD ESTABLISHMENT shall be labeled as specified under  3-602.11(E) and marked to indicate the date or day by which the FOOD shall be consumed on the PREMISES, sold, or discarded when held at a temperature of 41F (5C) or less. The maximum refrigerated holding period for ADVANCED PREPARED FOODS may not exceed 7 days and the day of preparation shall be counted as Day-1.',
+      text: '(A) On-premises preparation-prepare and hold cold. ADVANCED PREPARED TCS FOODS. Except when PACKAGING FOOD using a REDUCED OXYGEN PACKAGING (ROP) method as specified under  3-502.12, and except as specified in  (E) and (F) of this section and  3-502.13, refrigerated ADVANCED PREPARED TCS FOOD held in a FOOD ESTABLISHMENT shall be labeled as specified under  3-602.11(E) and marked to indicate the date or day by which the FOOD shall be consumed on the PREMISES, sold, or discarded when held at a temperature of 41F (5C) or less. The maximum refrigerated holding period for ADVANCED PREPARED FOODS may not exceed 7 days and the day of preparation shall be counted as Day-1.',
       type: 'uppercase_letter',
       header:
         '3-501.17 Time/temperature control for safety food, date marking and retention*',
@@ -9970,7 +9929,7 @@ export default sortedData = [
       selectable: false,
       children: [
         {
-          text: '(1) Received frozen. TCS FOOD that is PACKAGED and FROZEN by a FOOD PROCESSING PLANT and then thawed by the FOOD ESTABLISHMENT',
+          text: '(1) Received frozen. TCS FOOD that is PACKAGED and FROZEN by a FOOD PROCESSING PLANT and then thawed by the FOOD ESTABLISHMENT-',
           type: 'number',
           header:
             '3-501.17 Time/temperature control for safety food, date marking and retention*',
@@ -10045,26 +10004,12 @@ export default sortedData = [
       item: '14',
     },
     {
-      text: '(C) Commercially processed RTE foodopen and hold cold. Except as specified in  (F)-',
+      text: '(C) Commercially processed RTE food-open and hold cold. Except as specified in  (F)-(H) of this section, refrigerated RTE TCS FOOD prepared and PACKAGED by a FOOD PROCESSING PLANT shall be clearly marked, at the time the original container is opened in a FOOD ESTABLISHMENT and if the FOOD is held for more than 24 hours, to indicate the date in which the package was opened and the date or day by which the FOOD shall be consumed on the PREMISES, sold, or discarded, based on the temperature and time combinations specified in  (A) of this section, and:',
       type: 'uppercase_letter',
       header:
         '3-501.17 Time/temperature control for safety food, date marking and retention*',
       section: '3-501.17',
       uppercase_letter_id: '(C)',
-      number_id: '',
-      lowercase_letter_id: '',
-      selectable: true,
-      children: [],
-      id: 2,
-      item: '14',
-    },
-    {
-      text: '(H) of this section, refrigerated RTE TCS FOOD prepared and PACKAGED by a FOOD PROCESSING PLANT shall be clearly marked, at the time the original container is opened in a FOOD ESTABLISHMENT and if the FOOD is held for more than 24 hours, to indicate the date in which the package was opened and the date or day by which the FOOD shall be consumed on the PREMISES, sold, or discarded, based on the temperature and time combinations specified in  (A) of this section, and:',
-      type: 'uppercase_letter',
-      header:
-        '3-501.17 Time/temperature control for safety food, date marking and retention*',
-      section: '3-501.17',
-      uppercase_letter_id: '(H)',
       number_id: '',
       lowercase_letter_id: '',
       selectable: false,
@@ -10075,7 +10020,7 @@ export default sortedData = [
           header:
             '3-501.17 Time/temperature control for safety food, date marking and retention*',
           section: '3-501.17',
-          uppercase_letter_id: '(H)',
+          uppercase_letter_id: '(C)',
           number_id: '(1)',
           lowercase_letter_id: '',
           selectable: true,
@@ -10089,7 +10034,7 @@ export default sortedData = [
           header:
             '3-501.17 Time/temperature control for safety food, date marking and retention*',
           section: '3-501.17',
-          uppercase_letter_id: '(H)',
+          uppercase_letter_id: '(C)',
           number_id: '(2)',
           lowercase_letter_id: '',
           selectable: true,
@@ -10098,7 +10043,7 @@ export default sortedData = [
           item: '14',
         },
       ],
-      id: 3,
+      id: 2,
       item: '14',
     },
     {
@@ -10112,7 +10057,7 @@ export default sortedData = [
       lowercase_letter_id: '',
       selectable: true,
       children: [],
-      id: 4,
+      id: 3,
       item: '14',
     },
     {
@@ -10183,7 +10128,7 @@ export default sortedData = [
           item: '14',
         },
       ],
-      id: 5,
+      id: 4,
       item: '14',
     },
     {
@@ -10197,7 +10142,7 @@ export default sortedData = [
       lowercase_letter_id: '',
       selectable: true,
       children: [],
-      id: 6,
+      id: 5,
       item: '14',
     },
     {
@@ -10211,7 +10156,7 @@ export default sortedData = [
       lowercase_letter_id: '',
       selectable: true,
       children: [],
-      id: 7,
+      id: 6,
       item: '14',
     },
     {
@@ -10324,13 +10269,13 @@ export default sortedData = [
           item: '14',
         },
       ],
-      id: 8,
+      id: 7,
       item: '14',
     },
   ],
   [
     {
-      text: '(A) A FOOD specified in  3-501.17(A)(C) shall be discarded if it:',
+      text: '(A) A FOOD specified in  3-501.17(A)-(C) shall be discarded if it:',
       type: 'uppercase_letter',
       header:
         '3-501.18 Ready-to-eat, time/temperature control for safety food disposition*',
@@ -10470,7 +10415,7 @@ export default sortedData = [
       item: '34',
     },
     {
-      text: '(B) Timemaximum up to 4 hours (hot or cold food). If time without temperature control is used as the public health control for up to a maximum of 4 hours:',
+      text: '(B) Time-maximum up to 4 hours (hot or cold food). If time without temperature control is used as the public health control for up to a maximum of 4 hours:',
       type: 'uppercase_letter',
       header: '3-501.19 Time as a public health control*',
       section: '3-501.19',
@@ -10536,7 +10481,7 @@ export default sortedData = [
       item: '34',
     },
     {
-      text: '(C) Timemaximum up to 6 hours (cold food only). If time without temperature control is used as the public health control up to a maximum of 6 hours:',
+      text: '(C) Time-maximum up to 6 hours (cold food only). If time without temperature control is used as the public health control up to a maximum of 6 hours:',
       type: 'uppercase_letter',
       header: '3-501.19 Time as a public health control*',
       section: '3-501.19',
@@ -10840,7 +10785,7 @@ export default sortedData = [
       item: '34',
     },
     {
-      text: '(B) Except as specified under  (F) of this section, a FOOD ESTABLISHMENT that PACKAGES TCS FOOD using an ROP method shall have a HACCP PLAN that contains the information specified under  8-201.14(D) and that',
+      text: '(B) Except as specified under  (F) of this section, a FOOD ESTABLISHMENT that PACKAGES TCS FOOD using an ROP method shall have a HACCP PLAN that contains the information specified under  8-201.14(D) and that-',
       type: 'uppercase_letter',
       header: '3-502.12 Reduced oxygen packaging without a variance, criteria*',
       section: '3-502.12',
@@ -10864,7 +10809,7 @@ export default sortedData = [
           item: '34',
         },
         {
-          text: '(2) Except as specified under  (C)(E) of this section, requires that the PACKAGED FOOD shall be maintained at 41F (5C) or less and meet at least one of the following criteria:',
+          text: '(2) Except as specified under  (C)-(E) of this section, requires that the PACKAGED FOOD shall be maintained at 41F (5C) or less and meet at least one of the following criteria:',
           type: 'number',
           header:
             '3-502.12 Reduced oxygen packaging without a variance, criteria*',
@@ -11615,7 +11560,7 @@ export default sortedData = [
       item: '51',
     },
     {
-      text: '(B) TCS FOOD that is ADVANCED PREPARED by the FOOD ESTABLISHMENT shall meet the following conditions if FROZEN',
+      text: '(B) TCS FOOD that is ADVANCED PREPARED by the FOOD ESTABLISHMENT shall meet the following conditions if FROZEN-',
       type: 'uppercase_letter',
       header: '3-502.13 Freezing time/temperature control for safety foods',
       section: '3-502.13',
@@ -11772,7 +11717,7 @@ export default sortedData = [
       item: '51',
     },
     {
-      text: '(E) Except for products which are produced at a commercial manufacturing plant (that is, Guaranteed Products), retail store operations may freeze fresh raw beef and pork products (steaks, roasts, chops, and ground beef or pork) under the following conditions',
+      text: '(E) Except for products which are produced at a commercial manufacturing plant (that is, Guaranteed Products), retail store operations may freeze fresh raw beef and pork products (steaks, roasts, chops, and ground beef or pork) under the following conditions-',
       type: 'uppercase_letter',
       header: '3-502.13 Freezing time/temperature control for safety foods',
       section: '3-502.13',
@@ -11920,7 +11865,7 @@ export default sortedData = [
       item: '51',
     },
     {
-      text: '(C) The expiration, best used by, or best sold by date may be extended according to the following conditions and as specified in  (F) and (G) of this section',
+      text: '(C) The expiration, best used by, or best sold by date may be extended according to the following conditions and as specified in  (F) and (G) of this section-',
       type: 'uppercase_letter',
       header:
         '3-503.11 Restrictions for sale or service Except as specified in  (F) of this section, evaluation of OUTDATED/EXPIRED FOODS is conducted by Army Veterinary Services or Air Force Public Health personnel serving in a position as the REGULATORY AUTHORITY.',
@@ -12345,7 +12290,7 @@ export default sortedData = [
       item: '12',
     },
     {
-      text: '(E) Labels for ADVANCED PREPARED and LEFTOVER TCS FOODS shall contain',
+      text: '(E) Labels for ADVANCED PREPARED and LEFTOVER TCS FOODS shall contain-',
       type: 'uppercase_letter',
       header: '3-602.11 Food labels',
       section: '3-602.11',
@@ -12683,7 +12628,7 @@ export default sortedData = [
           item: '18',
         },
         {
-          text: '(3) UnPACKAGED JUICE that is prepared on the premises for service or sale in an RTE form shall be processed under a HACCP PLAN that contains the information specified under  8-201.14(C)(E) and as specified in 21 CFR Part 120-HACCP Systems, Subpart B Pathogen Reduction, 120.24 Process controls.',
+          text: '(3) UnPACKAGED JUICE that is prepared on the premises for service or sale in an RTE form shall be processed under a HACCP PLAN that contains the information specified under  8-201.14(C)-(E) and as specified in 21 CFR Part 120-HACCP Systems, Subpart B Pathogen Reduction, 120.24 Process controls.',
           type: 'number',
           header:
             '3-801.11 Pasteurized foods, prohibited re-service, and prohibited food* In a FOOD ESTABLISHMENT that serves a HIGHLY SUSCEPTIBLE POPULATION:',
@@ -12964,7 +12909,7 @@ export default sortedData = [
               item: '18',
             },
             {
-              text: '(d) Contains the information specified under  8-201.14(D) including procedures that',
+              text: '(d) Contains the information specified under  8-201.14(D) including procedures that-',
               type: 'lowercase_letter',
               header:
                 '3-801.11 Pasteurized foods, prohibited re-service, and prohibited food* In a FOOD ESTABLISHMENT that serves a HIGHLY SUSCEPTIBLE POPULATION:',
@@ -15065,7 +15010,7 @@ export default sortedData = [
       noncritical: true,
     },
     {
-      text: '(E) Dispensing EQUIPMENT in which TCS FOOD in a homogenous liquid form is maintained outside of the temperature control requirements as specified under  3-501.16(A) shall',
+      text: '(E) Dispensing EQUIPMENT in which TCS FOOD in a homogenous liquid form is maintained outside of the temperature control requirements as specified under  3-501.16(A) shall-',
       type: 'uppercase_letter',
       header:
         '4-204.13 Dispensing equipment, protection of equipment and food* In EQUIPMENT that dispenses or vends liquid FOOD or ice in unpackaged form:',
@@ -15953,7 +15898,7 @@ export default sortedData = [
       item: '49',
     },
     {
-      text: '(B) Local exhaust ventilation shall',
+      text: '(B) Local exhaust ventilation shall-',
       type: 'uppercase_letter',
       header: '4-301.14 Ventilation hood systems, adequacy',
       section: '4-301.14',
@@ -16170,7 +16115,7 @@ export default sortedData = [
           selectable: false,
           children: [
             {
-              text: '(a) 50 feet per minute (fpm)Nongrease-producing equipment (for example, kettles, ranges, small griddles).',
+              text: '(a) 50 feet per minute (fpm)-Nongrease-producing equipment (for example, kettles, ranges, small griddles).',
               type: 'lowercase_letter',
               header: '4-301.14 Ventilation hood systems, adequacy',
               section: '4-301.14',
@@ -16183,7 +16128,7 @@ export default sortedData = [
               item: '49',
             },
             {
-              text: '(b) 75 fpmGrease-producing equipment (for example, fryers, pressure fryers, griddles).',
+              text: '(b) 75 fpm-Grease-producing equipment (for example, fryers, pressure fryers, griddles).',
               type: 'lowercase_letter',
               header: '4-301.14 Ventilation hood systems, adequacy',
               section: '4-301.14',
@@ -16196,7 +16141,7 @@ export default sortedData = [
               item: '49',
             },
             {
-              text: '(c) 150 fpmHigh heat-producing equipment (for example, char-broilers, upright broilers).',
+              text: '(c) 150 fpm-High heat-producing equipment (for example, char-broilers, upright broilers).',
               type: 'lowercase_letter',
               header: '4-301.14 Ventilation hood systems, adequacy',
               section: '4-301.14',
@@ -17194,7 +17139,7 @@ export default sortedData = [
       item: '17',
     },
     {
-      text: '(D) If another solution of a chemical specified under  (A)-',
+      text: '(D) If another solution of a chemical specified under  (A)-(C) of this section is used, the PIC shall demonstrate to the REGULATORY AUTHORITY that the solution achieves SANITIZATION and the use of the solution shall be APPROVED; or',
       type: 'uppercase_letter',
       header:
         '4-501.114 Manual and mechanical warewashing equipment, chemical sanitization- temperature, pH, concentration, and hardness* A chemical SANITIZER used in a SANITIZING solution for a manual or mechanical operation at contact times specified under  4-703.11(C) shall meet the criteria specified under  7-204.11, shall be used IAW the EPAregistered label use instructions, and shall be used as follows:',
@@ -17208,20 +17153,6 @@ export default sortedData = [
       item: '17',
     },
     {
-      text: '(C) of this section is used, the PIC shall demonstrate to the REGULATORY AUTHORITY that the solution achieves SANITIZATION and the use of the solution shall be APPROVED; or',
-      type: 'uppercase_letter',
-      header:
-        '4-501.114 Manual and mechanical warewashing equipment, chemical sanitization- temperature, pH, concentration, and hardness* A chemical SANITIZER used in a SANITIZING solution for a manual or mechanical operation at contact times specified under  4-703.11(C) shall meet the criteria specified under  7-204.11, shall be used IAW the EPAregistered label use instructions, and shall be used as follows:',
-      section: '4-501.114',
-      uppercase_letter_id: '(C)',
-      number_id: '',
-      lowercase_letter_id: '',
-      selectable: true,
-      children: [],
-      id: 4,
-      item: '17',
-    },
-    {
       text: '(E) If a chemical SANITIZER other than chlorine, iodine, or a quaternary ammonium compound is used, it shall be applied IAW the EPA-registered label use instructions.',
       type: 'uppercase_letter',
       header:
@@ -17232,7 +17163,7 @@ export default sortedData = [
       lowercase_letter_id: '',
       selectable: true,
       children: [],
-      id: 5,
+      id: 4,
       item: '17',
     },
   ],
@@ -17508,7 +17439,7 @@ export default sortedData = [
   ],
   [
     {
-      text: '(A) Using bleach with 5.25 percent base strength',
+      text: '(A) Using bleach with 5.25 percent base strength-',
       type: 'uppercase_letter',
       header:
         '4-501.200 Chlorine sanitizing solution, preparation Standard, nonscented household-type bleach or calcium hypochlorite (rated between 5 and 10 percent base strength) should be used when preparing chlorine SANITIZING solutions. The following formulas produce a 100-ppm FAC SANITIZING solution:',
@@ -17545,7 +17476,7 @@ export default sortedData = [
       ],
     },
     {
-      text: '(B) Using bleach with 8.25 percent base strength',
+      text: '(B) Using bleach with 8.25 percent base strength-',
       type: 'uppercase_letter',
       header:
         '4-501.200 Chlorine sanitizing solution, preparation Standard, nonscented household-type bleach or calcium hypochlorite (rated between 5 and 10 percent base strength) should be used when preparing chlorine SANITIZING solutions. The following formulas produce a 100-ppm FAC SANITIZING solution:',
@@ -20089,7 +20020,7 @@ export default sortedData = [
       text: '(A) A supply of containers of commercially BOTTLED DRINKING WATER;',
       type: 'uppercase_letter',
       header:
-        '5-104.12 Alternative water supply Water meeting the requirements specified under Subparts 5-101, 5-102, and 5-103 shall be made available for a MOBILE or TEMPORARY FOOD ESTABLISHMENT without a permanent water supply, and for a FOOD ESTABLISHMENT or SEASONAL FOOD ESTABLISHMENT with a temporary interruption of its water supply through',
+        '5-104.12 Alternative water supply Water meeting the requirements specified under Subparts 5-101, 5-102, and 5-103 shall be made available for a MOBILE or TEMPORARY FOOD ESTABLISHMENT without a permanent water supply, and for a FOOD ESTABLISHMENT or SEASONAL FOOD ESTABLISHMENT with a temporary interruption of its water supply through-',
       section: '5-104.12',
       uppercase_letter_id: '(A)',
       number_id: '',
@@ -20103,7 +20034,7 @@ export default sortedData = [
       text: '(B) One or more closed portable water containers;',
       type: 'uppercase_letter',
       header:
-        '5-104.12 Alternative water supply Water meeting the requirements specified under Subparts 5-101, 5-102, and 5-103 shall be made available for a MOBILE or TEMPORARY FOOD ESTABLISHMENT without a permanent water supply, and for a FOOD ESTABLISHMENT or SEASONAL FOOD ESTABLISHMENT with a temporary interruption of its water supply through',
+        '5-104.12 Alternative water supply Water meeting the requirements specified under Subparts 5-101, 5-102, and 5-103 shall be made available for a MOBILE or TEMPORARY FOOD ESTABLISHMENT without a permanent water supply, and for a FOOD ESTABLISHMENT or SEASONAL FOOD ESTABLISHMENT with a temporary interruption of its water supply through-',
       section: '5-104.12',
       uppercase_letter_id: '(B)',
       number_id: '',
@@ -20117,7 +20048,7 @@ export default sortedData = [
       text: '(C) An enclosed vehicular water tank;',
       type: 'uppercase_letter',
       header:
-        '5-104.12 Alternative water supply Water meeting the requirements specified under Subparts 5-101, 5-102, and 5-103 shall be made available for a MOBILE or TEMPORARY FOOD ESTABLISHMENT without a permanent water supply, and for a FOOD ESTABLISHMENT or SEASONAL FOOD ESTABLISHMENT with a temporary interruption of its water supply through',
+        '5-104.12 Alternative water supply Water meeting the requirements specified under Subparts 5-101, 5-102, and 5-103 shall be made available for a MOBILE or TEMPORARY FOOD ESTABLISHMENT without a permanent water supply, and for a FOOD ESTABLISHMENT or SEASONAL FOOD ESTABLISHMENT with a temporary interruption of its water supply through-',
       section: '5-104.12',
       uppercase_letter_id: '(C)',
       number_id: '',
@@ -20131,7 +20062,7 @@ export default sortedData = [
       text: '(D) An on-PREMISES water storage tank; or',
       type: 'uppercase_letter',
       header:
-        '5-104.12 Alternative water supply Water meeting the requirements specified under Subparts 5-101, 5-102, and 5-103 shall be made available for a MOBILE or TEMPORARY FOOD ESTABLISHMENT without a permanent water supply, and for a FOOD ESTABLISHMENT or SEASONAL FOOD ESTABLISHMENT with a temporary interruption of its water supply through',
+        '5-104.12 Alternative water supply Water meeting the requirements specified under Subparts 5-101, 5-102, and 5-103 shall be made available for a MOBILE or TEMPORARY FOOD ESTABLISHMENT without a permanent water supply, and for a FOOD ESTABLISHMENT or SEASONAL FOOD ESTABLISHMENT with a temporary interruption of its water supply through-',
       section: '5-104.12',
       uppercase_letter_id: '(D)',
       number_id: '',
@@ -20145,7 +20076,7 @@ export default sortedData = [
       text: '(E) If APPROVED by the MEDICAL AUTHORITY or designated representative, piping, tubing, or hoses connected to an adjacent APPROVED source.',
       type: 'uppercase_letter',
       header:
-        '5-104.12 Alternative water supply Water meeting the requirements specified under Subparts 5-101, 5-102, and 5-103 shall be made available for a MOBILE or TEMPORARY FOOD ESTABLISHMENT without a permanent water supply, and for a FOOD ESTABLISHMENT or SEASONAL FOOD ESTABLISHMENT with a temporary interruption of its water supply through',
+        '5-104.12 Alternative water supply Water meeting the requirements specified under Subparts 5-101, 5-102, and 5-103 shall be made available for a MOBILE or TEMPORARY FOOD ESTABLISHMENT without a permanent water supply, and for a FOOD ESTABLISHMENT or SEASONAL FOOD ESTABLISHMENT with a temporary interruption of its water supply through-',
       section: '5-104.12',
       uppercase_letter_id: '(E)',
       number_id: '',
@@ -21019,7 +20950,7 @@ export default sortedData = [
       text: '(A) Repaired according to LAW; and',
       type: 'uppercase_letter',
       header:
-        '5-205.15 System maintained in good repair* A PLUMBING SYSTEM shall be',
+        '5-205.15 System maintained in good repair* A PLUMBING SYSTEM shall be-',
       section: '5-205.15',
       uppercase_letter_id: '(A)',
       number_id: '',
@@ -21034,7 +20965,7 @@ export default sortedData = [
       text: '(B) Maintained in good repair. S',
       type: 'uppercase_letter',
       header:
-        '5-205.15 System maintained in good repair* A PLUMBING SYSTEM shall be',
+        '5-205.15 System maintained in good repair* A PLUMBING SYSTEM shall be-',
       section: '5-205.15',
       uppercase_letter_id: '(B)',
       number_id: '',
@@ -21067,7 +20998,7 @@ export default sortedData = [
       text: '(A) Safe;',
       type: 'uppercase_letter',
       header:
-        '5-301.11 Approved* Materials that are used in the construction of a mobile water tank, MOBILE FOOD ESTABLISHMENT water tank, and appurtenances shall be',
+        '5-301.11 Approved* Materials that are used in the construction of a mobile water tank, MOBILE FOOD ESTABLISHMENT water tank, and appurtenances shall be-',
       section: '5-301.11',
       uppercase_letter_id: '(A)',
       number_id: '',
@@ -21082,7 +21013,7 @@ export default sortedData = [
       text: '(B) Durable, CORROSION-RESISTANT, and nonabsorbent; N and',
       type: 'uppercase_letter',
       header:
-        '5-301.11 Approved* Materials that are used in the construction of a mobile water tank, MOBILE FOOD ESTABLISHMENT water tank, and appurtenances shall be',
+        '5-301.11 Approved* Materials that are used in the construction of a mobile water tank, MOBILE FOOD ESTABLISHMENT water tank, and appurtenances shall be-',
       section: '5-301.11',
       uppercase_letter_id: '(B)',
       number_id: '',
@@ -21097,7 +21028,7 @@ export default sortedData = [
       text: '(C) Finished to have a SMOOTH, EASILY CLEANABLE surface. N',
       type: 'uppercase_letter',
       header:
-        '5-301.11 Approved* Materials that are used in the construction of a mobile water tank, MOBILE FOOD ESTABLISHMENT water tank, and appurtenances shall be',
+        '5-301.11 Approved* Materials that are used in the construction of a mobile water tank, MOBILE FOOD ESTABLISHMENT water tank, and appurtenances shall be-',
       section: '5-301.11',
       uppercase_letter_id: '(C)',
       number_id: '',
@@ -21114,7 +21045,7 @@ export default sortedData = [
       text: '(A) Enclosed from the filling inlet to the discharge outlet; and',
       type: 'uppercase_letter',
       header:
-        '5-302.11 Enclosed system, sloped to drain A mobile water tank shall be',
+        '5-302.11 Enclosed system, sloped to drain A mobile water tank shall be-',
       section: '5-302.11',
       uppercase_letter_id: '(A)',
       number_id: '',
@@ -21128,7 +21059,7 @@ export default sortedData = [
       text: '(B) Sloped to an outlet that allows complete drainage of the tank.',
       type: 'uppercase_letter',
       header:
-        '5-302.11 Enclosed system, sloped to drain A mobile water tank shall be',
+        '5-302.11 Enclosed system, sloped to drain A mobile water tank shall be-',
       section: '5-302.11',
       uppercase_letter_id: '(B)',
       number_id: '',
@@ -21144,7 +21075,7 @@ export default sortedData = [
       text: '(A) Flanged upward at least  inch (13 millimeters); and',
       type: 'uppercase_letter',
       header:
-        '5-302.12 Inspection and cleaning port, protected and secured If a water tank is designed with an access port for inspection and cleaning, the opening shall be in the top of the tank and',
+        '5-302.12 Inspection and cleaning port, protected and secured If a water tank is designed with an access port for inspection and cleaning, the opening shall be in the top of the tank and-',
       section: '5-302.12',
       uppercase_letter_id: '(A)',
       number_id: '',
@@ -21158,7 +21089,7 @@ export default sortedData = [
       text: '(B) Equipped with a port cover assembly that is-',
       type: 'uppercase_letter',
       header:
-        '5-302.12 Inspection and cleaning port, protected and secured If a water tank is designed with an access port for inspection and cleaning, the opening shall be in the top of the tank and',
+        '5-302.12 Inspection and cleaning port, protected and secured If a water tank is designed with an access port for inspection and cleaning, the opening shall be in the top of the tank and-',
       section: '5-302.12',
       uppercase_letter_id: '(B)',
       number_id: '',
@@ -21169,7 +21100,7 @@ export default sortedData = [
           text: '(1) Provided with a gasket and a device for securing the cover in place, and',
           type: 'number',
           header:
-            '5-302.12 Inspection and cleaning port, protected and secured If a water tank is designed with an access port for inspection and cleaning, the opening shall be in the top of the tank and',
+            '5-302.12 Inspection and cleaning port, protected and secured If a water tank is designed with an access port for inspection and cleaning, the opening shall be in the top of the tank and-',
           section: '5-302.12',
           uppercase_letter_id: '(B)',
           number_id: '(1)',
@@ -21183,7 +21114,7 @@ export default sortedData = [
           text: '(2) Flanged to overlap the opening and sloped to drain.',
           type: 'number',
           header:
-            '5-302.12 Inspection and cleaning port, protected and secured If a water tank is designed with an access port for inspection and cleaning, the opening shall be in the top of the tank and',
+            '5-302.12 Inspection and cleaning port, protected and secured If a water tank is designed with an access port for inspection and cleaning, the opening shall be in the top of the tank and-',
           section: '5-302.12',
           uppercase_letter_id: '(B)',
           number_id: '(2)',
@@ -21277,7 +21208,7 @@ export default sortedData = [
       text: '(A) Safe;',
       type: 'uppercase_letter',
       header:
-        '5-302.16 Hose, construction and identification* A hose used for conveying DRINKING WATER from a water tank shall be',
+        '5-302.16 Hose, construction and identification* A hose used for conveying DRINKING WATER from a water tank shall be-',
       section: '5-302.16',
       uppercase_letter_id: '(A)',
       number_id: '',
@@ -21292,7 +21223,7 @@ export default sortedData = [
       text: '(B) Durable, CORROSION-RESISTANT, and nonabsorbent; N',
       type: 'uppercase_letter',
       header:
-        '5-302.16 Hose, construction and identification* A hose used for conveying DRINKING WATER from a water tank shall be',
+        '5-302.16 Hose, construction and identification* A hose used for conveying DRINKING WATER from a water tank shall be-',
       section: '5-302.16',
       uppercase_letter_id: '(B)',
       number_id: '',
@@ -21307,7 +21238,7 @@ export default sortedData = [
       text: '(C) Resistant to pitting, chipping, crazing, scratching, scoring, distortion, and decomposition; N',
       type: 'uppercase_letter',
       header:
-        '5-302.16 Hose, construction and identification* A hose used for conveying DRINKING WATER from a water tank shall be',
+        '5-302.16 Hose, construction and identification* A hose used for conveying DRINKING WATER from a water tank shall be-',
       section: '5-302.16',
       uppercase_letter_id: '(C)',
       number_id: '',
@@ -21322,7 +21253,7 @@ export default sortedData = [
       text: '(D) Finished with a SMOOTH interior surface; N',
       type: 'uppercase_letter',
       header:
-        '5-302.16 Hose, construction and identification* A hose used for conveying DRINKING WATER from a water tank shall be',
+        '5-302.16 Hose, construction and identification* A hose used for conveying DRINKING WATER from a water tank shall be-',
       section: '5-302.16',
       uppercase_letter_id: '(D)',
       number_id: '',
@@ -21337,7 +21268,7 @@ export default sortedData = [
       text: '(E) Clearly and durably identified as to its use if not permanently attached; N and',
       type: 'uppercase_letter',
       header:
-        '5-302.16 Hose, construction and identification* A hose used for conveying DRINKING WATER from a water tank shall be',
+        '5-302.16 Hose, construction and identification* A hose used for conveying DRINKING WATER from a water tank shall be-',
       section: '5-302.16',
       uppercase_letter_id: '(E)',
       number_id: '',
@@ -21352,7 +21283,7 @@ export default sortedData = [
       text: '(F) The hose connection for the DRINKING WATER shall be a different diameter or thread size than the waste drain connection. N',
       type: 'uppercase_letter',
       header:
-        '5-302.16 Hose, construction and identification* A hose used for conveying DRINKING WATER from a water tank shall be',
+        '5-302.16 Hose, construction and identification* A hose used for conveying DRINKING WATER from a water tank shall be-',
       section: '5-302.16',
       uppercase_letter_id: '(F)',
       number_id: '',
@@ -21854,10 +21785,10 @@ export default sortedData = [
   ],
   [
     {
-      text: '(B) and  (C) of this section, receptacles and waste handling units for REFUSE, recyclables, and returnables shall be kept covered',
+      text: '(B) and  (C) of this section, receptacles and waste handling units for REFUSE, recyclables, and returnables shall be kept covered-',
       type: 'uppercase_letter',
       header:
-        '5-501.113 Covering receptacles Except as specified in  5-501.112(B) and  (C) of this section, receptacles and waste handling units for REFUSE, recyclables, and returnables shall be kept covered',
+        '5-501.113 Covering receptacles Except as specified in  5-501.112(B) and  (C) of this section, receptacles and waste handling units for REFUSE, recyclables, and returnables shall be kept covered-',
       section: '5-501.113',
       uppercase_letter_id: '(B)',
       number_id: '',
@@ -21871,7 +21802,7 @@ export default sortedData = [
       text: '(A) Inside the FOOD ESTABLISHMENT if the receptacles and units:',
       type: 'uppercase_letter',
       header:
-        '5-501.113 Covering receptacles Except as specified in  5-501.112(B) and  (C) of this section, receptacles and waste handling units for REFUSE, recyclables, and returnables shall be kept covered',
+        '5-501.113 Covering receptacles Except as specified in  5-501.112(B) and  (C) of this section, receptacles and waste handling units for REFUSE, recyclables, and returnables shall be kept covered-',
       section: '5-501.113',
       uppercase_letter_id: '(A)',
       number_id: '',
@@ -21882,7 +21813,7 @@ export default sortedData = [
           text: '(1) Contain FOOD residue and are not in continuous use; or',
           type: 'number',
           header:
-            '5-501.113 Covering receptacles Except as specified in  5-501.112(B) and  (C) of this section, receptacles and waste handling units for REFUSE, recyclables, and returnables shall be kept covered',
+            '5-501.113 Covering receptacles Except as specified in  5-501.112(B) and  (C) of this section, receptacles and waste handling units for REFUSE, recyclables, and returnables shall be kept covered-',
           section: '5-501.113',
           uppercase_letter_id: '(A)',
           number_id: '(1)',
@@ -21896,7 +21827,7 @@ export default sortedData = [
           text: '(2) After they are filled; and',
           type: 'number',
           header:
-            '5-501.113 Covering receptacles Except as specified in  5-501.112(B) and  (C) of this section, receptacles and waste handling units for REFUSE, recyclables, and returnables shall be kept covered',
+            '5-501.113 Covering receptacles Except as specified in  5-501.112(B) and  (C) of this section, receptacles and waste handling units for REFUSE, recyclables, and returnables shall be kept covered-',
           section: '5-501.113',
           uppercase_letter_id: '(A)',
           number_id: '(2)',
@@ -21914,7 +21845,7 @@ export default sortedData = [
       text: '(B) With tight-fitting lids or doors if kept outside the FOOD ESTABLISHMENT.',
       type: 'uppercase_letter',
       header:
-        '5-501.113 Covering receptacles Except as specified in  5-501.112(B) and  (C) of this section, receptacles and waste handling units for REFUSE, recyclables, and returnables shall be kept covered',
+        '5-501.113 Covering receptacles Except as specified in  5-501.112(B) and  (C) of this section, receptacles and waste handling units for REFUSE, recyclables, and returnables shall be kept covered-',
       section: '5-501.113',
       uppercase_letter_id: '(B)',
       number_id: '',
@@ -21928,7 +21859,7 @@ export default sortedData = [
       text: '(C) Garbage and trash receptacles in active use inside the FOOD ESTABLISHMENT may remain uncovered temporarily while in use, but shall be covered immediately upon completion of the task.',
       type: 'uppercase_letter',
       header:
-        '5-501.113 Covering receptacles Except as specified in  5-501.112(B) and  (C) of this section, receptacles and waste handling units for REFUSE, recyclables, and returnables shall be kept covered',
+        '5-501.113 Covering receptacles Except as specified in  5-501.112(B) and  (C) of this section, receptacles and waste handling units for REFUSE, recyclables, and returnables shall be kept covered-',
       section: '5-501.113',
       uppercase_letter_id: '(C)',
       number_id: '',
@@ -23218,7 +23149,7 @@ export default sortedData = [
   ],
   [
     {
-      text: '(A) Except as specified in  (B), (C), and (E) and under  (D) of this section, outer openings of a FOOD ESTABLISHMENT shall be protected against the entry of insects and rodents by',
+      text: '(A) Except as specified in  (B), (C), and (E) and under  (D) of this section, outer openings of a FOOD ESTABLISHMENT shall be protected against the entry of insects and rodents by-',
       type: 'uppercase_letter',
       header: '6-202.15 Outer openings, protected',
       section: '6-202.15',
@@ -24989,7 +24920,7 @@ export default sortedData = [
   ],
   [
     {
-      text: '(A) Chemicals, including those generated onsite, used to wash or peel raw, whole fruits and vegetables shall',
+      text: '(A) Chemicals, including those generated onsite, used to wash or peel raw, whole fruits and vegetables shall-',
       type: 'uppercase_letter',
       header:
         '7-204.12 Chemicals for washing, treatment, storage and processing fruits and vegetables, criteria*',
@@ -25841,7 +25772,7 @@ export default sortedData = [
   ],
   [
     {
-      text: '(A) Except as specified in  (B) this section, the plans and specifications for new FOOD ESTABLISHMENT construction, including a FOOD ESTABLISHMENT specified under  8-201.13, shall include, as required by the REGULATORY AUTHORITY based on the type of operation, type of FOOD preparation process, and the FOODS prepared, the following information to demonstrate its ability to conform with this publications provisions',
+      text: '(A) Except as specified in  (B) this section, the plans and specifications for new FOOD ESTABLISHMENT construction, including a FOOD ESTABLISHMENT specified under  8-201.13, shall include, as required by the REGULATORY AUTHORITY based on the type of operation, type of FOOD preparation process, and the FOODS prepared, the following information to demonstrate its ability to conform with this publications provisions-',
       type: 'uppercase_letter',
       header: '8-201.12 Contents of the plans and specifications',
       section: '8-201.12',
@@ -25943,7 +25874,7 @@ export default sortedData = [
   ],
   [
     {
-      text: '(A) Before engaging in an activity that requires a HACCP PLAN, the FOOD ESTABLISHMENT manager or PIC shall submit to the REGULATORY AUTHORITY for approval a properly prepared HACCP PLAN as specified under  8-201.14 and the relevant provisions of this publication if',
+      text: '(A) Before engaging in an activity that requires a HACCP PLAN, the FOOD ESTABLISHMENT manager or PIC shall submit to the REGULATORY AUTHORITY for approval a properly prepared HACCP PLAN as specified under  8-201.14 and the relevant provisions of this publication if-',
       type: 'uppercase_letter',
       header: '8-201.13 When a HACCP plan is required',
       section: '8-201.13',
@@ -26450,7 +26381,7 @@ export default sortedData = [
   ],
   [
     {
-      text: '(A) Except as specified in  (E) and (F) of this section and as indicated in Table 8-1, a PERSON may not operate a FOOD ESTABLISHMENT or dispense FOOD to the GENERAL PUBLIC without an authorization to operate issued by the REGULATORY AUTHORITY. Preoperational coordination and preopening inspection shall be conducted for',
+      text: '(A) Except as specified in  (E) and (F) of this section and as indicated in Table 8-1, a PERSON may not operate a FOOD ESTABLISHMENT or dispense FOOD to the GENERAL PUBLIC without an authorization to operate issued by the REGULATORY AUTHORITY. Preoperational coordination and preopening inspection shall be conducted for-',
       type: 'uppercase_letter',
       header: '8-301.11 Prerequisite for operation*',
       section: '8-301.11',
@@ -26528,7 +26459,7 @@ export default sortedData = [
       children: [],
     },
     {
-      text: '(F) Preoperational coordination and inspection is not required for a MILITARY UNIT or organizational function when N',
+      text: '(F) Preoperational coordination and inspection is not required for a MILITARY UNIT or organizational function when- N',
       type: 'uppercase_letter',
       header: '8-301.11 Prerequisite for operation*',
       section: '8-301.11',
@@ -26697,7 +26628,7 @@ export default sortedData = [
       ],
     },
     {
-      text: '(E) The COTTAGE FOOD operator shall',
+      text: '(E) The COTTAGE FOOD operator shall-',
       type: 'uppercase_letter',
       header:
         '8-301.12 Cottage food operations* Home businesses operating in government housing involving FOOD production and sale are not subject to public health inspection as a FOOD ESTABLISHMENT under the TSFC. However, there are specific requirements governing production and sale of COTTAGE FOODS.',
@@ -26756,7 +26687,7 @@ export default sortedData = [
           children: [],
         },
         {
-          text: '(5) Place a label on the PACKAGED FOOD to indicate',
+          text: '(5) Place a label on the PACKAGED FOOD to indicate-',
           type: 'number',
           header:
             '8-301.12 Cottage food operations* Home businesses operating in government housing involving FOOD production and sale are not subject to public health inspection as a FOOD ESTABLISHMENT under the TSFC. However, there are specific requirements governing production and sale of COTTAGE FOODS.',
@@ -26886,7 +26817,7 @@ export default sortedData = [
       text: '(A) New construction or renovation. The PERSON responsible for the safe operation of a newly constructed or renovated FOOD ESTABLISHMENT shall submit an application to operate or conduct preoperational coordination, as specified under Subparagraph 8-301.11(A)(1), at least 30 calendar days prior to the scheduled opening of the operation. A separate application is not required if a comprehensive plan was previously submitted as specified under  8-201.12(A); however, coordination for the preoperational inspection is required.',
       type: 'uppercase_letter',
       header:
-        '8-302.11 Submission, timeframe before proposed start date Except as specified in  (D) and (E) of this section, an application to operate, as specified under  8-302.12 and 8-302.14, shall be submitted to the REGULATORY AUTHORITY for',
+        '8-302.11 Submission, timeframe before proposed start date Except as specified in  (D) and (E) of this section, an application to operate, as specified under  8-302.12 and 8-302.14, shall be submitted to the REGULATORY AUTHORITY for-',
       section: '8-302.11',
       uppercase_letter_id: '(A)',
       number_id: '',
@@ -26898,7 +26829,7 @@ export default sortedData = [
       text: '(B) Modified operations. The manager of a FOOD ESTABLISHMENT undergoing one of the following types of operational change shall submit an application for approval of proposed changes at least 30 calendar days prior to the intended start of the new services:',
       type: 'uppercase_letter',
       header:
-        '8-302.11 Submission, timeframe before proposed start date Except as specified in  (D) and (E) of this section, an application to operate, as specified under  8-302.12 and 8-302.14, shall be submitted to the REGULATORY AUTHORITY for',
+        '8-302.11 Submission, timeframe before proposed start date Except as specified in  (D) and (E) of this section, an application to operate, as specified under  8-302.12 and 8-302.14, shall be submitted to the REGULATORY AUTHORITY for-',
       section: '8-302.11',
       uppercase_letter_id: '(B)',
       number_id: '',
@@ -26909,7 +26840,7 @@ export default sortedData = [
           text: '(1) Change in establishment type, (for example, coffee shop is converted to a sandwich shop).',
           type: 'number',
           header:
-            '8-302.11 Submission, timeframe before proposed start date Except as specified in  (D) and (E) of this section, an application to operate, as specified under  8-302.12 and 8-302.14, shall be submitted to the REGULATORY AUTHORITY for',
+            '8-302.11 Submission, timeframe before proposed start date Except as specified in  (D) and (E) of this section, an application to operate, as specified under  8-302.12 and 8-302.14, shall be submitted to the REGULATORY AUTHORITY for-',
           section: '8-302.11',
           uppercase_letter_id: '(B)',
           number_id: '(1)',
@@ -26921,7 +26852,7 @@ export default sortedData = [
           text: '(2) Menu becomes more complex (for example, the operation previously limited to serving baked goods and ice cream is expanded to serve sandwiches and salads that are prepared onsite).',
           type: 'number',
           header:
-            '8-302.11 Submission, timeframe before proposed start date Except as specified in  (D) and (E) of this section, an application to operate, as specified under  8-302.12 and 8-302.14, shall be submitted to the REGULATORY AUTHORITY for',
+            '8-302.11 Submission, timeframe before proposed start date Except as specified in  (D) and (E) of this section, an application to operate, as specified under  8-302.12 and 8-302.14, shall be submitted to the REGULATORY AUTHORITY for-',
           section: '8-302.11',
           uppercase_letter_id: '(B)',
           number_id: '(2)',
@@ -26933,7 +26864,7 @@ export default sortedData = [
           text: '(3) FOOD processing becomes more complex(for example, change from serving prePACKAGED RTE FOOD to preparing TCS FOODS onsite from raw ingredients).',
           type: 'number',
           header:
-            '8-302.11 Submission, timeframe before proposed start date Except as specified in  (D) and (E) of this section, an application to operate, as specified under  8-302.12 and 8-302.14, shall be submitted to the REGULATORY AUTHORITY for',
+            '8-302.11 Submission, timeframe before proposed start date Except as specified in  (D) and (E) of this section, an application to operate, as specified under  8-302.12 and 8-302.14, shall be submitted to the REGULATORY AUTHORITY for-',
           section: '8-302.11',
           uppercase_letter_id: '(B)',
           number_id: '(3)',
@@ -26947,7 +26878,7 @@ export default sortedData = [
       text: '(C) Temporary operations. The FOOD ESTABLISHMENTS sponsoring organization (for example, AAFES, NEX, MCX, MWR, or other) or designated installation representative shall notify the REGULATORY AUTHORITY and submit an application to operate a minimum of 14 days prior to the scheduled start date of a TEMPORARY FOOD ESTABLISHMENT.',
       type: 'uppercase_letter',
       header:
-        '8-302.11 Submission, timeframe before proposed start date Except as specified in  (D) and (E) of this section, an application to operate, as specified under  8-302.12 and 8-302.14, shall be submitted to the REGULATORY AUTHORITY for',
+        '8-302.11 Submission, timeframe before proposed start date Except as specified in  (D) and (E) of this section, an application to operate, as specified under  8-302.12 and 8-302.14, shall be submitted to the REGULATORY AUTHORITY for-',
       section: '8-302.11',
       uppercase_letter_id: '(C)',
       number_id: '',
@@ -26959,7 +26890,7 @@ export default sortedData = [
       text: '(D) Organizational food event. The PERSON responsible for the safe operation of an ORGANIZATIONAL FOOD EVENT involving TCS FOOD shall request a review as specified under  8-301.11(C) at least 48 hours prior to the scheduled event date.',
       type: 'uppercase_letter',
       header:
-        '8-302.11 Submission, timeframe before proposed start date Except as specified in  (D) and (E) of this section, an application to operate, as specified under  8-302.12 and 8-302.14, shall be submitted to the REGULATORY AUTHORITY for',
+        '8-302.11 Submission, timeframe before proposed start date Except as specified in  (D) and (E) of this section, an application to operate, as specified under  8-302.12 and 8-302.14, shall be submitted to the REGULATORY AUTHORITY for-',
       section: '8-302.11',
       uppercase_letter_id: '(D)',
       number_id: '',
@@ -26971,7 +26902,7 @@ export default sortedData = [
       text: '(E) Home business. A COTTAGE FOOD operation shall register with the REGULATORY AUTHORITY as specified under  8-301.12(D). 8-302.12 Form of submission A PERSON desiring to operate a FOOD ESTABLISHMENT shall submit to the REGULATORY AUTHORITY a written application to operate containing the information specified under  8-302.14, using the format or form required by the REGULATORY AUTHORITY. Use of DD Form 2970 [OMB No. 0702-0132], Application for Temporary Food Establishment, and DD Form 2975, Temporary Food Event Coordinators Application, may require additional documentation in order to meet all of the application criteria specified in  8-302.14. Refer to Appendix F for use of these forms.',
       type: 'uppercase_letter',
       header:
-        '8-302.11 Submission, timeframe before proposed start date Except as specified in  (D) and (E) of this section, an application to operate, as specified under  8-302.12 and 8-302.14, shall be submitted to the REGULATORY AUTHORITY for',
+        '8-302.11 Submission, timeframe before proposed start date Except as specified in  (D) and (E) of this section, an application to operate, as specified under  8-302.12 and 8-302.14, shall be submitted to the REGULATORY AUTHORITY for-',
       section: '8-302.11',
       uppercase_letter_id: '(E)',
       number_id: '',
@@ -27025,7 +26956,7 @@ export default sortedData = [
       text: '(A) The name, business mailing address, business telephone number, and signature of the PERSON submitting the application; and the name, mailing address, and location of the FOOD ESTABLISHMENT;',
       type: 'uppercase_letter',
       header:
-        '8-302.14 Contents of the application The application to operate a new or modified FOOD ESTABLISHMENT shall include information as specified under  8-201.12(A) and',
+        '8-302.14 Contents of the application The application to operate a new or modified FOOD ESTABLISHMENT shall include information as specified under  8-201.12(A) and-',
       section: '8-302.14',
       uppercase_letter_id: '(A)',
       number_id: '',
@@ -27037,7 +26968,7 @@ export default sortedData = [
       text: '(B) Information specifying whether the FOOD ESTABLISHMENT is owned by the government, an association, corporation, individual, partnership, or other legal entity, to include FOOD operations occurring in privatized facilities;',
       type: 'uppercase_letter',
       header:
-        '8-302.14 Contents of the application The application to operate a new or modified FOOD ESTABLISHMENT shall include information as specified under  8-201.12(A) and',
+        '8-302.14 Contents of the application The application to operate a new or modified FOOD ESTABLISHMENT shall include information as specified under  8-201.12(A) and-',
       section: '8-302.14',
       uppercase_letter_id: '(B)',
       number_id: '',
@@ -27046,10 +26977,10 @@ export default sortedData = [
       children: [],
     },
     {
-      text: '(C) A statement specifying whether the FOOD ESTABLISHMENT',
+      text: '(C) A statement specifying whether the FOOD ESTABLISHMENT-',
       type: 'uppercase_letter',
       header:
-        '8-302.14 Contents of the application The application to operate a new or modified FOOD ESTABLISHMENT shall include information as specified under  8-201.12(A) and',
+        '8-302.14 Contents of the application The application to operate a new or modified FOOD ESTABLISHMENT shall include information as specified under  8-201.12(A) and-',
       section: '8-302.14',
       uppercase_letter_id: '(C)',
       number_id: '',
@@ -27060,7 +26991,7 @@ export default sortedData = [
           text: '(1) Is TEMPORARY or permanent and MOBILE or SEASONAL;',
           type: 'number',
           header:
-            '8-302.14 Contents of the application The application to operate a new or modified FOOD ESTABLISHMENT shall include information as specified under  8-201.12(A) and',
+            '8-302.14 Contents of the application The application to operate a new or modified FOOD ESTABLISHMENT shall include information as specified under  8-201.12(A) and-',
           section: '8-302.14',
           uppercase_letter_id: '(C)',
           number_id: '(1)',
@@ -27072,7 +27003,7 @@ export default sortedData = [
           text: '(2) Is a MOBILE platform that is intended to operate in a static location; and',
           type: 'number',
           header:
-            '8-302.14 Contents of the application The application to operate a new or modified FOOD ESTABLISHMENT shall include information as specified under  8-201.12(A) and',
+            '8-302.14 Contents of the application The application to operate a new or modified FOOD ESTABLISHMENT shall include information as specified under  8-201.12(A) and-',
           section: '8-302.14',
           uppercase_letter_id: '(C)',
           number_id: '(2)',
@@ -27084,7 +27015,7 @@ export default sortedData = [
           text: '(3) Is an operation that includes one or more of the following activities:',
           type: 'number',
           header:
-            '8-302.14 Contents of the application The application to operate a new or modified FOOD ESTABLISHMENT shall include information as specified under  8-201.12(A) and',
+            '8-302.14 Contents of the application The application to operate a new or modified FOOD ESTABLISHMENT shall include information as specified under  8-201.12(A) and-',
           section: '8-302.14',
           uppercase_letter_id: '(C)',
           number_id: '(3)',
@@ -27095,7 +27026,7 @@ export default sortedData = [
               text: '(a) Prepares, offers for sale, or serves TCS FOOD under the following conditions:',
               type: 'lowercase_letter',
               header:
-                '8-302.14 Contents of the application The application to operate a new or modified FOOD ESTABLISHMENT shall include information as specified under  8-201.12(A) and',
+                '8-302.14 Contents of the application The application to operate a new or modified FOOD ESTABLISHMENT shall include information as specified under  8-201.12(A) and-',
               section: '8-302.14',
               uppercase_letter_id: '(C)',
               number_id: '(3)',
@@ -27106,7 +27037,7 @@ export default sortedData = [
                   text: '(i) Only to order upon a CONSUMERS request, ',
                   type: 'i',
                   header:
-                    '8-302.14 Contents of the application The application to operate a new or modified FOOD ESTABLISHMENT shall include information as specified under  8-201.12(A) and',
+                    '8-302.14 Contents of the application The application to operate a new or modified FOOD ESTABLISHMENT shall include information as specified under  8-201.12(A) and-',
                   section: '8-302.14',
                   uppercase_letter_id: '(C)',
                   number_section: '(3)',
@@ -27118,7 +27049,7 @@ export default sortedData = [
                   text: '(ii) In advance in quantities based on projected CONSUMER demand and discards FOOD that is not sold or served at an APPROVED frequency, or ',
                   type: 'i',
                   header:
-                    '8-302.14 Contents of the application The application to operate a new or modified FOOD ESTABLISHMENT shall include information as specified under  8-201.12(A) and',
+                    '8-302.14 Contents of the application The application to operate a new or modified FOOD ESTABLISHMENT shall include information as specified under  8-201.12(A) and-',
                   section: '8-302.14',
                   uppercase_letter_id: '(C)',
                   number_section: '(3)',
@@ -27130,7 +27061,7 @@ export default sortedData = [
                   text: '(iii) Using time as the public health control as specified under  3-501.19, ',
                   type: 'i',
                   header:
-                    '8-302.14 Contents of the application The application to operate a new or modified FOOD ESTABLISHMENT shall include information as specified under  8-201.12(A) and',
+                    '8-302.14 Contents of the application The application to operate a new or modified FOOD ESTABLISHMENT shall include information as specified under  8-201.12(A) and-',
                   section: '8-302.14',
                   uppercase_letter_id: '(C)',
                   number_section: '(3)',
@@ -27144,7 +27075,7 @@ export default sortedData = [
               text: '(b) Prepares TCS FOOD in advance using a FOOD preparation method that involves two or more steps which may include combining TCS FOOD ingredients; cooking; cooling; reheating; hot or cold holding; freezing; or thawing,',
               type: 'lowercase_letter',
               header:
-                '8-302.14 Contents of the application The application to operate a new or modified FOOD ESTABLISHMENT shall include information as specified under  8-201.12(A) and',
+                '8-302.14 Contents of the application The application to operate a new or modified FOOD ESTABLISHMENT shall include information as specified under  8-201.12(A) and-',
               section: '8-302.14',
               uppercase_letter_id: '(C)',
               number_id: '(3)',
@@ -27156,7 +27087,7 @@ export default sortedData = [
               text: '(c) Prepares FOOD as specified under Subparagraph (C)(3)(b) of this section for delivery to and consumption at a location off the PREMISES of the FOOD ESTABLISHMENT where it is prepared,',
               type: 'lowercase_letter',
               header:
-                '8-302.14 Contents of the application The application to operate a new or modified FOOD ESTABLISHMENT shall include information as specified under  8-201.12(A) and',
+                '8-302.14 Contents of the application The application to operate a new or modified FOOD ESTABLISHMENT shall include information as specified under  8-201.12(A) and-',
               section: '8-302.14',
               uppercase_letter_id: '(C)',
               number_id: '(3)',
@@ -27168,7 +27099,7 @@ export default sortedData = [
               text: '(d) Prepares FOOD as specified under Subparagraph (C)(3)(b) of this section for service to a HIGHLY SUSCEPTIBLE POPULATION,',
               type: 'lowercase_letter',
               header:
-                '8-302.14 Contents of the application The application to operate a new or modified FOOD ESTABLISHMENT shall include information as specified under  8-201.12(A) and',
+                '8-302.14 Contents of the application The application to operate a new or modified FOOD ESTABLISHMENT shall include information as specified under  8-201.12(A) and-',
               section: '8-302.14',
               uppercase_letter_id: '(C)',
               number_id: '(3)',
@@ -27180,7 +27111,7 @@ export default sortedData = [
               text: '(e) Prepares only FOOD that is not TCS FOOD, or',
               type: 'lowercase_letter',
               header:
-                '8-302.14 Contents of the application The application to operate a new or modified FOOD ESTABLISHMENT shall include information as specified under  8-201.12(A) and',
+                '8-302.14 Contents of the application The application to operate a new or modified FOOD ESTABLISHMENT shall include information as specified under  8-201.12(A) and-',
               section: '8-302.14',
               uppercase_letter_id: '(C)',
               number_id: '(3)',
@@ -27192,7 +27123,7 @@ export default sortedData = [
               text: '(f) Does not prepare, but offers for sale only prePACKAGED FOOD that is not a TCS FOOD;',
               type: 'lowercase_letter',
               header:
-                '8-302.14 Contents of the application The application to operate a new or modified FOOD ESTABLISHMENT shall include information as specified under  8-201.12(A) and',
+                '8-302.14 Contents of the application The application to operate a new or modified FOOD ESTABLISHMENT shall include information as specified under  8-201.12(A) and-',
               section: '8-302.14',
               uppercase_letter_id: '(C)',
               number_id: '(3)',
@@ -27206,7 +27137,7 @@ export default sortedData = [
           text: '(4) Prepares FOOD at a facility located off of the installation. In this case, the facilitys address and the conveyance method for FOODS that are transported from off-post sites or between facilities on post shall be provided in the application.',
           type: 'number',
           header:
-            '8-302.14 Contents of the application The application to operate a new or modified FOOD ESTABLISHMENT shall include information as specified under  8-201.12(A) and',
+            '8-302.14 Contents of the application The application to operate a new or modified FOOD ESTABLISHMENT shall include information as specified under  8-201.12(A) and-',
           section: '8-302.14',
           uppercase_letter_id: '(C)',
           number_id: '(4)',
@@ -27220,7 +27151,7 @@ export default sortedData = [
       text: '(D) The name, title, telephone number, and official email of the PERSON directly responsible for the FOOD ESTABLISHMENT;',
       type: 'uppercase_letter',
       header:
-        '8-302.14 Contents of the application The application to operate a new or modified FOOD ESTABLISHMENT shall include information as specified under  8-201.12(A) and',
+        '8-302.14 Contents of the application The application to operate a new or modified FOOD ESTABLISHMENT shall include information as specified under  8-201.12(A) and-',
       section: '8-302.14',
       uppercase_letter_id: '(D)',
       number_id: '',
@@ -27232,7 +27163,7 @@ export default sortedData = [
       text: '(E) The name, title, address, and telephone number of the PERSON who functions as the immediate supervisor of the PERSON specified under  (D) of this section such as the zone, district, or regional supervisor;',
       type: 'uppercase_letter',
       header:
-        '8-302.14 Contents of the application The application to operate a new or modified FOOD ESTABLISHMENT shall include information as specified under  8-201.12(A) and',
+        '8-302.14 Contents of the application The application to operate a new or modified FOOD ESTABLISHMENT shall include information as specified under  8-201.12(A) and-',
       section: '8-302.14',
       uppercase_letter_id: '(E)',
       number_id: '',
@@ -27244,7 +27175,7 @@ export default sortedData = [
       text: '(F) The names, titles, and addresses of:',
       type: 'uppercase_letter',
       header:
-        '8-302.14 Contents of the application The application to operate a new or modified FOOD ESTABLISHMENT shall include information as specified under  8-201.12(A) and',
+        '8-302.14 Contents of the application The application to operate a new or modified FOOD ESTABLISHMENT shall include information as specified under  8-201.12(A) and-',
       section: '8-302.14',
       uppercase_letter_id: '(F)',
       number_id: '',
@@ -27255,7 +27186,7 @@ export default sortedData = [
           text: '(1) The PERSONS comprising the legal ownership as specified under  (B) of this section including the owners and officers, and',
           type: 'number',
           header:
-            '8-302.14 Contents of the application The application to operate a new or modified FOOD ESTABLISHMENT shall include information as specified under  8-201.12(A) and',
+            '8-302.14 Contents of the application The application to operate a new or modified FOOD ESTABLISHMENT shall include information as specified under  8-201.12(A) and-',
           section: '8-302.14',
           uppercase_letter_id: '(F)',
           number_id: '(1)',
@@ -27267,7 +27198,7 @@ export default sortedData = [
           text: '(2) The local resident agent if one is required based on the type of legal ownership;',
           type: 'number',
           header:
-            '8-302.14 Contents of the application The application to operate a new or modified FOOD ESTABLISHMENT shall include information as specified under  8-201.12(A) and',
+            '8-302.14 Contents of the application The application to operate a new or modified FOOD ESTABLISHMENT shall include information as specified under  8-201.12(A) and-',
           section: '8-302.14',
           uppercase_letter_id: '(F)',
           number_id: '(2)',
@@ -27278,10 +27209,10 @@ export default sortedData = [
       ],
     },
     {
-      text: '(G) A statement signed by the applicant that',
+      text: '(G) A statement signed by the applicant that-',
       type: 'uppercase_letter',
       header:
-        '8-302.14 Contents of the application The application to operate a new or modified FOOD ESTABLISHMENT shall include information as specified under  8-201.12(A) and',
+        '8-302.14 Contents of the application The application to operate a new or modified FOOD ESTABLISHMENT shall include information as specified under  8-201.12(A) and-',
       section: '8-302.14',
       uppercase_letter_id: '(G)',
       number_id: '',
@@ -27292,7 +27223,7 @@ export default sortedData = [
           text: '(1) Attests to the accuracy of the information provided in the application, and',
           type: 'number',
           header:
-            '8-302.14 Contents of the application The application to operate a new or modified FOOD ESTABLISHMENT shall include information as specified under  8-201.12(A) and',
+            '8-302.14 Contents of the application The application to operate a new or modified FOOD ESTABLISHMENT shall include information as specified under  8-201.12(A) and-',
           section: '8-302.14',
           uppercase_letter_id: '(G)',
           number_id: '(1)',
@@ -27301,10 +27232,10 @@ export default sortedData = [
           children: [],
         },
         {
-          text: '(2) Affirms that the applicant will',
+          text: '(2) Affirms that the applicant will-',
           type: 'number',
           header:
-            '8-302.14 Contents of the application The application to operate a new or modified FOOD ESTABLISHMENT shall include information as specified under  8-201.12(A) and',
+            '8-302.14 Contents of the application The application to operate a new or modified FOOD ESTABLISHMENT shall include information as specified under  8-201.12(A) and-',
           section: '8-302.14',
           uppercase_letter_id: '(G)',
           number_id: '(2)',
@@ -27315,7 +27246,7 @@ export default sortedData = [
               text: '(a) Comply with this publication, and',
               type: 'lowercase_letter',
               header:
-                '8-302.14 Contents of the application The application to operate a new or modified FOOD ESTABLISHMENT shall include information as specified under  8-201.12(A) and',
+                '8-302.14 Contents of the application The application to operate a new or modified FOOD ESTABLISHMENT shall include information as specified under  8-201.12(A) and-',
               section: '8-302.14',
               uppercase_letter_id: '(G)',
               number_id: '(2)',
@@ -27327,7 +27258,7 @@ export default sortedData = [
               text: '(b) Allow the REGULATORY AUTHORITY access to the establishment as specified under  8-402.11 and to the records specified under  3-203.12 and 5-205.13 and Subparagraph 8-201.14(D)(6); and',
               type: 'lowercase_letter',
               header:
-                '8-302.14 Contents of the application The application to operate a new or modified FOOD ESTABLISHMENT shall include information as specified under  8-201.12(A) and',
+                '8-302.14 Contents of the application The application to operate a new or modified FOOD ESTABLISHMENT shall include information as specified under  8-201.12(A) and-',
               section: '8-302.14',
               uppercase_letter_id: '(G)',
               number_id: '(2)',
@@ -27343,7 +27274,7 @@ export default sortedData = [
       text: '(H) Other information required by the REGULATORY AUTHORITY.',
       type: 'uppercase_letter',
       header:
-        '8-302.14 Contents of the application The application to operate a new or modified FOOD ESTABLISHMENT shall include information as specified under  8-201.12(A) and',
+        '8-302.14 Contents of the application The application to operate a new or modified FOOD ESTABLISHMENT shall include information as specified under  8-201.12(A) and-',
       section: '8-302.14',
       uppercase_letter_id: '(H)',
       number_id: '',
@@ -27357,7 +27288,7 @@ export default sortedData = [
       text: '(A) A properly completed application is submitted;',
       type: 'uppercase_letter',
       header:
-        '8-303.10 New, converted, or remodeled establishments For FOOD ESTABLISHMENTS that are required to submit plans as specified under  8-201.11 the REGULATORY AUTHORITY shall approve the application to operate after',
+        '8-303.10 New, converted, or remodeled establishments For FOOD ESTABLISHMENTS that are required to submit plans as specified under  8-201.11 the REGULATORY AUTHORITY shall approve the application to operate after-',
       section: '8-303.10',
       uppercase_letter_id: '(A)',
       number_id: '',
@@ -27369,7 +27300,7 @@ export default sortedData = [
       text: '(B) The required plans, specifications, and information are reviewed and APPROVED;',
       type: 'uppercase_letter',
       header:
-        '8-303.10 New, converted, or remodeled establishments For FOOD ESTABLISHMENTS that are required to submit plans as specified under  8-201.11 the REGULATORY AUTHORITY shall approve the application to operate after',
+        '8-303.10 New, converted, or remodeled establishments For FOOD ESTABLISHMENTS that are required to submit plans as specified under  8-201.11 the REGULATORY AUTHORITY shall approve the application to operate after-',
       section: '8-303.10',
       uppercase_letter_id: '(B)',
       number_id: '',
@@ -27381,7 +27312,7 @@ export default sortedData = [
       text: '(C) A preoperational inspection as specified in  8-203.10 shows that the establishment is built or remodeled IAW the APPROVED plans and specifications and that the establishment is in compliance with this publication.',
       type: 'uppercase_letter',
       header:
-        '8-303.10 New, converted, or remodeled establishments For FOOD ESTABLISHMENTS that are required to submit plans as specified under  8-201.11 the REGULATORY AUTHORITY shall approve the application to operate after',
+        '8-303.10 New, converted, or remodeled establishments For FOOD ESTABLISHMENTS that are required to submit plans as specified under  8-201.11 the REGULATORY AUTHORITY shall approve the application to operate after-',
       section: '8-303.10',
       uppercase_letter_id: '(C)',
       number_id: '',
@@ -27522,7 +27453,7 @@ export default sortedData = [
       text: '(A) Comply with the provisions of this publication, including the conditions of a granted VARIANCE as specified under  8-103.12, and APPROVED plans as specified under  8-201.12;',
       type: 'uppercase_letter',
       header:
-        '8-304.11 Responsibilities of the food manager Upon approval of the application to operate issued by the REGULATORY AUTHORITY, the FOOD ESTABLISHMENT shall',
+        '8-304.11 Responsibilities of the food manager Upon approval of the application to operate issued by the REGULATORY AUTHORITY, the FOOD ESTABLISHMENT shall-',
       section: '8-304.11',
       uppercase_letter_id: '(A)',
       number_id: '',
@@ -27536,7 +27467,7 @@ export default sortedData = [
       text: '(B) If a FOOD ESTABLISHMENT is required under  8-201.13 to operate under a HACCP PLAN, comply with the plan as specified under  8-103.12;',
       type: 'uppercase_letter',
       header:
-        '8-304.11 Responsibilities of the food manager Upon approval of the application to operate issued by the REGULATORY AUTHORITY, the FOOD ESTABLISHMENT shall',
+        '8-304.11 Responsibilities of the food manager Upon approval of the application to operate issued by the REGULATORY AUTHORITY, the FOOD ESTABLISHMENT shall-',
       section: '8-304.11',
       uppercase_letter_id: '(B)',
       number_id: '',
@@ -27550,7 +27481,7 @@ export default sortedData = [
       text: '(C) Immediately contact the REGULATORY AUTHORITY to report an illness of a FOOD EMPLOYEE or CONDITIONAL EMPLOYEE as specified under  2-201.11(B);',
       type: 'uppercase_letter',
       header:
-        '8-304.11 Responsibilities of the food manager Upon approval of the application to operate issued by the REGULATORY AUTHORITY, the FOOD ESTABLISHMENT shall',
+        '8-304.11 Responsibilities of the food manager Upon approval of the application to operate issued by the REGULATORY AUTHORITY, the FOOD ESTABLISHMENT shall-',
       section: '8-304.11',
       uppercase_letter_id: '(C)',
       number_id: '',
@@ -27564,7 +27495,7 @@ export default sortedData = [
       text: '(D) Immediately discontinue operations and notify the REGULATORY AUTHORITY if an IMMINENT HEALTH HAZARD (IHH) may exist as specified under  8-404.11;',
       type: 'uppercase_letter',
       header:
-        '8-304.11 Responsibilities of the food manager Upon approval of the application to operate issued by the REGULATORY AUTHORITY, the FOOD ESTABLISHMENT shall',
+        '8-304.11 Responsibilities of the food manager Upon approval of the application to operate issued by the REGULATORY AUTHORITY, the FOOD ESTABLISHMENT shall-',
       section: '8-304.11',
       uppercase_letter_id: '(D)',
       number_id: '',
@@ -27578,7 +27509,7 @@ export default sortedData = [
       text: '(E) Allow representatives of the REGULATORY AUTHORITY access to the FOOD ESTABLISHMENT as specified under  8-402.11;',
       type: 'uppercase_letter',
       header:
-        '8-304.11 Responsibilities of the food manager Upon approval of the application to operate issued by the REGULATORY AUTHORITY, the FOOD ESTABLISHMENT shall',
+        '8-304.11 Responsibilities of the food manager Upon approval of the application to operate issued by the REGULATORY AUTHORITY, the FOOD ESTABLISHMENT shall-',
       section: '8-304.11',
       uppercase_letter_id: '(E)',
       number_id: '',
@@ -27589,10 +27520,10 @@ export default sortedData = [
       item: '2',
     },
     {
-      text: '(F) Replace or repair (through work order submission and appropriate follow-up) existing facilities and EQUIPMENT specified in  8-101.10 with facilities and EQUIPMENT that comply with this publication if',
+      text: '(F) Replace or repair (through work order submission and appropriate follow-up) existing facilities and EQUIPMENT specified in  8-101.10 with facilities and EQUIPMENT that comply with this publication if-',
       type: 'uppercase_letter',
       header:
-        '8-304.11 Responsibilities of the food manager Upon approval of the application to operate issued by the REGULATORY AUTHORITY, the FOOD ESTABLISHMENT shall',
+        '8-304.11 Responsibilities of the food manager Upon approval of the application to operate issued by the REGULATORY AUTHORITY, the FOOD ESTABLISHMENT shall-',
       section: '8-304.11',
       uppercase_letter_id: '(F)',
       number_id: '',
@@ -27603,7 +27534,7 @@ export default sortedData = [
           text: '(1) The REGULATORY AUTHORITY directs the replacement or repair because the facilities and EQUIPMENT constitute a public health HAZARD or nuisance or no longer comply with the criteria upon which the facilities and EQUIPMENT were accepted,',
           type: 'number',
           header:
-            '8-304.11 Responsibilities of the food manager Upon approval of the application to operate issued by the REGULATORY AUTHORITY, the FOOD ESTABLISHMENT shall',
+            '8-304.11 Responsibilities of the food manager Upon approval of the application to operate issued by the REGULATORY AUTHORITY, the FOOD ESTABLISHMENT shall-',
           section: '8-304.11',
           uppercase_letter_id: '(F)',
           number_id: '(1)',
@@ -27617,7 +27548,7 @@ export default sortedData = [
           text: '(2) The REGULATORY AUTHORITY directs the replacement or repair of the facilities and EQUIPMENT because of a change of ownership, or',
           type: 'number',
           header:
-            '8-304.11 Responsibilities of the food manager Upon approval of the application to operate issued by the REGULATORY AUTHORITY, the FOOD ESTABLISHMENT shall',
+            '8-304.11 Responsibilities of the food manager Upon approval of the application to operate issued by the REGULATORY AUTHORITY, the FOOD ESTABLISHMENT shall-',
           section: '8-304.11',
           uppercase_letter_id: '(F)',
           number_id: '(2)',
@@ -27631,7 +27562,7 @@ export default sortedData = [
           text: '(3) The facilities and EQUIPMENT are replaced in the normal course of operation;',
           type: 'number',
           header:
-            '8-304.11 Responsibilities of the food manager Upon approval of the application to operate issued by the REGULATORY AUTHORITY, the FOOD ESTABLISHMENT shall',
+            '8-304.11 Responsibilities of the food manager Upon approval of the application to operate issued by the REGULATORY AUTHORITY, the FOOD ESTABLISHMENT shall-',
           section: '8-304.11',
           uppercase_letter_id: '(F)',
           number_id: '(3)',
@@ -27649,7 +27580,7 @@ export default sortedData = [
       text: '(G) Comply with directives of the REGULATORY AUTHORITY, including time frames for corrective actions as specified under  8-405.11 and 8-406.11, and inspection reports, notices, orders, warnings, and other directives issued by the REGULATORY AUTHORITY and in regards to the FOOD ESTABLISHMENT or in response to a declared state of emergency;',
       type: 'uppercase_letter',
       header:
-        '8-304.11 Responsibilities of the food manager Upon approval of the application to operate issued by the REGULATORY AUTHORITY, the FOOD ESTABLISHMENT shall',
+        '8-304.11 Responsibilities of the food manager Upon approval of the application to operate issued by the REGULATORY AUTHORITY, the FOOD ESTABLISHMENT shall-',
       section: '8-304.11',
       uppercase_letter_id: '(G)',
       number_id: '',
@@ -27663,7 +27594,7 @@ export default sortedData = [
       text: '(H) Accept notices issued and served by the REGULATORY AUTHORITY according to LAW; and',
       type: 'uppercase_letter',
       header:
-        '8-304.11 Responsibilities of the food manager Upon approval of the application to operate issued by the REGULATORY AUTHORITY, the FOOD ESTABLISHMENT shall',
+        '8-304.11 Responsibilities of the food manager Upon approval of the application to operate issued by the REGULATORY AUTHORITY, the FOOD ESTABLISHMENT shall-',
       section: '8-304.11',
       uppercase_letter_id: '(H)',
       number_id: '',
@@ -27677,7 +27608,7 @@ export default sortedData = [
       text: '(I) Be subject to the administrative, civil, injunctive, and criminal remedies authorized in LAW for failure to comply with this publication or a directive of the REGULATORY AUTHORITY, including time frames for corrective actions specified in inspection reports, notices, orders, warnings, and other directives.',
       type: 'uppercase_letter',
       header:
-        '8-304.11 Responsibilities of the food manager Upon approval of the application to operate issued by the REGULATORY AUTHORITY, the FOOD ESTABLISHMENT shall',
+        '8-304.11 Responsibilities of the food manager Upon approval of the application to operate issued by the REGULATORY AUTHORITY, the FOOD ESTABLISHMENT shall-',
       section: '8-304.11',
       uppercase_letter_id: '(I)',
       number_id: '',
@@ -27691,7 +27622,7 @@ export default sortedData = [
       text: '(J) Inform customers that a copy of the most recent establishment inspection report is available upon request by posting a sign or placard in a location in the FOOD ESTABLISHMENT that is conspicuous to customers or by another method acceptable to the REGULATORY AUTHORITY.',
       type: 'uppercase_letter',
       header:
-        '8-304.11 Responsibilities of the food manager Upon approval of the application to operate issued by the REGULATORY AUTHORITY, the FOOD ESTABLISHMENT shall',
+        '8-304.11 Responsibilities of the food manager Upon approval of the application to operate issued by the REGULATORY AUTHORITY, the FOOD ESTABLISHMENT shall-',
       section: '8-304.11',
       uppercase_letter_id: '(J)',
       number_id: '',
@@ -27914,7 +27845,7 @@ export default sortedData = [
       ],
     },
     {
-      text: '(B) The food facility risk assessment shall be conducted by the REGULATORY AUTHORITY having inspection jurisdiction over the FOOD ESTABLISHMENT and the person conducting the assessment shall be',
+      text: '(B) The food facility risk assessment shall be conducted by the REGULATORY AUTHORITY having inspection jurisdiction over the FOOD ESTABLISHMENT and the person conducting the assessment shall be-',
       type: 'uppercase_letter',
       header: '8-400.11 Food facility risk assessment survey',
       section: '8-400.11',
@@ -28048,22 +27979,11 @@ export default sortedData = [
   ],
   [
     {
-      text: '(A) Except as specified in  (B)-',
+      text: '(A) Except as specified in  (B)-(E) of this section, the REGULATORY AUTHORITY shall inspect each FOOD ESTABLISHMENT and retail FOOD store at a frequency-',
       type: 'uppercase_letter',
       header: '8-401.10 Establishing inspection interval',
       section: '8-401.10',
       uppercase_letter_id: '(A)',
-      number_id: '',
-      lowercase_letter_id: '',
-      selectable: true,
-      children: [],
-    },
-    {
-      text: '(E) of this section, the REGULATORY AUTHORITY shall inspect each FOOD ESTABLISHMENT and retail FOOD store at a frequency',
-      type: 'uppercase_letter',
-      header: '8-401.10 Establishing inspection interval',
-      section: '8-401.10',
-      uppercase_letter_id: '(E)',
       number_id: '',
       lowercase_letter_id: '',
       selectable: false,
@@ -28073,7 +27993,7 @@ export default sortedData = [
           type: 'number',
           header: '8-401.10 Establishing inspection interval',
           section: '8-401.10',
-          uppercase_letter_id: '(E)',
+          uppercase_letter_id: '(A)',
           number_id: '(1)',
           lowercase_letter_id: '',
           selectable: true,
@@ -28084,7 +28004,7 @@ export default sortedData = [
           type: 'number',
           header: '8-401.10 Establishing inspection interval',
           section: '8-401.10',
-          uppercase_letter_id: '(E)',
+          uppercase_letter_id: '(A)',
           number_id: '(2)',
           lowercase_letter_id: '',
           selectable: true,
@@ -28104,7 +28024,7 @@ export default sortedData = [
       children: [],
     },
     {
-      text: '(C) The REGULATORY AUTHORITY may increase the interval (for example, decrease the inspection frequency) between required routine inspections if',
+      text: '(C) The REGULATORY AUTHORITY may increase the interval (for example, decrease the inspection frequency) between required routine inspections if-',
       type: 'uppercase_letter',
       header: '8-401.10 Establishing inspection interval',
       section: '8-401.10',
@@ -28183,7 +28103,7 @@ export default sortedData = [
       ],
     },
     {
-      text: '(E) The REGULATORY AUTHORITY may increase the frequency of inspections, as specified in  8-401.20, without prior notice and for a period of time that is deemed necessary if',
+      text: '(E) The REGULATORY AUTHORITY may increase the frequency of inspections, as specified in  8-401.20, without prior notice and for a period of time that is deemed necessary if-',
       type: 'uppercase_letter',
       header: '8-401.10 Establishing inspection interval',
       section: '8-401.10',
@@ -28244,7 +28164,7 @@ export default sortedData = [
       text: '(A) Past performance for nonconformance with this publications or the HACCP PLANs requirements that are CRITICAL ITEMS;',
       type: 'uppercase_letter',
       header:
-        '8-401.20 Performance- and risk-based inspections Within the parameters specified in  8-401.10, the REGULATORY AUTHORITY shall prioritize and conduct more frequent inspections based upon its assessment of a FOOD facility or operations history of compliance with this publications and the establishments potential as a vector of foodborne illness by evaluating',
+        '8-401.20 Performance- and risk-based inspections Within the parameters specified in  8-401.10, the REGULATORY AUTHORITY shall prioritize and conduct more frequent inspections based upon its assessment of a FOOD facility or operations history of compliance with this publications and the establishments potential as a vector of foodborne illness by evaluating-',
       section: '8-401.20',
       uppercase_letter_id: '(A)',
       number_id: '',
@@ -28256,7 +28176,7 @@ export default sortedData = [
       text: '(B) Past performance for numerous or repeat violations of this publications or HACCP PLANs requirements that are SWING or NONCRITICAL ITEMS;',
       type: 'uppercase_letter',
       header:
-        '8-401.20 Performance- and risk-based inspections Within the parameters specified in  8-401.10, the REGULATORY AUTHORITY shall prioritize and conduct more frequent inspections based upon its assessment of a FOOD facility or operations history of compliance with this publications and the establishments potential as a vector of foodborne illness by evaluating',
+        '8-401.20 Performance- and risk-based inspections Within the parameters specified in  8-401.10, the REGULATORY AUTHORITY shall prioritize and conduct more frequent inspections based upon its assessment of a FOOD facility or operations history of compliance with this publications and the establishments potential as a vector of foodborne illness by evaluating-',
       section: '8-401.20',
       uppercase_letter_id: '(B)',
       number_id: '',
@@ -28268,7 +28188,7 @@ export default sortedData = [
       text: '(C) Past performance for customer complaints investigated and found to be valid;',
       type: 'uppercase_letter',
       header:
-        '8-401.20 Performance- and risk-based inspections Within the parameters specified in  8-401.10, the REGULATORY AUTHORITY shall prioritize and conduct more frequent inspections based upon its assessment of a FOOD facility or operations history of compliance with this publications and the establishments potential as a vector of foodborne illness by evaluating',
+        '8-401.20 Performance- and risk-based inspections Within the parameters specified in  8-401.10, the REGULATORY AUTHORITY shall prioritize and conduct more frequent inspections based upon its assessment of a FOOD facility or operations history of compliance with this publications and the establishments potential as a vector of foodborne illness by evaluating-',
       section: '8-401.20',
       uppercase_letter_id: '(C)',
       number_id: '',
@@ -28280,7 +28200,7 @@ export default sortedData = [
       text: '(D) The HAZARDS associated with the particular FOODS that are prepared, stored, or served;',
       type: 'uppercase_letter',
       header:
-        '8-401.20 Performance- and risk-based inspections Within the parameters specified in  8-401.10, the REGULATORY AUTHORITY shall prioritize and conduct more frequent inspections based upon its assessment of a FOOD facility or operations history of compliance with this publications and the establishments potential as a vector of foodborne illness by evaluating',
+        '8-401.20 Performance- and risk-based inspections Within the parameters specified in  8-401.10, the REGULATORY AUTHORITY shall prioritize and conduct more frequent inspections based upon its assessment of a FOOD facility or operations history of compliance with this publications and the establishments potential as a vector of foodborne illness by evaluating-',
       section: '8-401.20',
       uppercase_letter_id: '(D)',
       number_id: '',
@@ -28292,7 +28212,7 @@ export default sortedData = [
       text: '(E) The type of operation, including the methods and extent of FOOD storage, preparation, and service;',
       type: 'uppercase_letter',
       header:
-        '8-401.20 Performance- and risk-based inspections Within the parameters specified in  8-401.10, the REGULATORY AUTHORITY shall prioritize and conduct more frequent inspections based upon its assessment of a FOOD facility or operations history of compliance with this publications and the establishments potential as a vector of foodborne illness by evaluating',
+        '8-401.20 Performance- and risk-based inspections Within the parameters specified in  8-401.10, the REGULATORY AUTHORITY shall prioritize and conduct more frequent inspections based upon its assessment of a FOOD facility or operations history of compliance with this publications and the establishments potential as a vector of foodborne illness by evaluating-',
       section: '8-401.20',
       uppercase_letter_id: '(E)',
       number_id: '',
@@ -28304,7 +28224,7 @@ export default sortedData = [
       text: '(F) The number of people served; and',
       type: 'uppercase_letter',
       header:
-        '8-401.20 Performance- and risk-based inspections Within the parameters specified in  8-401.10, the REGULATORY AUTHORITY shall prioritize and conduct more frequent inspections based upon its assessment of a FOOD facility or operations history of compliance with this publications and the establishments potential as a vector of foodborne illness by evaluating',
+        '8-401.20 Performance- and risk-based inspections Within the parameters specified in  8-401.10, the REGULATORY AUTHORITY shall prioritize and conduct more frequent inspections based upon its assessment of a FOOD facility or operations history of compliance with this publications and the establishments potential as a vector of foodborne illness by evaluating-',
       section: '8-401.20',
       uppercase_letter_id: '(F)',
       number_id: '',
@@ -28316,7 +28236,7 @@ export default sortedData = [
       text: '(G) Whether the population served is a HIGHLY SUSCEPTIBLE POPULATION.',
       type: 'uppercase_letter',
       header:
-        '8-401.20 Performance- and risk-based inspections Within the parameters specified in  8-401.10, the REGULATORY AUTHORITY shall prioritize and conduct more frequent inspections based upon its assessment of a FOOD facility or operations history of compliance with this publications and the establishments potential as a vector of foodborne illness by evaluating',
+        '8-401.20 Performance- and risk-based inspections Within the parameters specified in  8-401.10, the REGULATORY AUTHORITY shall prioritize and conduct more frequent inspections based upon its assessment of a FOOD facility or operations history of compliance with this publications and the establishments potential as a vector of foodborne illness by evaluating-',
       section: '8-401.20',
       uppercase_letter_id: '(G)',
       number_id: '',
@@ -28547,7 +28467,7 @@ export default sortedData = [
   ],
   [
     {
-      text: '(A) The food service operation manager or PIC shall conduct daily self-evaluations to ensure compliance with their duties and responsibilities, as specified under  2-103.11(B)(N) and  8-304.11. (See also  8-6.f.)',
+      text: '(A) The food service operation manager or PIC shall conduct daily self-evaluations to ensure compliance with their duties and responsibilities, as specified under  2-103.11(B)-(N) and  8-304.11. (See also  8-6.f.)',
       type: 'uppercase_letter',
       header: '8-402.12 Food service facility, self-evaluations',
       section: '8-402.12',
@@ -28578,7 +28498,7 @@ export default sortedData = [
       text: '(A) At the time of inspection, notify the PIC of the FOOD ESTABLISHMENT prior to commencing the inspection and ask that he or she, or an appropriate representative, accompany the inspector through the FOOD ESTABLISHMENT.',
       type: 'uppercase_letter',
       header:
-        '8-402.13 Conducting formal inspections The REGULATORY AUTHORITY conducting the sanitary inspection shall',
+        '8-402.13 Conducting formal inspections The REGULATORY AUTHORITY conducting the sanitary inspection shall-',
       section: '8-402.13',
       uppercase_letter_id: '(A)',
       number_id: '',
@@ -28590,7 +28510,7 @@ export default sortedData = [
       text: '(B) Emphasize control of practices and conditions that have been associated with outbreaks of foodborne illness. This emphasis does not minimize the need to evaluate other areas or practices, but it allows effective use of resources in promoting and enforcing FOOD safety and sanitation programs. If the FOOD ESTABLISHMENT has implemented an APPROVED HACCP PLAN or FOOD Safety Plan, inspections will include evaluating the effectiveness of, and compliance with, the HACCP program.',
       type: 'uppercase_letter',
       header:
-        '8-402.13 Conducting formal inspections The REGULATORY AUTHORITY conducting the sanitary inspection shall',
+        '8-402.13 Conducting formal inspections The REGULATORY AUTHORITY conducting the sanitary inspection shall-',
       section: '8-402.13',
       uppercase_letter_id: '(B)',
       number_id: '',
@@ -28602,7 +28522,7 @@ export default sortedData = [
       text: '(C) Make every effort to avoid interfering with the FOOD ESTABLISHMENT operation while conducting the sanitary inspection.',
       type: 'uppercase_letter',
       header:
-        '8-402.13 Conducting formal inspections The REGULATORY AUTHORITY conducting the sanitary inspection shall',
+        '8-402.13 Conducting formal inspections The REGULATORY AUTHORITY conducting the sanitary inspection shall-',
       section: '8-402.13',
       uppercase_letter_id: '(C)',
       number_id: '',
@@ -28614,7 +28534,7 @@ export default sortedData = [
       text: '(D) Explain to the management representative or PIC all findings that are in violation of the TSFC. Comments or discussions of problems should not be conducted in the presence of customers.',
       type: 'uppercase_letter',
       header:
-        '8-402.13 Conducting formal inspections The REGULATORY AUTHORITY conducting the sanitary inspection shall',
+        '8-402.13 Conducting formal inspections The REGULATORY AUTHORITY conducting the sanitary inspection shall-',
       section: '8-402.13',
       uppercase_letter_id: '(D)',
       number_id: '',
@@ -28626,7 +28546,7 @@ export default sortedData = [
       text: '(E) Provide recommended corrective actions for issues that could not be resolved at the time of inspection and, when applicable, actions that should be taken to reduce the potential for future related violations.',
       type: 'uppercase_letter',
       header:
-        '8-402.13 Conducting formal inspections The REGULATORY AUTHORITY conducting the sanitary inspection shall',
+        '8-402.13 Conducting formal inspections The REGULATORY AUTHORITY conducting the sanitary inspection shall-',
       section: '8-402.13',
       uppercase_letter_id: '(E)',
       number_id: '',
@@ -28638,7 +28558,7 @@ export default sortedData = [
       text: '(F) Obtain a signature on the inspection report from the PIC or management representative and provide a copy of the inspection document as specified in  8-403.40.',
       type: 'uppercase_letter',
       header:
-        '8-402.13 Conducting formal inspections The REGULATORY AUTHORITY conducting the sanitary inspection shall',
+        '8-402.13 Conducting formal inspections The REGULATORY AUTHORITY conducting the sanitary inspection shall-',
       section: '8-402.13',
       uppercase_letter_id: '(F)',
       number_id: '',
@@ -28763,7 +28683,7 @@ export default sortedData = [
       children: [],
     },
     {
-      text: '(C) A letter-grading or color-grading system that is similar to the system applied by the local health department outside of the installation may be implemented by the REGULATORY AUTHORITY in lieu of the inspection rating specified in  (A) of this section. The following implementation guidelines apply',
+      text: '(C) A letter-grading or color-grading system that is similar to the system applied by the local health department outside of the installation may be implemented by the REGULATORY AUTHORITY in lieu of the inspection rating specified in  (A) of this section. The following implementation guidelines apply-',
       type: 'uppercase_letter',
       header: '8-403.20 Inspection ratings',
       section: '8-403.20',
@@ -28851,7 +28771,7 @@ export default sortedData = [
           children: [],
         },
         {
-          text: '(2) Routine inspection follow-ups are assessed as pass or failcurrently not indicated on official inspection formsand the resulting facility inspection rating is awarded as follows',
+          text: '(2) Routine inspection follow-ups are assessed as pass or fail-currently not indicated on official inspection forms-and the resulting facility inspection rating is awarded as follows-',
           type: 'number',
           header: '8-403.20 Inspection ratings',
           section: '8-403.20',
@@ -28949,7 +28869,7 @@ export default sortedData = [
           children: [],
         },
         {
-          text: '(2) The REGULATORY AUTHORITY signs the electronic document or, if completed in DOEHRS, marks the inspection survey complete at the conclusion of the inspection and',
+          text: '(2) The REGULATORY AUTHORITY signs the electronic document or, if completed in DOEHRS, marks the inspection survey complete at the conclusion of the inspection and-',
           type: 'number',
           header:
             '8-403.40 Issuing report and obtaining acknowledgment of receipt Signatures on the inspection report provide acknowledgment that a formal inspection was conducted by the REGULATORY AUTHORITY and a summary of findings as specified under  8-402.13(D) and (E) was provided to the PIC or food establishment manager at the conclusion of the inspection.',
@@ -28988,7 +28908,7 @@ export default sortedData = [
       ],
     },
     {
-      text: '(B) Sanitary inspections conducted by Army Veterinary Services. For sanitary inspections conducted at retail stores by Army Veterinary Service personnel and documented using the Food Operation Inspection Report, a copy of the final report is provided to the PIC no later than the end of the next business day following the inspection. Upon conclusion of the inspection, the REGULATORY AUTHORITY',
+      text: '(B) Sanitary inspections conducted by Army Veterinary Services. For sanitary inspections conducted at retail stores by Army Veterinary Service personnel and documented using the Food Operation Inspection Report, a copy of the final report is provided to the PIC no later than the end of the next business day following the inspection. Upon conclusion of the inspection, the REGULATORY AUTHORITY-',
       type: 'uppercase_letter',
       header:
         '8-403.40 Issuing report and obtaining acknowledgment of receipt Signatures on the inspection report provide acknowledgment that a formal inspection was conducted by the REGULATORY AUTHORITY and a summary of findings as specified under  8-402.13(D) and (E) was provided to the PIC or food establishment manager at the conclusion of the inspection.',
@@ -29037,7 +28957,7 @@ export default sortedData = [
       ],
     },
     {
-      text: '(C) Refusal to sign. When the FOOD ESTABLISHMENT PICor manager refuses to sign acknowledgment of receipt of the inspection document, the REGULATORY AUTHORITY',
+      text: '(C) Refusal to sign. When the FOOD ESTABLISHMENT PICor manager refuses to sign acknowledgment of receipt of the inspection document, the REGULATORY AUTHORITY-',
       type: 'uppercase_letter',
       header:
         '8-403.40 Issuing report and obtaining acknowledgment of receipt Signatures on the inspection report provide acknowledgment that a formal inspection was conducted by the REGULATORY AUTHORITY and a summary of findings as specified under  8-402.13(D) and (E) was provided to the PIC or food establishment manager at the conclusion of the inspection.',
@@ -29048,7 +28968,7 @@ export default sortedData = [
       selectable: false,
       children: [
         {
-          text: '(1) Informs the PERSON who declines to sign that',
+          text: '(1) Informs the PERSON who declines to sign that-',
           type: 'number',
           header:
             '8-403.40 Issuing report and obtaining acknowledgment of receipt Signatures on the inspection report provide acknowledgment that a formal inspection was conducted by the REGULATORY AUTHORITY and a summary of findings as specified under  8-402.13(D) and (E) was provided to the PIC or food establishment manager at the conclusion of the inspection.',
@@ -29168,7 +29088,7 @@ export default sortedData = [
       item: '2',
     },
     {
-      text: '(B) Raw or RTE TCS FOOD that has been exposed to temperatures outside the SAFE TEMPERATURE ZONE as specified in  3-501.16 for less than 4 hours, but has not been exposed to any known contaminants, may be served with approval of the REGULATORY AUTHORITY, provided it is',
+      text: '(B) Raw or RTE TCS FOOD that has been exposed to temperatures outside the SAFE TEMPERATURE ZONE as specified in  3-501.16 for less than 4 hours, but has not been exposed to any known contaminants, may be served with approval of the REGULATORY AUTHORITY, provided it is-',
       type: 'uppercase_letter',
       header: '8-404.12 Resumption of operations',
       section: '8-404.12',
@@ -29330,7 +29250,7 @@ export default sortedData = [
   ],
   [
     {
-      text: '(A) The REGULATORY AUTHORITY shall act when it has reasonable cause to believe that a FOOD EMPLOYEE or CONDITIONAL EMPLOYEE has possibly transmitted disease; may be infected with a disease in a communicable form that is transmissible through FOOD; may be a carrier of infectious agents that cause a disease that is transmissible through FOOD; or is affected with a boil, an infected wound, or acute respiratory infection, by',
+      text: '(A) The REGULATORY AUTHORITY shall act when it has reasonable cause to believe that a FOOD EMPLOYEE or CONDITIONAL EMPLOYEE has possibly transmitted disease; may be infected with a disease in a communicable form that is transmissible through FOOD; may be a carrier of infectious agents that cause a disease that is transmissible through FOOD; or is affected with a boil, an infected wound, or acute respiratory infection, by-',
       type: 'uppercase_letter',
       header:
         '8-501.11 Obtaining information: personal history of illness, medical examination, and specimen analysis',
@@ -29384,7 +29304,7 @@ export default sortedData = [
       text: '(A) RESTRICTING the FOOD EMPLOYEE or CONDITIONAL EMPLOYEE;',
       type: 'uppercase_letter',
       header:
-        '8-501.20 Restriction or exclusion of food employee, or suspension of operation Based on the findings of an investigation related to a FOOD EMPLOYEE or CONDITIONAL EMPLOYEE who is suspected of being infected or diseased, the REGULATORY AUTHORITY may issue an order to the suspected FOOD EMPLOYEE, CONDITIONAL EMPLOYEE, or PIC instituting one or more of the following control measures',
+        '8-501.20 Restriction or exclusion of food employee, or suspension of operation Based on the findings of an investigation related to a FOOD EMPLOYEE or CONDITIONAL EMPLOYEE who is suspected of being infected or diseased, the REGULATORY AUTHORITY may issue an order to the suspected FOOD EMPLOYEE, CONDITIONAL EMPLOYEE, or PIC instituting one or more of the following control measures-',
       section: '8-501.20',
       uppercase_letter_id: '(A)',
       number_id: '',
@@ -29396,7 +29316,7 @@ export default sortedData = [
       text: '(B) EXCLUDING the FOOD EMPLOYEE or CONDITIONAL EMPLOYEE; or',
       type: 'uppercase_letter',
       header:
-        '8-501.20 Restriction or exclusion of food employee, or suspension of operation Based on the findings of an investigation related to a FOOD EMPLOYEE or CONDITIONAL EMPLOYEE who is suspected of being infected or diseased, the REGULATORY AUTHORITY may issue an order to the suspected FOOD EMPLOYEE, CONDITIONAL EMPLOYEE, or PIC instituting one or more of the following control measures',
+        '8-501.20 Restriction or exclusion of food employee, or suspension of operation Based on the findings of an investigation related to a FOOD EMPLOYEE or CONDITIONAL EMPLOYEE who is suspected of being infected or diseased, the REGULATORY AUTHORITY may issue an order to the suspected FOOD EMPLOYEE, CONDITIONAL EMPLOYEE, or PIC instituting one or more of the following control measures-',
       section: '8-501.20',
       uppercase_letter_id: '(B)',
       number_id: '',
@@ -29408,7 +29328,7 @@ export default sortedData = [
       text: '(C) Coordinating with the installation or senior tactical commander (holding command authority) to suspend operation of the implicated FOOD ESTABLISHMENT.',
       type: 'uppercase_letter',
       header:
-        '8-501.20 Restriction or exclusion of food employee, or suspension of operation Based on the findings of an investigation related to a FOOD EMPLOYEE or CONDITIONAL EMPLOYEE who is suspected of being infected or diseased, the REGULATORY AUTHORITY may issue an order to the suspected FOOD EMPLOYEE, CONDITIONAL EMPLOYEE, or PIC instituting one or more of the following control measures',
+        '8-501.20 Restriction or exclusion of food employee, or suspension of operation Based on the findings of an investigation related to a FOOD EMPLOYEE or CONDITIONAL EMPLOYEE who is suspected of being infected or diseased, the REGULATORY AUTHORITY may issue an order to the suspected FOOD EMPLOYEE, CONDITIONAL EMPLOYEE, or PIC instituting one or more of the following control measures-',
       section: '8-501.20',
       uppercase_letter_id: '(C)',
       number_id: '',
@@ -29422,7 +29342,7 @@ export default sortedData = [
       text: '(A) States the reasons for the RESTRICTION or EXCLUSION that is ordered;',
       type: 'uppercase_letter',
       header:
-        '8-501.30 Restriction or exclusion order Based on the findings of the investigation as specified in  8-501.11 and to control disease transmission, the REGULATORY AUTHORITY may issue an order (in a formal letter or memorandum) of RESTRICTION or EXCLUSION to a suspected FOOD EMPLOYEE or the PIC without prior warning if the order',
+        '8-501.30 Restriction or exclusion order Based on the findings of the investigation as specified in  8-501.11 and to control disease transmission, the REGULATORY AUTHORITY may issue an order (in a formal letter or memorandum) of RESTRICTION or EXCLUSION to a suspected FOOD EMPLOYEE or the PIC without prior warning if the order-',
       section: '8-501.30',
       uppercase_letter_id: '(A)',
       number_id: '',
@@ -29434,7 +29354,7 @@ export default sortedData = [
       text: '(B) States the criteria that the FOOD EMPLOYEE or PIC shall provide in order to demonstrate that the reasons for the RESTRICTION or EXCLUSION are eliminated; and',
       type: 'uppercase_letter',
       header:
-        '8-501.30 Restriction or exclusion order Based on the findings of the investigation as specified in  8-501.11 and to control disease transmission, the REGULATORY AUTHORITY may issue an order (in a formal letter or memorandum) of RESTRICTION or EXCLUSION to a suspected FOOD EMPLOYEE or the PIC without prior warning if the order',
+        '8-501.30 Restriction or exclusion order Based on the findings of the investigation as specified in  8-501.11 and to control disease transmission, the REGULATORY AUTHORITY may issue an order (in a formal letter or memorandum) of RESTRICTION or EXCLUSION to a suspected FOOD EMPLOYEE or the PIC without prior warning if the order-',
       section: '8-501.30',
       uppercase_letter_id: '(B)',
       number_id: '',
@@ -29446,7 +29366,7 @@ export default sortedData = [
       text: '(C) States that the suspected FOOD EMPLOYEE or the PIC may request an appeal by the MEDICAL AUTHORITY or designated representative by submitting a timely written request as provided in LAW; and',
       type: 'uppercase_letter',
       header:
-        '8-501.30 Restriction or exclusion order Based on the findings of the investigation as specified in  8-501.11 and to control disease transmission, the REGULATORY AUTHORITY may issue an order (in a formal letter or memorandum) of RESTRICTION or EXCLUSION to a suspected FOOD EMPLOYEE or the PIC without prior warning if the order',
+        '8-501.30 Restriction or exclusion order Based on the findings of the investigation as specified in  8-501.11 and to control disease transmission, the REGULATORY AUTHORITY may issue an order (in a formal letter or memorandum) of RESTRICTION or EXCLUSION to a suspected FOOD EMPLOYEE or the PIC without prior warning if the order-',
       section: '8-501.30',
       uppercase_letter_id: '(C)',
       number_id: '',
@@ -29458,7 +29378,7 @@ export default sortedData = [
       text: '(D) Provides the name and address of the REGULATORY AUTHORITY representative to whom a request for an appeal may be made.',
       type: 'uppercase_letter',
       header:
-        '8-501.30 Restriction or exclusion order Based on the findings of the investigation as specified in  8-501.11 and to control disease transmission, the REGULATORY AUTHORITY may issue an order (in a formal letter or memorandum) of RESTRICTION or EXCLUSION to a suspected FOOD EMPLOYEE or the PIC without prior warning if the order',
+        '8-501.30 Restriction or exclusion order Based on the findings of the investigation as specified in  8-501.11 and to control disease transmission, the REGULATORY AUTHORITY may issue an order (in a formal letter or memorandum) of RESTRICTION or EXCLUSION to a suspected FOOD EMPLOYEE or the PIC without prior warning if the order-',
       section: '8-501.30',
       uppercase_letter_id: '(D)',
       number_id: '',
@@ -29507,7 +29427,7 @@ export default sortedData = [
       children: [],
     },
     {
-      text: '(C) Modifications to the guidance provided in this publication to meet unique circumstances associated with field operations should',
+      text: '(C) Modifications to the guidance provided in this publication to meet unique circumstances associated with field operations should-',
       type: 'uppercase_letter',
       header:
         '9-101.10 High-risk environments and highly susceptible populations',
@@ -29568,7 +29488,7 @@ export default sortedData = [
       ],
     },
     {
-      text: '(D) The MEDICAL AUTHORITY or designated representative may',
+      text: '(D) The MEDICAL AUTHORITY or designated representative may-',
       type: 'uppercase_letter',
       header:
         '9-101.10 High-risk environments and highly susceptible populations',
@@ -29685,7 +29605,7 @@ export default sortedData = [
       ],
     },
     {
-      text: '(C) The following publications should be referenced as applicable',
+      text: '(C) The following publications should be referenced as applicable-',
       type: 'uppercase_letter',
       header: '9-102.10 Food, equipment, and facilities, management',
       section: '9-102.10',
@@ -29791,7 +29711,7 @@ export default sortedData = [
       text: '(A) Ensure handwashing facilities are provided at FOOD preparation and serving areas and at latrines designated for FOOD EMPLOYEES.',
       type: 'uppercase_letter',
       header:
-        '9-102.11 Minimum operational requirements* At a minimum, FIELD FOOD OPERATIONS and FIELD FOOD SERVICE ESTABLISHMENTS shall',
+        '9-102.11 Minimum operational requirements* At a minimum, FIELD FOOD OPERATIONS and FIELD FOOD SERVICE ESTABLISHMENTS shall-',
       section: '9-102.11',
       uppercase_letter_id: '(A)',
       number_id: '',
@@ -29806,7 +29726,7 @@ export default sortedData = [
       text: '(B) Provide a sanitation center or dishwashing line that is capable of cleaning and SANITIZING field feeding components, EQUIPMENT, and UTENSILS.',
       type: 'uppercase_letter',
       header:
-        '9-102.11 Minimum operational requirements* At a minimum, FIELD FOOD OPERATIONS and FIELD FOOD SERVICE ESTABLISHMENTS shall',
+        '9-102.11 Minimum operational requirements* At a minimum, FIELD FOOD OPERATIONS and FIELD FOOD SERVICE ESTABLISHMENTS shall-',
       section: '9-102.11',
       uppercase_letter_id: '(B)',
       number_id: '',
@@ -29821,7 +29741,7 @@ export default sortedData = [
       text: '(C) Provide a safe and adequate supply of DRINKING WATER through an APPROVED system as specified under  9-301.11.',
       type: 'uppercase_letter',
       header:
-        '9-102.11 Minimum operational requirements* At a minimum, FIELD FOOD OPERATIONS and FIELD FOOD SERVICE ESTABLISHMENTS shall',
+        '9-102.11 Minimum operational requirements* At a minimum, FIELD FOOD OPERATIONS and FIELD FOOD SERVICE ESTABLISHMENTS shall-',
       section: '9-102.11',
       uppercase_letter_id: '(C)',
       number_id: '',
@@ -29836,7 +29756,7 @@ export default sortedData = [
       text: '(D) Collect, store, and dispose of solid waste in a manner to minimize insect and rodent attraction. For example, bury, incinerate, return to the forward supply point, or dispose per local requirements. N',
       type: 'uppercase_letter',
       header:
-        '9-102.11 Minimum operational requirements* At a minimum, FIELD FOOD OPERATIONS and FIELD FOOD SERVICE ESTABLISHMENTS shall',
+        '9-102.11 Minimum operational requirements* At a minimum, FIELD FOOD OPERATIONS and FIELD FOOD SERVICE ESTABLISHMENTS shall-',
       section: '9-102.11',
       uppercase_letter_id: '(D)',
       number_id: '',
@@ -29851,7 +29771,7 @@ export default sortedData = [
       text: '(E) Collect, store, and dispose of liquid wastewater. Examples of field-expedient methods, such as soakage pits, trenches, and grease traps, are provided in ATP 4-25.12. N',
       type: 'uppercase_letter',
       header:
-        '9-102.11 Minimum operational requirements* At a minimum, FIELD FOOD OPERATIONS and FIELD FOOD SERVICE ESTABLISHMENTS shall',
+        '9-102.11 Minimum operational requirements* At a minimum, FIELD FOOD OPERATIONS and FIELD FOOD SERVICE ESTABLISHMENTS shall-',
       section: '9-102.11',
       uppercase_letter_id: '(E)',
       number_id: '',
@@ -29866,7 +29786,7 @@ export default sortedData = [
       text: '(F) Protect FOOD during storage as specified under  3-305.11 and 9-204.11.',
       type: 'uppercase_letter',
       header:
-        '9-102.11 Minimum operational requirements* At a minimum, FIELD FOOD OPERATIONS and FIELD FOOD SERVICE ESTABLISHMENTS shall',
+        '9-102.11 Minimum operational requirements* At a minimum, FIELD FOOD OPERATIONS and FIELD FOOD SERVICE ESTABLISHMENTS shall-',
       section: '9-102.11',
       uppercase_letter_id: '(F)',
       number_id: '',
@@ -29881,7 +29801,7 @@ export default sortedData = [
       text: '(G) Provide adequate mechanical refrigeration or ice chests to maintain proper FOOD temperature as specified under  9-502.11 for perishable rations (A-type rations) and TCS FOODS.',
       type: 'uppercase_letter',
       header:
-        '9-102.11 Minimum operational requirements* At a minimum, FIELD FOOD OPERATIONS and FIELD FOOD SERVICE ESTABLISHMENTS shall',
+        '9-102.11 Minimum operational requirements* At a minimum, FIELD FOOD OPERATIONS and FIELD FOOD SERVICE ESTABLISHMENTS shall-',
       section: '9-102.11',
       uppercase_letter_id: '(G)',
       number_id: '',
@@ -29896,7 +29816,7 @@ export default sortedData = [
       text: '(H) Use designated ration breakpoint areas for thawing frozen FOOD at SAFE TEMPERATURES, or provide adequate refrigeration support at the field feeding site as specified under  (G) of this section.',
       type: 'uppercase_letter',
       header:
-        '9-102.11 Minimum operational requirements* At a minimum, FIELD FOOD OPERATIONS and FIELD FOOD SERVICE ESTABLISHMENTS shall',
+        '9-102.11 Minimum operational requirements* At a minimum, FIELD FOOD OPERATIONS and FIELD FOOD SERVICE ESTABLISHMENTS shall-',
       section: '9-102.11',
       uppercase_letter_id: '(H)',
       number_id: '',
@@ -29911,7 +29831,7 @@ export default sortedData = [
       text: '(I) Protect FOOD from potential contamination by transporting in clean, covered vehicles as specified under  9-502.18.',
       type: 'uppercase_letter',
       header:
-        '9-102.11 Minimum operational requirements* At a minimum, FIELD FOOD OPERATIONS and FIELD FOOD SERVICE ESTABLISHMENTS shall',
+        '9-102.11 Minimum operational requirements* At a minimum, FIELD FOOD OPERATIONS and FIELD FOOD SERVICE ESTABLISHMENTS shall-',
       section: '9-102.11',
       uppercase_letter_id: '(I)',
       number_id: '',
@@ -29966,7 +29886,7 @@ export default sortedData = [
   ],
   [
     {
-      text: '(A) Unless operational requirements prohibit, FIELD FOOD OPERATIONS and FIELD FOOD SERVICE ESTABLISHMENTS shall be',
+      text: '(A) Unless operational requirements prohibit, FIELD FOOD OPERATIONS and FIELD FOOD SERVICE ESTABLISHMENTS shall be-',
       type: 'uppercase_letter',
       header:
         '9-201.11 Location Establishing and selecting a site for a field kitchen requires careful consideration of traffic flow; location of sleeping areas, toilets, and handwashing facilities; drainage; and potential insect and rodent control issues.',
@@ -30067,7 +29987,7 @@ export default sortedData = [
       item: '3',
     },
     {
-      text: '(B) FIELD FOOD OPERATIONS conducted in a structure or shelter other than its prescribed tactical feeding system configuration shall be',
+      text: '(B) FIELD FOOD OPERATIONS conducted in a structure or shelter other than its prescribed tactical feeding system configuration shall be-',
       type: 'uppercase_letter',
       header: '9-202.11 Field food operation, facilities',
       section: '9-202.11',
@@ -30120,7 +30040,7 @@ export default sortedData = [
       item: '2',
     },
     {
-      text: '(D) Except as specified in  (E) of this section, FIELD FOOD OPERATIONS shall',
+      text: '(D) Except as specified in  (E) of this section, FIELD FOOD OPERATIONS shall-',
       type: 'uppercase_letter',
       header: '9-202.11 Field food operation, facilities',
       section: '9-202.11',
@@ -30288,7 +30208,7 @@ export default sortedData = [
       item: '3',
     },
     {
-      text: '(C) Physical facilities for FIELD FOOD SERVICE ESTABLISHMENTS shall',
+      text: '(C) Physical facilities for FIELD FOOD SERVICE ESTABLISHMENTS shall-',
       type: 'uppercase_letter',
       header: '9-203.11 Floors, walls, and ceilings',
       section: '9-203.11',
@@ -30346,7 +30266,7 @@ export default sortedData = [
       text: '(A) Placed in areas where the ground is firm and the weight of the pallets and contents will not lead to the FOOD or supplies coming into direct contact with the ground or standing water; and',
       type: 'uppercase_letter',
       header:
-        '9-204.11 Wood pallets Wood pallets are authorized for storage of FOOD and supplies in FIELD FOOD OPERATIONS and operations afloat and shall be',
+        '9-204.11 Wood pallets Wood pallets are authorized for storage of FOOD and supplies in FIELD FOOD OPERATIONS and operations afloat and shall be-',
       section: '9-204.11',
       uppercase_letter_id: '(A)',
       number_id: '',
@@ -30360,7 +30280,7 @@ export default sortedData = [
       text: '(B) Exchanged when new supplies are delivered.',
       type: 'uppercase_letter',
       header:
-        '9-204.11 Wood pallets Wood pallets are authorized for storage of FOOD and supplies in FIELD FOOD OPERATIONS and operations afloat and shall be',
+        '9-204.11 Wood pallets Wood pallets are authorized for storage of FOOD and supplies in FIELD FOOD OPERATIONS and operations afloat and shall be-',
       section: '9-204.11',
       uppercase_letter_id: '(B)',
       number_id: '',
@@ -30374,7 +30294,7 @@ export default sortedData = [
       text: '(C) Covered, when used as a subfloor, with an impermeable and easily cleanable material to prevent accumulation of FOOD debris and liquid and promote pest harborage. The use of pallets to create a subfloor should be of limited duration. Facilities (and flooring) should be improved over time as specified under Subparagraph',
       type: 'uppercase_letter',
       header:
-        '9-204.11 Wood pallets Wood pallets are authorized for storage of FOOD and supplies in FIELD FOOD OPERATIONS and operations afloat and shall be',
+        '9-204.11 Wood pallets Wood pallets are authorized for storage of FOOD and supplies in FIELD FOOD OPERATIONS and operations afloat and shall be-',
       section: '9-204.11',
       uppercase_letter_id: '(C)',
       number_id: '',
@@ -30614,7 +30534,7 @@ export default sortedData = [
       noncritical: true,
     },
     {
-      text: '(B) The FOOD operations manager shall',
+      text: '(B) The FOOD operations manager shall-',
       type: 'uppercase_letter',
       header: '9-303.13 Chlorine residual, monitoring*',
       section: '9-303.13',
@@ -30757,7 +30677,7 @@ export default sortedData = [
   ],
   [
     {
-      text: '(A) Hoses used to connect an APPROVED water source to a FIELD FOOD SERVICE ESTABLISHMENT or FIELD FOOD OPERATION shall',
+      text: '(A) Hoses used to connect an APPROVED water source to a FIELD FOOD SERVICE ESTABLISHMENT or FIELD FOOD OPERATION shall-',
       type: 'uppercase_letter',
       header: '9-304.12 Pipes and hoses, connections*',
       section: '9-304.12',
@@ -31019,7 +30939,7 @@ export default sortedData = [
       noncritical: false,
     },
     {
-      text: '(B) FROZEN FOODS shall be',
+      text: '(B) FROZEN FOODS shall be-',
       type: 'uppercase_letter',
       header: '9-502.11 Frozen and refrigerated foods, management*',
       section: '9-502.11',
@@ -31076,7 +30996,7 @@ export default sortedData = [
       noncritical: true,
     },
     {
-      text: '(C) Except as specified in Subparagraph (D) of this section',
+      text: '(C) Except as specified in Subparagraph (D) of this section-',
       type: 'uppercase_letter',
       header: '9-502.11 Frozen and refrigerated foods, management*',
       section: '9-502.11',
@@ -31163,7 +31083,7 @@ export default sortedData = [
   ],
   [
     {
-      text: '(A) Insulated food containers (IFCs) used for holding or transporting TCS FOODS shall be',
+      text: '(A) Insulated food containers (IFCs) used for holding or transporting TCS FOODS shall be-',
       type: 'uppercase_letter',
       header: '9-502.13 Insulated food containers*',
       section: '9-502.13',
@@ -31378,7 +31298,7 @@ export default sortedData = [
       text: '(A) Provided to the CONSUMER in an unopened, commercially filled individual PACKAGE not exceeding 16 fluid ounces, 1 pint, or 0.5 liter equivalent in volume; or',
       type: 'uppercase_letter',
       header:
-        '9-502.16 Milk and milk products Milk and milk products for drinking purposes shall be',
+        '9-502.16 Milk and milk products Milk and milk products for drinking purposes shall be-',
       section: '9-502.16',
       uppercase_letter_id: '(A)',
       number_id: '',
@@ -31392,7 +31312,7 @@ export default sortedData = [
       text: '(B) Drawn for immediate consumption from a commercially filled container only when mechanically refrigerated bulk milk dispensers are functional and used; and',
       type: 'uppercase_letter',
       header:
-        '9-502.16 Milk and milk products Milk and milk products for drinking purposes shall be',
+        '9-502.16 Milk and milk products Milk and milk products for drinking purposes shall be-',
       section: '9-502.16',
       uppercase_letter_id: '(B)',
       number_id: '',
@@ -31406,7 +31326,7 @@ export default sortedData = [
       text: '(C) Except as specified in Subparagraph 9-502.11(C)(3), maintained at 41F (5C) or below during storage, display, and service.',
       type: 'uppercase_letter',
       header:
-        '9-502.16 Milk and milk products Milk and milk products for drinking purposes shall be',
+        '9-502.16 Milk and milk products Milk and milk products for drinking purposes shall be-',
       section: '9-502.16',
       uppercase_letter_id: '(C)',
       number_id: '',
@@ -31739,7 +31659,7 @@ export default sortedData = [
       children: [],
     },
     {
-      text: '(B) For TEMPORARY and SEASONAL FOOD operations',
+      text: '(B) For TEMPORARY and SEASONAL FOOD operations-',
       type: 'uppercase_letter',
       header: '10-201.11 Approved system*',
       section: '10-201.11',
@@ -32124,7 +32044,7 @@ export default sortedData = [
       text: '(A) Maintain a list of all VENDING MACHINES and the route servicing schedule for all VENDING MACHINES operated within the jurisdiction of the MEDICAL AUTHORITY.',
       type: 'uppercase_letter',
       header:
-        '10-501.13 Operator procedures In addition to complying with the provisions of this publication, the VENDING MACHINE operator shall',
+        '10-501.13 Operator procedures In addition to complying with the provisions of this publication, the VENDING MACHINE operator shall-',
       section: '10-501.13',
       uppercase_letter_id: '(A)',
       number_id: '',
@@ -32136,7 +32056,7 @@ export default sortedData = [
       text: '(B) Maintain a complete address of each VENDING MACHINE LOCATION and of all commissaries or other FOOD ESTABLISHMENTS that service these VENDING MACHINES.',
       type: 'uppercase_letter',
       header:
-        '10-501.13 Operator procedures In addition to complying with the provisions of this publication, the VENDING MACHINE operator shall',
+        '10-501.13 Operator procedures In addition to complying with the provisions of this publication, the VENDING MACHINE operator shall-',
       section: '10-501.13',
       uppercase_letter_id: '(B)',
       number_id: '',
@@ -32148,7 +32068,7 @@ export default sortedData = [
       text: '(C) Provide the information in  (A) and (B) of this section to the REGULATORY AUTHORITY and keep this information current.',
       type: 'uppercase_letter',
       header:
-        '10-501.13 Operator procedures In addition to complying with the provisions of this publication, the VENDING MACHINE operator shall',
+        '10-501.13 Operator procedures In addition to complying with the provisions of this publication, the VENDING MACHINE operator shall-',
       section: '10-501.13',
       uppercase_letter_id: '(C)',
       number_id: '',
@@ -32160,7 +32080,7 @@ export default sortedData = [
       text: '(D) Obtain MEDICAL AUTHORITY or designated representative approval for each VENDING MACHINE LOCATION where TCS FOODS and hot and cold cup BEVERAGE VENDING MACHINES will be placed in operation.',
       type: 'uppercase_letter',
       header:
-        '10-501.13 Operator procedures In addition to complying with the provisions of this publication, the VENDING MACHINE operator shall',
+        '10-501.13 Operator procedures In addition to complying with the provisions of this publication, the VENDING MACHINE operator shall-',
       section: '10-501.13',
       uppercase_letter_id: '(D)',
       number_id: '',
@@ -32172,7 +32092,7 @@ export default sortedData = [
       text: '(E) Obtain REGULATORY AUTHORITY approval prior to any changes in operations, including changes to the HACCP PLAN or SOP, involving new types of VENDING MACHINES or the conversion of existing machines to dispense products other than those for which the machines were APPROVED. TB MED 530/NAVMED P-5010-1/AFMAN 48-147_IP',
       type: 'uppercase_letter',
       header:
-        '10-501.13 Operator procedures In addition to complying with the provisions of this publication, the VENDING MACHINE operator shall',
+        '10-501.13 Operator procedures In addition to complying with the provisions of this publication, the VENDING MACHINE operator shall-',
       section: '10-501.13',
       uppercase_letter_id: '(E)',
       number_id: '',

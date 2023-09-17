@@ -1,9 +1,12 @@
+import { useContext } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { AppContext } from '../context/AppContext';
 
 const Navigation = ({ navigation }) => {
   const routes = navigation.getState()?.routes;
   const prevRoute = routes[routes.length - 2];
+  const { validEmailPIC, validEmailInspector } = useContext(AppContext);
 
   return (
     <SafeAreaView>
@@ -16,6 +19,17 @@ const Navigation = ({ navigation }) => {
         </TouchableOpacity>
       </View>
       <View>
+        <TouchableOpacity
+          style={
+            prevRoute.name === 'background'
+              ? styles.navButtonDisabled
+              : styles.navButton
+          }
+          onPress={() => navigation.replace('background')}
+          disabled={prevRoute.name === 'background' ? true : false}
+        >
+          <Text style={styles.navButtonText}>Backgound</Text>
+        </TouchableOpacity>
         <TouchableOpacity
           style={
             prevRoute.name === 'find discrepancies'
@@ -36,18 +50,18 @@ const Navigation = ({ navigation }) => {
           onPress={() => navigation.replace('view discrepancies')}
           disabled={prevRoute.name === 'view discrepancies' ? true : false}
         >
-          <Text style={styles.navButtonText}>View Discrepancies</Text>
+          <Text style={styles.navButtonText}>View / Edit Discrepancies</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={
-            prevRoute.name === 'background'
+            prevRoute.name === 'nano'
               ? styles.navButtonDisabled
               : styles.navButton
           }
-          onPress={() => navigation.replace('background')}
-          disabled={prevRoute.name === 'background' ? true : false}
+          onPress={() => navigation.replace('nano')}
+          disabled={prevRoute.name === 'nano' ? true : false}
         >
-          <Text style={styles.navButtonText}>Backgound</Text>
+          <Text style={styles.navButtonText}>NA / NO</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={
@@ -60,6 +74,7 @@ const Navigation = ({ navigation }) => {
         >
           <Text style={styles.navButtonText}>Temperature</Text>
         </TouchableOpacity>
+
         <TouchableOpacity
           style={
             prevRoute.name === 'sanitizing'
@@ -82,13 +97,29 @@ const Navigation = ({ navigation }) => {
         >
           <Text style={styles.navButtonText}>Imminent Health Hazard</Text>
         </TouchableOpacity>
+
+        <TouchableOpacity
+          style={
+            prevRoute.name === 'free text'
+              ? styles.navButtonDisabled
+              : styles.navButton
+          }
+          onPress={() => navigation.replace('free text')}
+          disabled={prevRoute.name === 'free text' ? true : false}
+        >
+          <Text style={styles.navButtonText}>Free Text</Text>
+        </TouchableOpacity>
         <TouchableOpacity
           style={
             prevRoute.name === 'done'
               ? styles.navButtonDisabled
               : styles.navButton
           }
-          onPress={() => navigation.replace('done')}
+          onPress={() =>
+            validEmailPIC && validEmailInspector
+              ? navigation.replace('done')
+              : navigation.replace('background')
+          }
           disabled={prevRoute.name === 'done' ? true : false}
         >
           <Text style={styles.navButtonText}>Finish Inspection</Text>
@@ -123,10 +154,11 @@ const styles = StyleSheet.create({
   },
   navButtonText: {
     textAlign: 'center',
+    fontFamily: 'Raj',
   },
   cancelButtonContainer: {
     marginTop: 50,
-    marginBottom: 75,
+    marginBottom: 10,
   },
   cancelButton: {
     borderRadius: 15,
