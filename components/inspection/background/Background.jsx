@@ -1,4 +1,5 @@
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
+import * as Network from 'expo-network';
 import {
   View,
   Text,
@@ -9,6 +10,7 @@ import {
   ScrollView,
 } from 'react-native';
 import { AppContext } from '../../context/AppContext';
+import ErrorModal from '../error modal/ErrorModal';
 import EmailFields from './EmailFields';
 import InspectionType from './InsepctionType';
 
@@ -91,7 +93,23 @@ const BackgroundForm = ({ navigation }) => {
     setBackgroundValues,
     setInspectionTypeOther,
     setInspectionTypeOtherText,
+    setErrorModalVisible,
+    setErrorMessage,
   } = useContext(AppContext);
+
+  useEffect(() => {
+    const getNetworkState = async () => {
+      const networkState = await Network.getNetworkStateAsync();
+      if (!networkState.isConnected || !networkState.isInternetReachable) {
+        setErrorModalVisible(true);
+        setErrorMessage(
+          'Poor Network connectivity detected. You can continue to conduct the inspection through the app. However, you will not be able to finish the inspection (sign and send the DD 2973) until a stable connection is established.'
+        );
+      }
+    };
+
+    getNetworkState();
+  }, []);
 
   const handleInput = (text, i) => {
     setBackgroundValues(prevBackgroundValues => {
@@ -116,49 +134,53 @@ const BackgroundForm = ({ navigation }) => {
   };
 
   return (
-    <SafeAreaView style={styles.parentContainer}>
-      <ScrollView>
-        <View style={styles.listContainer}>
-          {backgroundFields.map((el, i) => (
-            <View key={i} style={styles.contentContainer}>
-              <Text style={styles.label}>{el.displayName}</Text>
-              {el.type === 'select' ? (
-                <InspectionType index={i} handleInput={handleInput} />
-              ) : (
-                <>
-                  {i === 6 || i === 10 ? (
-                    <EmailFields
-                      index={i}
-                      handleInput={handleInput}
-                      backgroundValues={backgroundValues}
-                    />
-                  ) : (
-                    <TextInput
-                      style={styles.textBox}
-                      onChangeText={text => handleInput(text, i)}
-                      value={backgroundValues[i]?.text ?? ''}
-                    />
-                  )}
-                </>
-              )}
-            </View>
-          ))}
+    <>
+      <ErrorModal />
+      <SafeAreaView style={styles.parentContainer}>
+        <ScrollView>
+          <View style={styles.listContainer}>
+            {backgroundFields.map((el, i) => (
+              <View key={i} style={styles.contentContainer}>
+                <Text style={styles.label}>{el.displayName}</Text>
+                {el.type === 'select' ? (
+                  <InspectionType index={i} handleInput={handleInput} />
+                ) : (
+                  <>
+                    {i === 6 || i === 10 ? (
+                      <EmailFields
+                        index={i}
+                        handleInput={handleInput}
+                        backgroundValues={backgroundValues}
+                      />
+                    ) : (
+                      <TextInput
+                        style={styles.textBox}
+                        onChangeText={text => handleInput(text, i)}
+                        value={backgroundValues[i]?.text ?? ''}
+                      />
+                    )}
+                  </>
+                )}
+              </View>
+            ))}
 
-          <TouchableOpacity
-            style={styles.naivgateButton}
-            onPress={() => navigation.push('nav')}
-          >
-            <Text style={styles.navigateButtonText}>Move On To...</Text>
-          </TouchableOpacity>
-        </View>
-      </ScrollView>
-    </SafeAreaView>
+            <TouchableOpacity
+              style={styles.naivgateButton}
+              onPress={() => navigation.push('nav')}
+            >
+              <Text style={styles.navigateButtonText}>Move On To...</Text>
+            </TouchableOpacity>
+          </View>
+        </ScrollView>
+      </SafeAreaView>
+    </>
   );
 };
 
 const styles = StyleSheet.create({
   listContainer: {
-    marginBottom: 400,
+    paddingBottom: 400,
+    paddingHorizontal: 30,
   },
   parentContainer: {
     alignItems: 'center',

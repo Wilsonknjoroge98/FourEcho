@@ -21,8 +21,9 @@ export const AppProvider = ({ children }) => {
   const [filterLoading, setFilterLoading] = useState(false);
   const [discrepancy, setDiscrepancy] = useState({});
   const [discrepancyModalVisible, setDiscrepancyModalVisible] = useState(false);
-  const [nanoModalVisible, setNanoModalVisible] = useState(false);
   const [nanoInfo, setNanoInfo] = useState(false);
+  const [errorModalVisible, setErrorModalVisible] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
   const [iHH, setIHH] = useState('');
   const [startTime, setStartTime] = useState('');
   const [inspectorSignature, setInspectorSignature] = useState(null);
@@ -79,10 +80,12 @@ export const AppProvider = ({ children }) => {
         setFreeText,
         nanoValues,
         setNanoValues,
-        nanoModalVisible,
-        setNanoModalVisible,
         nanoInfo,
         setNanoInfo,
+        errorModalVisible,
+        setErrorModalVisible,
+        errorMessage,
+        setErrorMessage,
       }}
     >
       {children}

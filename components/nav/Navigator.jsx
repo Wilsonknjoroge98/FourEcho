@@ -22,16 +22,13 @@ const Navigator = () => {
       <Stack.Screen
         name="home"
         component={Home}
-        options={{ headerShown: false }}
+        options={{ headerShown: false, title: '' }}
       />
       <Stack.Screen
         name="background"
         component={Background}
         options={({ navigation }) => ({
-          headerTitleStyle: {
-            fontFamily: 'Open-Sans',
-            backgroundColor: '#ffffff',
-          },
+          title: '',
           headerRight: () => (
             <Button
               onPress={() => navigation.navigate('nav')}
@@ -45,10 +42,7 @@ const Navigator = () => {
         name="find discrepancies"
         component={FindDiscrepancies}
         options={({ navigation }) => ({
-          headerTitleStyle: {
-            fontFamily: 'Open-Sans',
-            backgroundColor: '#ffffff',
-          },
+          title: '',
           headerRight: () => (
             <Button
               onPress={() => navigation.push('nav')}
@@ -62,10 +56,7 @@ const Navigator = () => {
         name="select discrepancies"
         component={SelectDiscrepancies}
         options={({ navigation }) => ({
-          headerTitleStyle: {
-            fontFamily: 'Open-Sans',
-            backgroundColor: '#ffffff',
-          },
+          title: '',
           headerRight: () => (
             <Button
               onPress={() => navigation.push('nav')}
@@ -79,10 +70,7 @@ const Navigator = () => {
         name="view discrepancies"
         component={ViewDiscrepancies}
         options={({ navigation }) => ({
-          headerTitleStyle: {
-            fontFamily: 'Open-Sans',
-            backgroundColor: '#ffffff',
-          },
+          title: '',
           headerRight: () => (
             <Button
               onPress={() => navigation.push('nav')}
@@ -96,10 +84,7 @@ const Navigator = () => {
         name="temperature"
         component={Temperature}
         options={({ navigation }) => ({
-          headerTitleStyle: {
-            fontFamily: 'Open-Sans',
-            backgroundColor: '#ffffff',
-          },
+          title: '',
           headerRight: () => (
             <Button
               onPress={() => navigation.push('nav')}
@@ -113,10 +98,7 @@ const Navigator = () => {
         name="sanitizing"
         component={Sanitizing}
         options={({ navigation }) => ({
-          headerTitleStyle: {
-            fontFamily: 'Open-Sans',
-            backgroundColor: '#ffffff',
-          },
+          title: '',
           headerRight: () => (
             <Button
               onPress={() => navigation.push('nav')}
@@ -130,10 +112,7 @@ const Navigator = () => {
         name="ihh"
         component={IHH}
         options={({ navigation }) => ({
-          headerTitleStyle: {
-            fontFamily: 'Open-Sans',
-            backgroundColor: '#ffffff',
-          },
+          title: '',
           headerRight: () => (
             <Button
               onPress={() => navigation.push('nav')}
@@ -147,10 +126,7 @@ const Navigator = () => {
         name="review"
         component={PdfView}
         options={({ navigation }) => ({
-          headerTitleStyle: {
-            fontFamily: 'Open-Sans',
-            backgroundColor: '#ffffff',
-          },
+          title: '',
           headerRight: () => (
             <Button
               onPress={() => navigation.push('nav')}
@@ -165,20 +141,14 @@ const Navigator = () => {
         component={Nav}
         options={{
           headerShown: false,
-          headerTitleStyle: {
-            fontFamily: 'Open-Sans',
-            backgroundColor: '#ffffff',
-          },
+          title: '',
         }}
       />
       <Stack.Screen
         name="done"
         component={Done}
         options={({ navigation }) => ({
-          headerTitleStyle: {
-            fontFamily: 'Open-Sans',
-            backgroundColor: '#ffffff',
-          },
+          title: '',
           headerRight: () => (
             <Button
               onPress={() => navigation.push('nav')}
@@ -192,10 +162,7 @@ const Navigator = () => {
         name="free text"
         component={FreeText}
         options={({ navigation }) => ({
-          headerTitleStyle: {
-            fontFamily: 'Open-Sans',
-            backgroundColor: '#ffffff',
-          },
+          title: '',
           headerRight: () => (
             <Button
               onPress={() => navigation.push('nav')}
@@ -209,10 +176,7 @@ const Navigator = () => {
         name="nano"
         component={Nano}
         options={({ navigation }) => ({
-          headerTitleStyle: {
-            fontFamily: 'Open-Sans',
-            backgroundColor: '#ffffff',
-          },
+          title: '',
           headerRight: () => (
             <Button
               onPress={() => navigation.push('nav')}

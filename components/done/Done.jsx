@@ -49,7 +49,9 @@ const Done = ({ navigation }) => {
     const retrievePdf = async () => {
       const response = await axios.get(
         'https://publichealthapp-5964a.web.app/dd__2973__blank.pdf',
-        { responseType: 'arraybuffer' }
+        {
+          responseType: 'arraybuffer',
+        }
       );
       const pdfBytes = response.data;
       return pdfBytes;
@@ -101,7 +103,7 @@ const Done = ({ navigation }) => {
         const tempField = form.getTextField(`temp__temp__${i + 1}`);
         const tempVal = tempValues[i]?.temp;
         const temp =
-          tempValues[i]?.metric === 'F' ? `${tempVal}°F` : `${tempVal}°C`;
+          tempValues[i]?.metric === 'C' ? `${tempVal}°C` : `${tempVal}°F`;
 
         if (tempVal) tempField.setText(temp);
       }
@@ -114,9 +116,9 @@ const Done = ({ navigation }) => {
           const tempField = form.getTextField(`sanitizing__temp__${i + 1}`);
           const tempVal = sanitizingTempValues[i]?.temp;
           const temp =
-            sanitizingTempValues[i]?.metric === 'F'
-              ? `${tempVal}°F`
-              : `${tempVal}°C`;
+            sanitizingTempValues[i]?.metric === 'C'
+              ? `${tempVal}°C`
+              : `${tempVal}°F`;
           if (tempVal) tempField.setText(temp);
         }
       }
@@ -201,18 +203,10 @@ const Done = ({ navigation }) => {
         }
       };
 
-      const getItemNewLines = (
-        observationLength,
-        bodyLength,
-        correctiveActionLength
-      ) => {
-        let newLines = 3;
+      const getItemNewLines = (observationLength, correctiveActionLength) => {
+        let newLines = 4;
         const observationIncrement = Math.floor(observationLength / 100);
         for (let i = 0; i < observationIncrement; i++) {
-          newLines++;
-        }
-        const bodyIncrement = Math.floor(bodyLength / 100);
-        for (let i = 0; i < bodyIncrement; i++) {
           newLines++;
         }
         const correctiveActionIncrement = Math.floor(
@@ -303,18 +297,11 @@ const Done = ({ navigation }) => {
             `${discrepancy.section}${conditionalAsterisks}: ${conditionalCOS}. ${discrepancy.observation}`
               .length;
 
-          const bodyLength =
-            `${discrepancy.text}${discrepancy?.children[0]?.text}${discrepancy?.children[0]?.children[0]?.text}${discrepancy?.children[0]?.children[0]?.children[0]?.text}`.replace(
-              /undefined/g,
-              ''
-            ).length;
-
           const correctiveActionLength =
             `corrective action: ${discrepancy.corrective}`.length;
 
           const newLines = getItemNewLines(
             observationLength,
-            bodyLength,
             correctiveActionLength
           );
           itemText = itemText + `${discrepancy.item}`;
@@ -324,7 +311,8 @@ const Done = ({ navigation }) => {
           form.getTextField('item__text').setText(itemText);
 
           // add discrepancy text to larger discrepancy text
-          let text = `${discrepancy.section}${conditionalAsterisks}: ${conditionalCOS}. ${discrepancy.observation}\n${discrepancy.text}${discrepancy?.children[0]?.text}${discrepancy?.children[0]?.children[0]?.text}${discrepancy?.children[0]?.children[0]?.children[0]?.text}\ncorrective action: ${discrepancy.corrective}\n`;
+          console.log(discrepancy.children[0]);
+          let text = `${discrepancy.section}${discrepancy?.children[0]?.uppercase_letter_id}${discrepancy?.children[0]?.number_id}${discrepancy?.children[0]?.children[0]?.lowercase_letter_id}${conditionalAsterisks}: ${conditionalCOS}. ${discrepancy.observation}\ncorrective action: ${discrepancy.corrective}\n`;
           text = text.replace(/undefined/g, '');
           if (discrepancyText != '') {
             discrepancyText = discrepancyText + '\n' + text;
@@ -491,8 +479,10 @@ const Done = ({ navigation }) => {
           })
           .catch(err => console.log(err));
       })
-      .catch(err => {
-        console.log(err);
+      .catch(() => {
+        //setErrorModalVisible(true)
+        //setErrorModalMessgae('The DD 2973 cannot be processed, most likely due to network connectivity issues')
+        // navigation.navigate('nav')
       });
   };
 

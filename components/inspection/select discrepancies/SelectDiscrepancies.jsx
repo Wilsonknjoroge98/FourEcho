@@ -10,13 +10,14 @@ import {
 } from 'react-native';
 import DiscrepancyModal from './discrepancy modal/DiscrepancyModal';
 import BigLetter from './subcomponents/BigLetter';
-import InfoModal from './info modal/InfoModal';
+import StaticHelpModal from './static help modal/StaticHelpModal';
 import { AppContext } from '../../context/AppContext';
 import uuid from 'react-native-uuid';
 
 const SelectDiscrepancies = () => {
   const [expandedSection, setExpandedSection] = useState({});
-  const [infoModalVisible, setInfoModalVisible] = useState(false);
+  const [helpModalVisible, setHelpModalVisible] = useState(false);
+
   const { itemGroup, setDiscrepancy, setDiscrepancyModalVisible } =
     useContext(AppContext);
 
@@ -61,20 +62,24 @@ const SelectDiscrepancies = () => {
 
   return (
     <>
+      <StaticHelpModal
+        helpModalVisible={helpModalVisible}
+        setHelpModalVisible={setHelpModalVisible}
+      />
+      <DiscrepancyModal />
       <View style={styles.background}>
         <View>
-          <TouchableOpacity onPress={() => setInfoModalVisible(true)}>
+          <TouchableOpacity
+            onPress={() => setHelpModalVisible(true)}
+            style={styles.infoIconButton}
+          >
             <Image
               style={styles.infoIcon}
               source={require('../../../assets/images/info__icon.png')}
             />
           </TouchableOpacity>
         </View>
-        <InfoModal
-          infoModalVisible={infoModalVisible}
-          setInfoModalVisible={setInfoModalVisible}
-        />
-        <DiscrepancyModal />
+
         {itemGroup && (
           <FlatList
             data={itemGroup}
@@ -123,12 +128,15 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.5,
     shadowRadius: 2,
   },
-
+  infoIconButton: {
+    width: 30,
+    marginLeft: 30,
+    margin: 10,
+    alignSelf: 'flex-start',
+  },
   infoIcon: {
     height: 25,
     width: 25,
-    margin: 10,
-    marginLeft: 30,
     alignSelf: 'flex-start',
   },
 });

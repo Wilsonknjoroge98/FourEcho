@@ -9,7 +9,7 @@ import {
 import { useContext } from 'react';
 import { AppContext } from '../../context/AppContext';
 
-const IHH = () => {
+const IHH = ({ navigation }) => {
   const { iHH, setIHH } = useContext(AppContext);
 
   return (

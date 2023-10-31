@@ -89,7 +89,7 @@ const SanatizingTemperature = () => {
           </View>
           <SelectDropdown
             data={['F', 'C']}
-            defaultValue={''}
+            defaultValue={'F'}
             onSelect={text => handleInput(text, i, 'metric')}
             buttonStyle={
               sanitizingTempValues[i]?.NA === true

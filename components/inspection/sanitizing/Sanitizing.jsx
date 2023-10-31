@@ -4,6 +4,7 @@ import {
   StyleSheet,
   ScrollView,
   TouchableOpacity,
+  View,
 } from 'react-native';
 import SanatizingTemperature from './subcomponents/SanatizingTemperature';
 import SanatizingConcetration from './subcomponents/SanatizingConcentration';
@@ -12,16 +13,18 @@ const Sanitizing = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.parentContainer}>
       <ScrollView>
-        <SanatizingTemperature />
+        <View style={styles.contentCotnainer}>
+          <SanatizingTemperature />
 
-        <SanatizingConcetration />
+          <SanatizingConcetration />
 
-        <TouchableOpacity
-          style={styles.naivgateButton}
-          onPress={() => navigation.push('nav')}
-        >
-          <Text style={styles.navigateButtonText}>Move On To...</Text>
-        </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.naivgateButton}
+            onPress={() => navigation.push('nav')}
+          >
+            <Text style={styles.navigateButtonText}>Move On To...</Text>
+          </TouchableOpacity>
+        </View>
       </ScrollView>
     </SafeAreaView>
   );
@@ -33,6 +36,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignContent: 'center',
     flex: 1,
+  },
+  contentCotnainer: {
+    marginBottom: 400,
   },
   naivgateButton: {
     textTransform: 'uppercase',

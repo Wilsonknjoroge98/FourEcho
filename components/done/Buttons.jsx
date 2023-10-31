@@ -1,6 +1,8 @@
 import { useContext } from 'react';
 import { View, TouchableOpacity, Text, StyleSheet } from 'react-native';
 import { AppContext } from '../context/AppContext';
+import * as Network from 'expo-network';
+import ErrorModal from '../inspection/error modal/ErrorModal';
 
 const Buttons = ({ navigation, main, signDoc }) => {
   const {
@@ -8,38 +10,51 @@ const Buttons = ({ navigation, main, signDoc }) => {
     setInspectorSignature,
     picSignature,
     setPICSignature,
+    setErrorModalVisible,
+    setErrorMessage,
   } = useContext(AppContext);
   const handleReSign = () => {
     setInspectorSignature(null);
     setPICSignature(null);
   };
 
-  const handlePress = () => {
-    signDoc()
-      .then(pdf => main(pdf))
-      .catch(err => console.log(err));
+  const handleSubmit = async () => {
+    const networkState = await Network.getNetworkStateAsync();
+    if (!networkState.isConnected || !networkState.isInternetReachable) {
+      setErrorModalVisible(true);
+      setErrorMessage(
+        'The DD 2973 cannot be processed, most likely due to network connectivity issues. Please try again when you establish a stable connection.'
+      );
+    } else {
+      signDoc()
+        .then(pdf => main(pdf))
+        .catch(err => console.log(err));
+    }
   };
 
   return (
-    <View style={styles.buttonContainer}>
-      {inspectorSignature && picSignature ? (
-        <>
-          <TouchableOpacity style={styles.greenButton} onPress={handlePress}>
-            <Text style={styles.buttonText}>Sign and Send PDF</Text>
+    <>
+      <ErrorModal />
+      <View style={styles.buttonContainer}>
+        {inspectorSignature && picSignature ? (
+          <>
+            <TouchableOpacity style={styles.greenButton} onPress={handleSubmit}>
+              <Text style={styles.buttonText}>Sign and Send PDF</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.blueButton} onPress={handleReSign}>
+              <Text style={styles.buttonText}>Re-Sign PDF</Text>
+            </TouchableOpacity>
+          </>
+        ) : (
+          <TouchableOpacity
+            style={styles.blueButton}
+            onPress={() => navigation.push('review')}
+          >
+            <Text style={styles.buttonText}>review PDF</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.blueButton} onPress={handleReSign}>
-            <Text style={styles.buttonText}>Re-Sign PDF</Text>
-          </TouchableOpacity>
-        </>
-      ) : (
-        <TouchableOpacity
-          style={styles.blueButton}
-          onPress={() => navigation.push('review')}
-        >
-          <Text style={styles.buttonText}>review PDF</Text>
-        </TouchableOpacity>
-      )}
-    </View>
+        )}
+      </View>
+    </>
   );
 };
 

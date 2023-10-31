@@ -10,9 +10,8 @@ import {
 import { AppContext } from '../../context/AppContext';
 import HighlightText from '@sanar/react-native-highlight-text';
 
-const NanoModal = () => {
-  const { nanoModalVisible, setNanoModalVisible, nanoInfo } =
-    useContext(AppContext);
+const NanoModal = ({ nanoModalVisible, setNanoModalVisible }) => {
+  const { nanoInfo } = useContext(AppContext);
   return (
     <>
       <Modal

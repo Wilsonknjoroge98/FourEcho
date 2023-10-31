@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import {
   View,
   Text,
@@ -259,8 +259,8 @@ const info = [
       'This item may be marked “N/A” when the food processes occurring within the operation do not include, at any time, the preparation of RTE, TCS foods on-premises and holding the RTE TCS food beyond the current business day; and at no time are commercial containers of bulk RTE, TCS food opened and held beyond the current business day at the establishment. This item may be marked “N/O” when the establishment does handle foods requiring date marking, but there are no foods requiring date marking in the facility at the time of inspection.',
   },
   {
-    body: '',
-    highlight: '',
+    body: 'Food separated & protected in storage. Some of the provisions contained within this grouping are critical. This item may not be marked “N/A” or “N/O.” Compliance is based on direct observations of conditions that can lead to contamination during food storage. This item should be marked “noncompliant” when RTE foods are subject to potential contamination by raw animal foods; raw animal foods are not properly separated or segregated by shelving based on minimum required cooking temperatures; or food is not packaged or covered during storage. An exception is applied to loosely covered pans of hot foods that are placed in the refrigerator for cooling, as long as the pans are located on the top shelf and are not subject to contamination from the fan, condensation, or other sources that may drip or splash into the food. When this condition exists, a violation does not occur unless there is a potential for contamination or the food that was being cooled remains uncovered/partially covered beyond the reasonable time needed to cool the food. Violations are also cited when stored food is subjected to contamination due to improper storage conditions or storage in prohibited areas. A violation involving improper cooling of food as specified under § 3-501.14 is marked using Item 29. Violations involving contamination during food preparation, display, or service are marked using Item 19.',
+    highlight: 'This item may not be marked “N/A” or “N/O.”',
   },
   {
     body: 'Fresh fruits and vegetables properly washed. This item may be marked “N/A” if Fresh fruits and vegetables are not prepared by the food establishment and the service of Fresh fruits and vegetables, when practiced, is limited to commercially packaged items portioned for individual sale (for example, salads and fruit bowls). This item may not be marked “N/O.” Chemicals are allowed for washing fruits and vegetables, as is washing them in water. Raw fruits and vegetables are to be washed prior to their preparation or being offered as RTE. Discussion with the PIC and food employees will help determine the establishment’s practice. This item is marked “noncompliant” when Fresh fruits and vegetables are not washed to remove visible soil. Violations involving use of unauthorized chemicals are to wash or disinfect Fresh fruits and vegetables are assessed using Item 25.',
@@ -370,8 +370,8 @@ const info = [
 ];
 
 const Nano = () => {
-  const { nanoValues, setNanoValues, setNanoModalVisible, setNanoInfo } =
-    useContext(AppContext);
+  const { nanoValues, setNanoInfo, setNanoValues } = useContext(AppContext);
+  const [nanoModalVisible, setNanoModalVisible] = useState(false);
 
   handleNAPress = (itemNum, i) => {
     setNanoValues(prevNanoValues => {
@@ -460,7 +460,10 @@ const Nano = () => {
 
   return (
     <SafeAreaView style={styles.parentContainer}>
-      <NanoModal />
+      <NanoModal
+        nanoModalVisible={nanoModalVisible}
+        setNanoModalVisible={setNanoModalVisible}
+      />
       <FlatList
         renderItem={renderItem}
         data={data}

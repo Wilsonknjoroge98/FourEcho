@@ -2,7 +2,7 @@
   "expo": {
     "name": "FourEcho",
     "slug": "FourEcho",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "scheme": "acme",
     "icon": "./assets/images/icon.png",
     "web": {
@@ -10,7 +10,13 @@
     },
     "plugins": [
       "@config-plugins/react-native-blob-util",
-      "@config-plugins/react-native-pdf"
+      "@config-plugins/react-native-pdf",
+      [
+        "expo-updates",
+        {
+          "username": "wilsonknjoroge98"
+        }
+      ]
     ],
     "extra": {
       "eas": {
@@ -19,11 +25,23 @@
     },
     "ios": {
       "bundleIdentifier": "com.wilsonknjoroge98.FourEcho",
-      "buildNumber": "7"
+      "buildNumber": "1"
     },
     "android": {
       "package": "com.wilsonknjoroge98.FourEcho",
-      "versionCode": 1
+      "versionCode": 4,
+      "permissions": [
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.DOWNLOAD_WITHOUT_NOTIFICATION",
+        "android.permission.ACCESS_NETWORK_STATE"
+      ]
+    },
+    "runtimeVersion": {
+      "policy": "sdkVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/cb4602ba-c178-4444-9fdc-cf4f4c0d834f"
     }
   }
 }

@@ -3,17 +3,19 @@ import {
   View,
   TouchableOpacity,
   StyleSheet,
-  ActivityIndicator,
   FlatList,
+  Image,
 } from 'react-native';
 import FilterBigLetter from './subcomponents/FilterBigLetter';
 import HighlightText from '@sanar/react-native-highlight-text';
 import DiscrepancyModal from '../../select discrepancies/discrepancy modal/DiscrepancyModal';
+import FilterHelpModal from './filter help modal/FilterHelpModal';
 import { AppContext } from '../../../context/AppContext';
 import { Skeleton } from '@rneui/themed';
 
 const Filter = ({ data, searchQuery, navigation }) => {
   const [expandedSection, setExpandedSection] = useState({});
+  const [helpModalVisible, setHelpModalVisible] = useState(false);
   const { filterLoading, setDiscrepancyModalVisible, setDiscrepancy } =
     useContext(AppContext);
 
@@ -75,44 +77,72 @@ const Filter = ({ data, searchQuery, navigation }) => {
 
   if (!filterLoading) {
     return (
-      <View>
-        {/* <View>
-          <Text style={styles.title}>
-            Press and Hold Discrepancy To Continue
-          </Text>
-        </View> */}
+      <>
+        <FilterHelpModal
+          helpModalVisible={helpModalVisible}
+          setHelpModalVisible={setHelpModalVisible}
+        />
         <DiscrepancyModal />
-        {data && (
-          <>
-            <FlatList
-              style={styles.flatList}
-              data={data}
-              renderItem={renderItem}
-              keyExtractor={(item, index) => `${item[0].section}${index}`}
-              contentContainerStyle={styles.contentContainerStyle}
-            />
-          </>
-        )}
-      </View>
+        <View>
+          <View>
+            <TouchableOpacity
+              onPress={() => setHelpModalVisible(true)}
+              style={styles.infoIconButton}
+            >
+              <Image
+                style={styles.infoIcon}
+                source={require('../../../../assets/images/info__icon.png')}
+              />
+            </TouchableOpacity>
+          </View>
+
+          {data && (
+            <>
+              <FlatList
+                style={styles.flatList}
+                data={data}
+                renderItem={renderItem}
+                keyExtractor={(item, index) => `${item[0].section}${index}`}
+                contentContainerStyle={styles.contentContainerStyle}
+              />
+            </>
+          )}
+        </View>
+      </>
     );
   } else {
     return (
-      <View style={styles.skeletonContainer}>
-        <Skeleton animation={'wave'} style={styles.skeleton} />
-        <Skeleton animation={'wave'} style={styles.skeleton} />
-        <Skeleton animation={'wave'} style={styles.skeleton} />
-        <Skeleton animation={'wave'} style={styles.skeleton} />
-        <Skeleton animation={'wave'} style={styles.skeleton} />
-        <Skeleton animation={'wave'} style={styles.skeleton} />
-      </View>
+      <>
+        <FilterHelpModal
+          helpModalVisible={helpModalVisible}
+          setHelpModalVisible={setHelpModalVisible}
+        />
+        <View>
+          <TouchableOpacity
+            onPress={() => setHelpModalVisible(true)}
+            style={styles.infoIconButton}
+          >
+            <Image
+              style={styles.infoIcon}
+              source={require('../../../../assets/images/info__icon.png')}
+            />
+          </TouchableOpacity>
+        </View>
+        <View style={styles.skeletonContainer}>
+          <Skeleton animation={'wave'} style={styles.skeleton} />
+          <Skeleton animation={'wave'} style={styles.skeleton} />
+          <Skeleton animation={'wave'} style={styles.skeleton} />
+          <Skeleton animation={'wave'} style={styles.skeleton} />
+          <Skeleton animation={'wave'} style={styles.skeleton} />
+          <Skeleton animation={'wave'} style={styles.skeleton} />
+        </View>
+      </>
     );
   }
 };
 
 const styles = StyleSheet.create({
   skeletonContainer: {
-    // flex: 1,
-    padding: 5,
     justifyContent: 'center',
     alignContent: 'center',
   },
@@ -125,6 +155,16 @@ const styles = StyleSheet.create({
     width: 350,
     alignSelf: 'center',
     height: 53,
+  },
+  infoIconButton: {
+    marginLeft: 30,
+    margin: 10,
+    alignSelf: 'flex-start',
+    width: 30,
+  },
+  infoIcon: {
+    height: 25,
+    width: 25,
   },
   contentContainerStyle: {
     paddingBottom: 300,

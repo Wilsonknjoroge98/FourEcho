@@ -68,7 +68,7 @@ const Temperature = ({ navigation }) => {
                 </View>
                 <SelectDropdown
                   data={['F', 'C']}
-                  defaultValue={''}
+                  defaultValue={'F'}
                   onSelect={text => handleInput(text, i, 'metric')}
                   buttonStyle={{
                     width: 50,
