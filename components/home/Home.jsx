@@ -3,7 +3,9 @@ import { SafeAreaView } from 'react-native';
 import { useFonts } from 'expo-font';
 import { useCallback } from 'react';
 import StartButton from './subcomponents/StartButton';
+import SupportButton from '../support/SupportButton';
 import TitleLogo from './subcomponents/TitleLogo';
+import SupportModal from '../support/SupportModal';
 
 const Home = ({ navigation }) => {
   const [fontsLoaded] = useFonts({
@@ -24,12 +26,16 @@ const Home = ({ navigation }) => {
   }
 
   return (
-    <SafeAreaView style={styles.parentContainer}>
-      <View style={styles.contentContainer}>
-        <TitleLogo />
-        <StartButton navigation={navigation} />
-      </View>
-    </SafeAreaView>
+    <>
+      <SupportModal />
+      <SafeAreaView style={styles.parentContainer}>
+        <View style={styles.contentContainer}>
+          <TitleLogo />
+          <StartButton navigation={navigation} />
+          <SupportButton />
+        </View>
+      </SafeAreaView>
+    </>
   );
 };
 

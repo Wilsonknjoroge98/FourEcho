@@ -1,13 +1,6 @@
 import { useState, useContext } from 'react';
 import React from 'react';
-import {
-  Image,
-  View,
-  TouchableOpacity,
-  Text,
-  StyleSheet,
-  FlatList,
-} from 'react-native';
+import { Image, View, TouchableOpacity, Text, StyleSheet, FlatList } from 'react-native';
 import DiscrepancyModal from './discrepancy modal/DiscrepancyModal';
 import BigLetter from './subcomponents/BigLetter';
 import StaticHelpModal from './static help modal/StaticHelpModal';
@@ -18,8 +11,7 @@ const SelectDiscrepancies = () => {
   const [expandedSection, setExpandedSection] = useState({});
   const [helpModalVisible, setHelpModalVisible] = useState(false);
 
-  const { itemGroup, setDiscrepancy, setDiscrepancyModalVisible } =
-    useContext(AppContext);
+  const { itemGroup, setDiscrepancy, setDiscrepancyModalVisible } = useContext(AppContext);
 
   const handleSectionPress = index => {
     setExpandedSection(prevState => ({
@@ -31,7 +23,6 @@ const SelectDiscrepancies = () => {
   const handleLongPress = item => {
     setDiscrepancyModalVisible(true);
     setDiscrepancy(item);
-    console.log(item);
   };
 
   const renderItem = ({ item, index }) => {
@@ -51,11 +42,7 @@ const SelectDiscrepancies = () => {
             <Text>{item[0].header}</Text>
           </View>
         </TouchableOpacity>
-        <BigLetter
-          items={item}
-          expandedSection={expandedSection}
-          parentIndex={index}
-        />
+        <BigLetter items={item} expandedSection={expandedSection} parentIndex={index} />
       </View>
     );
   };
@@ -69,10 +56,7 @@ const SelectDiscrepancies = () => {
       <DiscrepancyModal />
       <View style={styles.background}>
         <View>
-          <TouchableOpacity
-            onPress={() => setHelpModalVisible(true)}
-            style={styles.infoIconButton}
-          >
+          <TouchableOpacity onPress={() => setHelpModalVisible(true)} style={styles.infoIconButton}>
             <Image
               style={styles.infoIcon}
               source={require('../../../assets/images/info__icon.png')}

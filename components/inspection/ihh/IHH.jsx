@@ -1,11 +1,4 @@
-import {
-  TextInput,
-  Text,
-  View,
-  TouchableOpacity,
-  StyleSheet,
-  ScrollView,
-} from 'react-native';
+import { TextInput, Text, View, TouchableOpacity, StyleSheet, ScrollView } from 'react-native';
 import { useContext } from 'react';
 import { AppContext } from '../../context/AppContext';
 
@@ -23,18 +16,22 @@ const IHH = ({ navigation }) => {
       >
         <View style={styles.contentContainer}>
           <Text style={styles.label}>Describe the Imminent Health Hazard</Text>
+
           <TextInput
             onChangeText={text => {
               setIHH(text);
             }}
             value={iHH}
             multiline={true}
-            style={styles.textInput}
+            style={iHH != '' ? styles.warningTextInput : styles.textInput}
           />
-          <TouchableOpacity
-            style={styles.naivgateButton}
-            onPress={() => navigation.push('nav')}
-          >
+          {iHH != '' && (
+            <Text style={styles.warningLabel}>
+              Warning: If this field is not left blank, the inspection is an automatic fail!
+            </Text>
+          )}
+
+          <TouchableOpacity style={styles.naivgateButton} onPress={() => navigation.push('nav')}>
             <Text style={styles.navigateButtonText}>Move On To...</Text>
           </TouchableOpacity>
         </View>
@@ -57,8 +54,27 @@ const styles = StyleSheet.create({
     fontSize: 22,
     alignSelf: 'center',
   },
+  warningLabel: {
+    fontFamily: 'Raj',
+    fontSize: 22,
+    alignSelf: 'center',
+    color: 'red',
+    textAlign: 'center',
+  },
   textInput: {
     borderColor: 'black',
+    borderWidth: 1,
+    padding: 15,
+    margin: 10,
+    height: 350,
+    width: 350,
+    borderRadius: 15,
+    fontSize: 15,
+    paddingTop: 20,
+    paddingBottom: 20,
+  },
+  warningTextInput: {
+    borderColor: 'red',
     borderWidth: 1,
     padding: 15,
     margin: 10,

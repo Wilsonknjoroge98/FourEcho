@@ -2,6 +2,8 @@ import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import WellDoneIcon from './WellDoneIcon';
 import { useContext } from 'react';
 import { AppContext } from '../../context/AppContext';
+import SupportButton from '../../support/SupportButton';
+import SupportModal from '../../support/SupportModal';
 
 const WellDone = ({ navigation }) => {
   const {
@@ -16,6 +18,7 @@ const WellDone = ({ navigation }) => {
     setInspectionTypeOtherText,
     setValidEmailInspector,
     setValidEmailPIC,
+    setValidEmailPersonal,
     setSanitizingConcentrationValues,
     setSanitizingTempValues,
     setTempValues,
@@ -24,7 +27,6 @@ const WellDone = ({ navigation }) => {
     setItemId,
     setFilterLoading,
     setDiscrepancy,
-    setModalVisible,
     setInspectorSignature,
     setPICSignature,
   } = useContext(AppContext);
@@ -37,6 +39,7 @@ const WellDone = ({ navigation }) => {
     setInspectionTypeOtherText('');
     setValidEmailPIC(false);
     setValidEmailInspector(false);
+    setValidEmailPersonal(false);
     setTempValues([{}]);
     setSanitizingConcentrationValues([{}]);
     setSanitizingTempValues([{}]);
@@ -45,7 +48,6 @@ const WellDone = ({ navigation }) => {
     setItemId('');
     setFilterLoading(false);
     setDiscrepancy({});
-    setModalVisible(false);
     setIHH('');
     setStartTime('');
     setInspectorSignature(null);
@@ -55,27 +57,37 @@ const WellDone = ({ navigation }) => {
 
   return (
     <>
+      <SupportModal />
       <WellDoneIcon />
-      <Text style={styles.confirmationText}>
-        The DD2973 has been sent to {backgroundValues[6]?.text} and{' '}
-        {backgroundValues[10]?.text}
-      </Text>
-      <View style={{ margin: 30 }}>
-        <TouchableOpacity
-          style={styles.startButton}
-          onPress={handleNewInspection}
-        >
+      <View style={styles.textContainer}>
+        <Text style={styles.confirmationText}>
+          The DD2973 has been sent to the following emails
+        </Text>
+        <Text style={styles.confirmationText}>‣ {backgroundValues[6]?.text}</Text>
+        <Text style={styles.confirmationText}>‣ {backgroundValues[10]?.text}</Text>
+        <Text style={styles.confirmationText}>‣ {backgroundValues[11].text}</Text>
+      </View>
+      <View style={{ marginTop: 30 }}>
+        <TouchableOpacity style={styles.startButton} onPress={handleNewInspection}>
           <Text style={styles.startButtonText}>Start New Inspection</Text>
         </TouchableOpacity>
       </View>
+      <SupportButton />
     </>
   );
 };
 
 const styles = StyleSheet.create({
+  textContainer: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-evenly',
+    margin: 10,
+  },
   confirmationText: {
     fontFamily: 'Raj',
     fontSize: 25,
+    margin: 5,
   },
   startButton: {
     borderRadius: 10,

@@ -12,8 +12,7 @@ export const AppProvider = ({ children }) => {
   const [validEmailPIC, setValidEmailPIC] = useState(false);
   const [validEmailInspector, setValidEmailInspector] = useState(false);
   const [tempValues, setTempValues] = useState([{}]);
-  const [sanitizingConcentrationValues, setSanitizingConcentrationValues] =
-    useState([{}]);
+  const [sanitizingConcentrationValues, setSanitizingConcentrationValues] = useState([{}]);
   const [sanitizingTempValues, setSanitizingTempValues] = useState([{}]);
   const [tempArr, setTempArr] = useState(Array.from(Array(3).keys()));
   const [itemGroup, setItemGroup] = useState();
@@ -30,6 +29,8 @@ export const AppProvider = ({ children }) => {
   const [picSignature, setPICSignature] = useState(null);
   const [freeText, setFreeText] = useState('');
   const [nanoValues, setNanoValues] = useState([]);
+  const [supportModalVisible, setSupportModalVisible] = useState(false);
+  const [validEmailPersonal, setValidEmailPersonal] = useState(false);
 
   return (
     <AppContext.Provider
@@ -52,8 +53,10 @@ export const AppProvider = ({ children }) => {
         setInspectionTypeOtherText,
         validEmailInspector,
         validEmailPIC,
+        validEmailPersonal,
         setValidEmailInspector,
         setValidEmailPIC,
+        setValidEmailPersonal,
         sanitizingConcentrationValues,
         setSanitizingConcentrationValues,
         sanitizingTempValues,
@@ -86,6 +89,8 @@ export const AppProvider = ({ children }) => {
         setErrorModalVisible,
         errorMessage,
         setErrorMessage,
+        supportModalVisible,
+        setSupportModalVisible,
       }}
     >
       {children}

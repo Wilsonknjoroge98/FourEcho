@@ -1,14 +1,9 @@
 import { useContext } from 'react';
-import {
-  View,
-  Text,
-  TouchableOpacity,
-  StyleSheet,
-  ScrollView,
-} from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, ScrollView } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { AppContext } from '../context/AppContext';
 import ErrorModal from '../inspection/error modal/ErrorModal';
+import { LinearGradient } from 'expo-linear-gradient';
 import * as Network from 'expo-network';
 
 const Navigation = ({ navigation }) => {
@@ -17,6 +12,7 @@ const Navigation = ({ navigation }) => {
   const {
     validEmailPIC,
     validEmailInspector,
+    validEmailPersonal,
     setErrorModalVisible,
     setErrorMessage,
   } = useContext(AppContext);
@@ -30,12 +26,10 @@ const Navigation = ({ navigation }) => {
       );
       setErrorModalVisible(true);
     } else {
-      if (validEmailPIC && validEmailInspector) {
+      if (validEmailPIC && validEmailInspector && validEmailPersonal) {
         navigation.navigate('done');
       } else {
-        setErrorMessage(
-          'Make sure to enter valid emails in the "Inspector Email" and the "PIC Email" fields.'
-        );
+        setErrorMessage('Make sure to enter valid emails in all of the email fields.');
         setErrorModalVisible(true);
         navigation.navigate('background');
       }
@@ -47,21 +41,26 @@ const Navigation = ({ navigation }) => {
       <ErrorModal />
       <ScrollView>
         <View style={styles.cancelButtonContainer}>
-          <TouchableOpacity
-            style={styles.cancelButton}
-            onPress={() => navigation.goBack()}
-          >
+          <TouchableOpacity style={styles.cancelButton} onPress={() => navigation.goBack()}>
             <Text style={styles.cancelButtonText}>X</Text>
           </TouchableOpacity>
         </View>
         <View style={styles.listContainer}>
           <View>
+            {/* <LinearGradient
+              colors={['#4ae02e', '#2EE06B', '#A3E02E']}
+              end={{ x: 0.1, y: 0.7 }}
+              style={prevRoute.name === 'assistant' ? styles.navButtonDisabled : styles.hawkButton}
+            >
+              <TouchableOpacity
+                onPress={() => navigation.replace('assistant')}
+                disabled={prevRoute.name === 'assistant' ? true : false}
+              >
+                <Text style={{ ...styles.navButtonText, fontSize: 25 }}>AI assistant</Text>
+              </TouchableOpacity>
+            </LinearGradient> */}
             <TouchableOpacity
-              style={
-                prevRoute.name === 'background'
-                  ? styles.navButtonDisabled
-                  : styles.navButton
-              }
+              style={prevRoute.name === 'background' ? styles.navButtonDisabled : styles.navButton}
               onPress={() => navigation.replace('background')}
               disabled={prevRoute.name === 'background' ? true : false}
             >
@@ -87,27 +86,17 @@ const Navigation = ({ navigation }) => {
               onPress={() => navigation.replace('view discrepancies')}
               disabled={prevRoute.name === 'view discrepancies' ? true : false}
             >
-              <Text style={styles.navButtonText}>
-                View / Edit Discrepancies
-              </Text>
+              <Text style={styles.navButtonText}>View / Edit Discrepancies</Text>
             </TouchableOpacity>
             <TouchableOpacity
-              style={
-                prevRoute.name === 'nano'
-                  ? styles.navButtonDisabled
-                  : styles.navButton
-              }
+              style={prevRoute.name === 'nano' ? styles.navButtonDisabled : styles.navButton}
               onPress={() => navigation.replace('nano')}
               disabled={prevRoute.name === 'nano' ? true : false}
             >
               <Text style={styles.navButtonText}>NA / NO</Text>
             </TouchableOpacity>
             <TouchableOpacity
-              style={
-                prevRoute.name === 'temperature'
-                  ? styles.navButtonDisabled
-                  : styles.navButton
-              }
+              style={prevRoute.name === 'temperature' ? styles.navButtonDisabled : styles.navButton}
               onPress={() => navigation.replace('temperature')}
               disabled={prevRoute.name === 'temperature' ? true : false}
             >
@@ -115,22 +104,14 @@ const Navigation = ({ navigation }) => {
             </TouchableOpacity>
 
             <TouchableOpacity
-              style={
-                prevRoute.name === 'sanitizing'
-                  ? styles.navButtonDisabled
-                  : styles.navButton
-              }
+              style={prevRoute.name === 'sanitizing' ? styles.navButtonDisabled : styles.navButton}
               onPress={() => navigation.replace('sanitizing')}
               disabled={prevRoute.name === 'sanitizing' ? true : false}
             >
               <Text style={styles.navButtonText}>Sanitizing</Text>
             </TouchableOpacity>
             <TouchableOpacity
-              style={
-                prevRoute.name === 'ihh'
-                  ? styles.navButtonDisabled
-                  : styles.navButton
-              }
+              style={prevRoute.name === 'ihh' ? styles.navButtonDisabled : styles.navButton}
               onPress={() => navigation.replace('ihh')}
               disabled={prevRoute.name === 'ihh' ? true : false}
             >
@@ -138,22 +119,14 @@ const Navigation = ({ navigation }) => {
             </TouchableOpacity>
 
             <TouchableOpacity
-              style={
-                prevRoute.name === 'free text'
-                  ? styles.navButtonDisabled
-                  : styles.navButton
-              }
+              style={prevRoute.name === 'free text' ? styles.navButtonDisabled : styles.navButton}
               onPress={() => navigation.replace('free text')}
               disabled={prevRoute.name === 'free text' ? true : false}
             >
               <Text style={styles.navButtonText}>Free Text</Text>
             </TouchableOpacity>
             <TouchableOpacity
-              style={
-                prevRoute.name === 'done'
-                  ? styles.navButtonDisabled
-                  : styles.navButton
-              }
+              style={prevRoute.name === 'done' ? styles.navButtonDisabled : styles.navButton}
               onPress={onFinished}
               disabled={prevRoute.name === 'done' ? true : false}
             >
@@ -184,6 +157,17 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     padding: 20,
     backgroundColor: '#4dd0e1',
+  },
+  hawkButton: {
+    width: 'auto',
+    marginLeft: 30,
+    marginRight: 30,
+    marginTop: 5,
+    marginBottom: 5,
+    borderColor: 'black',
+    borderRadius: 5,
+    padding: 20,
+    backgroundColor: '#4ae02e',
   },
   navButtonDisabled: {
     width: 'auto',

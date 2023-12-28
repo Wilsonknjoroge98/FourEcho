@@ -15,6 +15,10 @@
       },
       "channel": "development"
     },
+    "preview": {
+      "distribution": "internal",
+      "channel": "preview"
+    },
     "production": {
       "channel": "production"
     }

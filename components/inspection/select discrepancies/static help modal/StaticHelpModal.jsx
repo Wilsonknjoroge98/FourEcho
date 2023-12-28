@@ -1,11 +1,5 @@
-import {
-  Modal,
-  Text,
-  View,
-  StyleSheet,
-  TouchableOpacity,
-  ScrollView,
-} from 'react-native';
+import { Modal, Text, View, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
+import HighlightText from '@sanar/react-native-highlight-text';
 
 const staticHelpModal = ({ helpModalVisible, setHelpModalVisible }) => {
   return (
@@ -16,10 +10,7 @@ const staticHelpModal = ({ helpModalVisible, setHelpModalVisible }) => {
         onRequestClose={() => console.log('close')}
       >
         <View>
-          <TouchableOpacity
-            style={styles.cancelButton}
-            onPress={() => setHelpModalVisible(false)}
-          >
+          <TouchableOpacity style={styles.cancelButton} onPress={() => setHelpModalVisible(false)}>
             <Text style={styles.cancelButtonText}>X</Text>
           </TouchableOpacity>
         </View>
@@ -27,49 +18,49 @@ const staticHelpModal = ({ helpModalVisible, setHelpModalVisible }) => {
           <View style={styles.modalContainer}>
             <View style={styles.textView}>
               <Text style={styles.text}>
-                The Tri Service Food Code provisions are organized in a
-                hiererichal structure using cards. Each white card represents a
-                top-level section (e.g. 2-105.12). All subsections of the
-                top-level sections are displayed as nested cards.
+                The Tri Service Food Code provisions are organized in a hiererichal structure using
+                cards. Each white card represents a top-level section (e.g. 2-105.12). All
+                subsections of the top-level sections are displayed as nested cards.
               </Text>
             </View>
             <View style={styles.textView}>
               <Text style={styles.text}>
-                Tap the white provision cards to reveal all of the nested
-                sections (i.e. capital lettered sections) of that provision.
+                Tap the white provision cards to reveal all of the nested sections (i.e. capital
+                lettered sections) of that provision.
               </Text>
             </View>
             <View style={styles.textView}>
               <Text style={styles.text}>
-                If the provision contains capital lettered sub-sections, cards
-                corresponding to those lettered sections will be exposed below
-                the card that was tapped.
+                If the provision contains capital lettered sub-sections, cards corresponding to
+                those lettered sections will be exposed below the card that was tapped.
               </Text>
             </View>
             <View style={styles.textView}>
               <Text style={styles.text}>
-                This process can be done repeatedly until you reach the most
-                specific sub-section card (e.g 2-102.12 (A) (1) (c)).
+                This process can be done repeatedly until you reach the most specific sub-section
+                card (e.g 2-102.12 (A) (1) (c)).
               </Text>
             </View>
             <View style={styles.textView}>
               <Text style={styles.text}>
-                Upon reaching a section that does not have additional
-                sub-sections, that section card will not respond to taps as
-                there are no more descendant cards to reveal.
+                Upon reaching a section that does not have additional sub-sections, that section
+                card will not respond to taps as there are no more descendant cards to reveal.
               </Text>
             </View>
             <View style={styles.textView}>
-              <Text style={styles.text}>
-                At this point, press and hold the section card to designate the
-                discrepancy a finding in your inspection report.{' '}
-              </Text>
+              <HighlightText
+                style={styles.text}
+                highlightStyle={{ backgroundColor: 'yellow' }}
+                searchWords={[
+                  'press and hold the section card to designate the discrepancy a finding in your inspection report',
+                ]}
+                textToHighlight="At this point, press and hold the section card to designate the discrepancy a finding in your inspection report"
+              />
             </View>
             <View style={styles.textView}>
               <Text style={styles.text}>
-                For the sake of specificity, sections that have children cannot
-                be selected. Only the most deeply nested section cards can be
-                reported as findings.
+                For the sake of specificity, sections that have children cannot be selected. Only
+                the most deeply nested section cards can be reported as findings.
               </Text>
             </View>
           </View>

@@ -46,10 +46,7 @@ const Buttons = ({ navigation, main, signDoc }) => {
             </TouchableOpacity>
           </>
         ) : (
-          <TouchableOpacity
-            style={styles.blueButton}
-            onPress={() => navigation.push('review')}
-          >
+          <TouchableOpacity style={styles.blueButton} onPress={() => navigation.push('review')}>
             <Text style={styles.buttonText}>review PDF</Text>
           </TouchableOpacity>
         )}

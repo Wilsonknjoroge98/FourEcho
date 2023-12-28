@@ -1,8 +1,8 @@
+import { initializeApp } from 'firebase/app';
 const firebaseConfig = {
   apiKey: 'AIzaSyDJMAFnpTyjvl2KUit104uEgbvYadXTd70',
   authDomain: 'publichealthapp-5964a.firebaseapp.com',
-  databaseURL:
-    'https://publichealthapp-5964a-default-rtdb.europe-west1.firebasedatabase.app',
+  databaseURL: 'https://publichealthapp-5964a-default-rtdb.europe-west1.firebasedatabase.app',
   projectId: 'publichealthapp-5964a',
   storageBucket: 'publichealthapp-5964a.appspot.com',
   messagingSenderId: '322791136816',
@@ -10,4 +10,6 @@ const firebaseConfig = {
   measurementId: 'G-RFG2FG8DDE',
 };
 
-export default firebaseConfig;
+const firebaseApp = initializeApp(firebaseConfig);
+
+export default firebaseApp;

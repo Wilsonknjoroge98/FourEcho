@@ -13,28 +13,21 @@ import FreeText from '../inspection/free text/FreeText';
 import Done from '../done/Done';
 import Nano from '../inspection/nano/Nano';
 import PdfView from '../done/pdf/PdfView';
+import Assistant from '../inspection/find discrepancies/assistant/Assistant';
 
 const Stack = createNativeStackNavigator();
 
 const Navigator = () => {
   return (
     <Stack.Navigator initialRouteName="home">
-      <Stack.Screen
-        name="home"
-        component={Home}
-        options={{ headerShown: false, title: '' }}
-      />
+      <Stack.Screen name="home" component={Home} options={{ headerShown: false, title: '' }} />
       <Stack.Screen
         name="background"
         component={Background}
         options={({ navigation }) => ({
           title: '',
           headerRight: () => (
-            <Button
-              onPress={() => navigation.navigate('nav')}
-              title="☰"
-              color="black"
-            />
+            <Button onPress={() => navigation.navigate('nav')} title="☰" color="black" />
           ),
         })}
       />
@@ -44,11 +37,7 @@ const Navigator = () => {
         options={({ navigation }) => ({
           title: '',
           headerRight: () => (
-            <Button
-              onPress={() => navigation.push('nav')}
-              title="☰"
-              color="black"
-            />
+            <Button onPress={() => navigation.push('nav')} title="☰" color="black" />
           ),
         })}
       />
@@ -58,11 +47,7 @@ const Navigator = () => {
         options={({ navigation }) => ({
           title: '',
           headerRight: () => (
-            <Button
-              onPress={() => navigation.push('nav')}
-              title="☰"
-              color="black"
-            />
+            <Button onPress={() => navigation.push('nav')} title="☰" color="black" />
           ),
         })}
       />
@@ -72,11 +57,7 @@ const Navigator = () => {
         options={({ navigation }) => ({
           title: '',
           headerRight: () => (
-            <Button
-              onPress={() => navigation.push('nav')}
-              title="☰"
-              color="black"
-            />
+            <Button onPress={() => navigation.push('nav')} title="☰" color="black" />
           ),
         })}
       />
@@ -86,11 +67,7 @@ const Navigator = () => {
         options={({ navigation }) => ({
           title: '',
           headerRight: () => (
-            <Button
-              onPress={() => navigation.push('nav')}
-              title="☰"
-              color="black"
-            />
+            <Button onPress={() => navigation.push('nav')} title="☰" color="black" />
           ),
         })}
       />
@@ -100,11 +77,7 @@ const Navigator = () => {
         options={({ navigation }) => ({
           title: '',
           headerRight: () => (
-            <Button
-              onPress={() => navigation.push('nav')}
-              title="☰"
-              color="black"
-            />
+            <Button onPress={() => navigation.push('nav')} title="☰" color="black" />
           ),
         })}
       />
@@ -114,11 +87,7 @@ const Navigator = () => {
         options={({ navigation }) => ({
           title: '',
           headerRight: () => (
-            <Button
-              onPress={() => navigation.push('nav')}
-              title="☰"
-              color="black"
-            />
+            <Button onPress={() => navigation.push('nav')} title="☰" color="black" />
           ),
         })}
       />
@@ -128,11 +97,7 @@ const Navigator = () => {
         options={({ navigation }) => ({
           title: '',
           headerRight: () => (
-            <Button
-              onPress={() => navigation.push('nav')}
-              title="☰"
-              color="black"
-            />
+            <Button onPress={() => navigation.push('nav')} title="☰" color="black" />
           ),
         })}
       />
@@ -150,11 +115,7 @@ const Navigator = () => {
         options={({ navigation }) => ({
           title: '',
           headerRight: () => (
-            <Button
-              onPress={() => navigation.push('nav')}
-              title="☰"
-              color="black"
-            />
+            <Button onPress={() => navigation.push('nav')} title="☰" color="black" />
           ),
         })}
       />
@@ -164,11 +125,7 @@ const Navigator = () => {
         options={({ navigation }) => ({
           title: '',
           headerRight: () => (
-            <Button
-              onPress={() => navigation.push('nav')}
-              title="☰"
-              color="black"
-            />
+            <Button onPress={() => navigation.push('nav')} title="☰" color="black" />
           ),
         })}
       />
@@ -178,14 +135,20 @@ const Navigator = () => {
         options={({ navigation }) => ({
           title: '',
           headerRight: () => (
-            <Button
-              onPress={() => navigation.push('nav')}
-              title="☰"
-              color="black"
-            />
+            <Button onPress={() => navigation.push('nav')} title="☰" color="black" />
           ),
         })}
       />
+      {/* <Stack.Screen
+        name="assistant"
+        component={Assistant}
+        options={({ navigation }) => ({
+          title: '',
+          headerRight: () => (
+            <Button onPress={() => navigation.push('nav')} title="☰" color="black" />
+          ),
+        })}
+      /> */}
     </Stack.Navigator>
   );
 };

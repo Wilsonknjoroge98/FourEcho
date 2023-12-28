@@ -85,6 +85,11 @@ const backgroundFields = [
     displayName: 'Person In Charge EMAIL',
     formId: 'PIC__email',
   },
+  {
+    type: 'text',
+    displayName: 'Personal EMAIL (to ensure delivery)',
+    formId: 'n/a',
+  },
 ];
 
 const BackgroundForm = ({ navigation }) => {
@@ -146,7 +151,7 @@ const BackgroundForm = ({ navigation }) => {
                   <InspectionType index={i} handleInput={handleInput} />
                 ) : (
                   <>
-                    {i === 6 || i === 10 ? (
+                    {i === 6 || i === 10 || i === 11 ? (
                       <EmailFields
                         index={i}
                         handleInput={handleInput}
@@ -164,10 +169,7 @@ const BackgroundForm = ({ navigation }) => {
               </View>
             ))}
 
-            <TouchableOpacity
-              style={styles.naivgateButton}
-              onPress={() => navigation.push('nav')}
-            >
+            <TouchableOpacity style={styles.naivgateButton} onPress={() => navigation.push('nav')}>
               <Text style={styles.navigateButtonText}>Move On To...</Text>
             </TouchableOpacity>
           </View>
@@ -202,7 +204,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 5,
     fontFamily: 'Open-Sans',
-    fontSize: 15,
+    fontSize: 13,
     alignSelf: 'center',
   },
   naivgateButton: {

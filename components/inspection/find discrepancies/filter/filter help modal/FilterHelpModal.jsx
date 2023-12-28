@@ -1,11 +1,5 @@
-import {
-  Modal,
-  Text,
-  View,
-  StyleSheet,
-  TouchableOpacity,
-  ScrollView,
-} from 'react-native';
+import { Modal, Text, View, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
+import HighlightText from '@sanar/react-native-highlight-text';
 
 const FilterHelpModal = ({ helpModalVisible, setHelpModalVisible }) => {
   return (
@@ -16,10 +10,7 @@ const FilterHelpModal = ({ helpModalVisible, setHelpModalVisible }) => {
         onRequestClose={() => console.log('close')}
       >
         <View>
-          <TouchableOpacity
-            style={styles.cancelButton}
-            onPress={() => setHelpModalVisible(false)}
-          >
+          <TouchableOpacity style={styles.cancelButton} onPress={() => setHelpModalVisible(false)}>
             <Text style={styles.cancelButtonText}>X</Text>
           </TouchableOpacity>
         </View>
@@ -27,46 +18,44 @@ const FilterHelpModal = ({ helpModalVisible, setHelpModalVisible }) => {
           <View style={styles.modalContainer}>
             <View style={styles.textView}>
               <Text style={styles.text}>
-                All section cards containing the search word will be exposed
-                when using search.
+                All section cards containing the search word will be exposed when using search.
               </Text>
             </View>
             <View style={styles.textView}>
               <Text style={styles.text}>
-                All parent sections of the section card that contains the search
-                word will be exposed.
+                All parent sections of the section card that contains the search word will be
+                exposed.
               </Text>
             </View>
             <View style={styles.textView}>
               <Text style={styles.text}>
-                Tap any section's card to reveal all of the children
-                (reagardless of if they contain the search word) if you seek
-                context for the provison.
+                Tap any section's card to reveal all of the children (reagardless of if they contain
+                the search word) if you seek context for the provison.
               </Text>
             </View>
             <View style={styles.textView}>
               <Text style={styles.text}>
-                While the search is active, all cards that contain the search
-                word will remain exposed--regardless of taps. In other words,
-                tapping an expandable section will reveal child cards (including
-                those that do not contain the search word) , however, when you
-                attempt to re-collapse the cards, all section cards will be
-                hidden with the exeption of the cards that contain the search
-                word.
+                While the search is active, all cards that contain the search word will remain
+                exposed--regardless of taps. In other words, tapping an expandable section will
+                reveal child cards (including those that do not contain the search word) , however,
+                when you attempt to re-collapse the cards, all section cards will be hidden with the
+                exeption of the cards that contain the search word.
               </Text>
             </View>
             <View style={styles.textView}>
-              <Text style={styles.text}>
-                When you reach a card that aligns with your observation, press
-                and hold the section card to designate the discrepancy a finding
-                in your inspection report.{' '}
-              </Text>
+              <HighlightText
+                style={styles.text}
+                highlightStyle={{ backgroundColor: 'yellow' }}
+                searchWords={[
+                  'press and hold the section card to designate the discrepancy a finding in your inspection report.',
+                ]}
+                textToHighlight="When you reach a card that aligns with your observation, press and hold the section card to designate the discrepancy a finding in your inspection report."
+              />
             </View>
             <View style={styles.textView}>
               <Text style={styles.text}>
-                For the sake of specificity, sections that have children cannot
-                be selected. Only the most deeply nested section cards can be
-                reported as findings.
+                For the sake of specificity, sections that have children cannot be selected. Only
+                the most deeply nested section cards can be reported as findings.
               </Text>
             </View>
             <View style={styles.textView}>

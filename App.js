@@ -20,7 +20,7 @@ export default function App() {
 
   useEffect(() => {
     onFetchUpdateAsync();
-  });
+  }, []);
 
   return (
     <View style={styles.container}>

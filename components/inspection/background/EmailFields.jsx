@@ -8,36 +8,58 @@ const EmailFields = ({ index, handleInput, backgroundValues }) => {
     setValidEmailInspector,
     validEmailPIC,
     setValidEmailPIC,
+    validEmailPersonal,
+    setValidEmailPersonal,
   } = useContext(AppContext);
 
   const re = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
 
   const validateEmail = (text, index) => {
     if (re.test(text)) {
-      index === 6 ? setValidEmailInspector(true) : setValidEmailPIC(true);
+      if (index === 6) {
+        setValidEmailInspector(true);
+      } else if (index === 10) {
+        setValidEmailPIC(true);
+      } else {
+        setValidEmailPersonal(true);
+      }
     } else {
-      index === 6 ? setValidEmailInspector(false) : setValidEmailPIC(false);
+      if (index === 6) {
+        setValidEmailInspector(false);
+      } else if (index === 10) {
+        setValidEmailPIC(false);
+      } else {
+        setValidEmailPersonal(false);
+      }
     }
     handleInput(text, index);
   };
 
-  return (
-    <>
-      {index === 6 ? (
-        <TextInput
-          style={validEmailInspector ? styles.textBoxGood : styles.textBoxBad}
-          onChangeText={text => validateEmail(text, index)}
-          value={backgroundValues[6]?.text ?? ''}
-        />
-      ) : (
-        <TextInput
-          style={validEmailPIC ? styles.textBoxGood : styles.textBoxBad}
-          onChangeText={text => validateEmail(text, index)}
-          value={backgroundValues[10]?.text ?? ''}
-        />
-      )}
-    </>
-  );
+  if (index === 6) {
+    return (
+      <TextInput
+        style={validEmailInspector ? styles.textBoxGood : styles.textBoxBad}
+        onChangeText={text => validateEmail(text, index)}
+        value={backgroundValues[6]?.text ?? ''}
+      />
+    );
+  } else if (index === 10) {
+    return (
+      <TextInput
+        style={validEmailPIC ? styles.textBoxGood : styles.textBoxBad}
+        onChangeText={text => validateEmail(text, index)}
+        value={backgroundValues[10]?.text ?? ''}
+      />
+    );
+  } else {
+    return (
+      <TextInput
+        style={validEmailPersonal ? styles.textBoxGood : styles.textBoxBad}
+        onChangeText={text => validateEmail(text, index)}
+        value={backgroundValues[11]?.text ?? ''}
+      />
+    );
+  }
 };
 
 const styles = StyleSheet.create({
@@ -48,7 +70,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 5,
     fontFamily: 'Open-Sans',
-    fontSize: 15,
+    fontSize: 13,
     alignSelf: 'center',
     backgroundColor: '#ffffff',
   },
@@ -60,7 +82,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     borderColor: '#d50000',
     fontFamily: 'Open-Sans',
-    fontSize: 15,
+    fontSize: 13,
     alignSelf: 'center',
   },
 });
