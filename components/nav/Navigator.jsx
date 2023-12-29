@@ -13,7 +13,6 @@ import FreeText from '../inspection/free text/FreeText';
 import Done from '../done/Done';
 import Nano from '../inspection/nano/Nano';
 import PdfView from '../done/pdf/PdfView';
-import Assistant from '../inspection/find discrepancies/assistant/Assistant';
 
 const Stack = createNativeStackNavigator();
 

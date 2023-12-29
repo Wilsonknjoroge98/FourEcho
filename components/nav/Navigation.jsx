@@ -3,7 +3,6 @@ import { View, Text, TouchableOpacity, StyleSheet, ScrollView } from 'react-nati
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { AppContext } from '../context/AppContext';
 import ErrorModal from '../inspection/error modal/ErrorModal';
-import { LinearGradient } from 'expo-linear-gradient';
 import * as Network from 'expo-network';
 
 const Navigation = ({ navigation }) => {
