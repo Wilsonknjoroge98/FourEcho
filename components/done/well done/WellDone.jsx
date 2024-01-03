@@ -2,6 +2,7 @@ import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import WellDoneIcon from './WellDoneIcon';
 import { useContext } from 'react';
 import { AppContext } from '../../context/AppContext';
+import HighlightText from '@sanar/react-native-highlight-text';
 import SupportButton from '../../support/SupportButton';
 import SupportModal from '../../support/SupportModal';
 
@@ -63,12 +64,29 @@ const WellDone = ({ navigation }) => {
         <Text style={styles.confirmationText}>
           The DD2973 has been sent to the following emails
         </Text>
-        <Text style={styles.confirmationText}>‣ {backgroundValues[6]?.text}</Text>
-        <Text style={styles.confirmationText}>‣ {backgroundValues[10]?.text}</Text>
-        <Text style={styles.confirmationText}>‣ {backgroundValues[11].text}</Text>
+        <Text style={styles.confirmationText}>
+          ‣ {backgroundValues[6]?.text}
+        </Text>
+        <Text style={styles.confirmationText}>
+          ‣ {backgroundValues[10]?.text}
+        </Text>
+        <Text style={styles.confirmationText}>
+          ‣ {backgroundValues[11].text}
+        </Text>
+      </View>
+      <View style={styles.textContainer}>
+        <HighlightText
+          style={{ ...styles.confirmationText, fontSize: 25 }}
+          highlightStyle={{ backgroundColor: 'yellow' }}
+          searchWords={['DAF365 QUARANTINE']}
+          textToHighlight="Search your military inbox for 'DAF365 QUARANTINE' to find the inspection email from fourxecho@gmail.com"
+        />
       </View>
       <View style={{ marginTop: 30 }}>
-        <TouchableOpacity style={styles.startButton} onPress={handleNewInspection}>
+        <TouchableOpacity
+          style={styles.startButton}
+          onPress={handleNewInspection}
+        >
           <Text style={styles.startButtonText}>Start New Inspection</Text>
         </TouchableOpacity>
       </View>
@@ -86,7 +104,7 @@ const styles = StyleSheet.create({
   },
   confirmationText: {
     fontFamily: 'Raj',
-    fontSize: 25,
+    fontSize: 20,
     margin: 5,
   },
   startButton: {

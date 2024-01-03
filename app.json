@@ -25,7 +25,7 @@
     },
     "ios": {
       "bundleIdentifier": "com.wilsonknjoroge98.FourEcho",
-      "buildNumber": "13"
+      "buildNumber": "14"
     },
     "android": {
       "package": "com.wilsonknjoroge98.FourEcho",
