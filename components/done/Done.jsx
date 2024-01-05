@@ -1,15 +1,21 @@
 import { useEffect, useContext, useState } from 'react';
-import { Text, View, StyleSheet, ActivityIndicator } from 'react-native';
+import { Text, View, StyleSheet } from 'react-native';
 import Signatures from './sign/Signatures';
 import { PDFDocument } from 'pdf-lib';
 import firebaseApp from '../../firebase';
 import { getFirestore, collection, addDoc } from 'firebase/firestore';
-import { getStorage, ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
+import {
+  getStorage,
+  ref,
+  uploadBytesResumable,
+  getDownloadURL,
+} from 'firebase/storage';
 import axios from 'axios';
 import moment from 'moment/moment';
 import { AppContext } from '../context/AppContext';
 import Buttons from './Buttons';
 import WellDone from './well done/WellDone';
+import { WaveIndicator } from 'react-native-indicators';
 
 const Done = ({ navigation }) => {
   const {
@@ -31,7 +37,7 @@ const Done = ({ navigation }) => {
   } = useContext(AppContext);
   const [loading, setLoading] = useState(true);
   const [finished, setFinished] = useState(false);
-  const [activityLabel, setActivityLabel] = useState('preparing PDF...');
+  const [activityLabel, setActivityLabel] = useState('preparing PDF');
 
   useEffect(() => {
     const retrievePdf = async () => {
@@ -53,7 +59,9 @@ const Done = ({ navigation }) => {
 
       form.getTextField('inspection__start__time').setText(startTime);
 
-      form.getTextField('inspection__end__time').setText(moment().format('h:mm'));
+      form
+        .getTextField('inspection__end__time')
+        .setText(moment().format('h:mm'));
 
       // BACKGROUND FORM //
       for (i = 0; i < backgroundValues.length; i++) {
@@ -75,18 +83,23 @@ const Done = ({ navigation }) => {
           form.getCheckBox(`${obj?.formid(obj?.text)}__3`)?.check();
           // form.getCheckBox(`${obj?.formid(obj.text)}__4`).check();
           if (inspectionTypeOtherText != '') {
-            form.getTextField('inspection__type__other__specify').setText(inspectionTypeOtherText);
+            form
+              .getTextField('inspection__type__other__specify')
+              .setText(inspectionTypeOtherText);
           }
         }
       }
 
       // TEMPERATURE FORM //
       for (i = 0; i < tempValues.length; i++) {
-        form.getTextField(`temp__item__location__${i + 1}`).setText(tempValues[i]?.description);
+        form
+          .getTextField(`temp__item__location__${i + 1}`)
+          .setText(tempValues[i]?.description);
 
         const tempField = form.getTextField(`temp__temp__${i + 1}`);
         const tempVal = tempValues[i]?.temp;
-        const temp = tempValues[i]?.metric === 'C' ? `${tempVal}°C` : `${tempVal}°F`;
+        const temp =
+          tempValues[i]?.metric === 'C' ? `${tempVal}°C` : `${tempVal}°F`;
 
         if (tempVal) tempField.setText(temp);
       }
@@ -98,7 +111,10 @@ const Done = ({ navigation }) => {
         } else {
           const tempField = form.getTextField(`sanitizing__temp__${i + 1}`);
           const tempVal = sanitizingTempValues[i]?.temp;
-          const temp = sanitizingTempValues[i]?.metric === 'C' ? `${tempVal}°C` : `${tempVal}°F`;
+          const temp =
+            sanitizingTempValues[i]?.metric === 'C'
+              ? `${tempVal}°C`
+              : `${tempVal}°F`;
           if (tempVal) tempField.setText(temp);
         }
       }
@@ -145,7 +161,9 @@ const Done = ({ navigation }) => {
         '4-204.13',
         '4-204.111',
       ]);
-      const onlyNonCriticalCheckBoxItems = new Set([1, 5, 6, 9, 11, 13, 17, 25]);
+      const onlyNonCriticalCheckBoxItems = new Set([
+        1, 5, 6, 9, 11, 13, 17, 25,
+      ]);
       let discrepancyText = '';
       let itemText = '';
       let numCritical = 0;
@@ -187,7 +205,9 @@ const Done = ({ navigation }) => {
         for (let i = 0; i < observationIncrement; i++) {
           newLines++;
         }
-        const correctiveActionIncrement = Math.floor(correctiveActionLength / 100);
+        const correctiveActionIncrement = Math.floor(
+          correctiveActionLength / 100
+        );
         for (let i = 0; i < correctiveActionIncrement; i++) {
           newLines++;
         }
@@ -205,7 +225,9 @@ const Done = ({ navigation }) => {
         if (itemsProcessed.has(referenceDiscrepancy.item)) continue;
 
         itemsProcessed.add(referenceDiscrepancy.item);
-        const itemGrouping = discrepanciesList.filter(x => x.item === referenceDiscrepancy.item);
+        const itemGrouping = discrepanciesList.filter(
+          x => x.item === referenceDiscrepancy.item
+        );
 
         let itemCritical = false;
         let itemCriticalCount = 0;
@@ -232,7 +254,10 @@ const Done = ({ navigation }) => {
           }
 
           // address the unique swing discrepancy withing item grouping 2
-          if (discrepancy.section === '2-201.11' && discrepancy.uppercase_letter_id === '(A)') {
+          if (
+            discrepancy.section === '2-201.11' &&
+            discrepancy.uppercase_letter_id === '(A)'
+          ) {
             form.getCheckBox('220111(A)').check();
           }
 
@@ -257,7 +282,9 @@ const Done = ({ navigation }) => {
 
           // conditional asterkisks to put after the seciton number in the
           // discrepancy text block
-          const conditionalAsterisks = discrepancy?.header?.includes('*') ? '*' : '';
+          const conditionalAsterisks = discrepancy?.header?.includes('*')
+            ? '*'
+            : '';
 
           // ITEM NUM //
 
@@ -266,9 +293,13 @@ const Done = ({ navigation }) => {
             `${discrepancy.section}${conditionalAsterisks}: ${conditionalCOS}. ${discrepancy.observation}`
               .length;
 
-          const correctiveActionLength = `corrective action: ${discrepancy.corrective}`.length;
+          const correctiveActionLength =
+            `corrective action: ${discrepancy.corrective}`.length;
 
-          const newLines = getItemNewLines(observationLength, correctiveActionLength);
+          const newLines = getItemNewLines(
+            observationLength,
+            correctiveActionLength
+          );
           itemText = itemText + `${discrepancy.item}`;
           for (let i = 0; i < newLines; i++) {
             itemText = itemText + `\n`;
@@ -288,10 +319,16 @@ const Done = ({ navigation }) => {
 
         // determine if all discrepancies belonging to a critical item grouping
         // were non-critical
-        if (onlyNonCriticalCheckBoxItems.has(parseInt(referenceDiscrepancy.item))) {
+        if (
+          onlyNonCriticalCheckBoxItems.has(parseInt(referenceDiscrepancy.item))
+        ) {
           if (itemCriticalCount === 0) {
             form
-              .getCheckBox(`item__${parseInt(referenceDiscrepancy.item)}__only__non__critical`)
+              .getCheckBox(
+                `item__${parseInt(
+                  referenceDiscrepancy.item
+                )}__only__non__critical`
+              )
               .check();
           }
         }
@@ -309,7 +346,8 @@ const Done = ({ navigation }) => {
       // IHH //
       if (iHH != '') {
         form.getCheckBox('imminent__health__hazard').check();
-        discrepancyText = discrepancyText + `\nIMMINENT HEALTH HAZARD: ${iHH}\n`;
+        discrepancyText =
+          discrepancyText + `\nIMMINENT HEALTH HAZARD: ${iHH}\n`;
       }
 
       // NANO //
@@ -324,7 +362,9 @@ const Done = ({ navigation }) => {
       }
 
       // COMPLIANCE RATING //
-      form.getTextField('number__of__critical').setText(`${numCritical + numCriticalCOS}`);
+      form
+        .getTextField('number__of__critical')
+        .setText(`${numCritical + numCriticalCOS}`);
       form
         .getTextField('number__of__non__critical')
         .setText(`${numNonCritical + numNonCriticalCOS}`);
@@ -378,7 +418,9 @@ const Done = ({ navigation }) => {
     });
 
     const form = pdfDoc.getForm();
-    form.getTextField('date__signed__inspector').setText(moment().format('YYYYMMDD'));
+    form
+      .getTextField('date__signed__inspector')
+      .setText(moment().format('YYYYMMDD'));
     form.getTextField('date__signed__pic').setText(moment().format('YYYYMMDD'));
 
     const unit8Array = await pdfDoc.save();
@@ -390,7 +432,9 @@ const Done = ({ navigation }) => {
     const storage = getStorage();
     const storageRef = ref(
       storage,
-      `pdf/${backgroundValues[0]?.text ?? 'inspection'}-${moment().format('YYYYMMDD')}.pdf`
+      `pdf/${backgroundValues[0]?.text ?? 'inspection'}-${moment().format(
+        'YYYYMMDD'
+      )}.pdf`
     );
     await uploadBytesResumable(storageRef, pdf);
     return storageRef;
@@ -426,22 +470,22 @@ const Done = ({ navigation }) => {
   };
 
   const main = pdf => {
-    setActivityLabel('uploading PDF...');
+    setActivityLabel('uploading PDF');
     uploadPdf(pdf)
       .then(storageRef => {
-        setActivityLabel('sending emails...');
+        setActivityLabel('sending emails');
         sendEmail(storageRef)
           .then(() => {
             setLoading(false);
-            setActivityLabel('preparing PDF...');
+            setActivityLabel('preparing PDF');
             setFinished(true);
           })
           .catch(err => console.log(err));
       })
       .catch(() => {
-        //setErrorModalVisible(true)
-        //setErrorModalMessgae('The DD 2973 cannot be processed, most likely due to network connectivity issues')
-        // navigation.navigate('nav')
+        // setErrorModalVisible(true)
+        // setErrorModalMessgae('The DD 2973 cannot be processed, most likely due to network connectivity issues')
+        navigation.navigate('nav');
       });
   };
 
@@ -459,13 +503,10 @@ const Done = ({ navigation }) => {
       return (
         <View style={styles.parentContainer}>
           <View style={styles.contentContainer}>
-            <ActivityIndicator
-              style={styles.activityIndicator}
-              animating={loading}
-              size="large"
-              color="#000000"
-            />
             <Text style={styles.indicatorText}>{activityLabel}</Text>
+            <View style={{ height: '30%' }}>
+              <WaveIndicator size={100} animating={loading} />
+            </View>
           </View>
         </View>
       );
@@ -500,7 +541,7 @@ const styles = StyleSheet.create({
   },
   indicatorText: {
     fontFamily: 'Raj',
-    fontSize: 18,
+    fontSize: 40,
   },
 });
 
