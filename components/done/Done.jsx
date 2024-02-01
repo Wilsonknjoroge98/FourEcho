@@ -22,6 +22,7 @@ const Done = ({ navigation }) => {
     pdf,
     setPdf,
     setBase64Pdf,
+    base64Pdf,
     backgroundValues,
     inspectionTypeOtherText,
     tempValues,
@@ -45,7 +46,7 @@ const Done = ({ navigation }) => {
         'https://publichealthapp-5964a.web.app/dd__2973__blank.pdf',
         {
           responseType: 'arraybuffer',
-        }
+        },
       );
       const pdfBytes = response.data;
       return pdfBytes;
@@ -184,7 +185,7 @@ const Done = ({ navigation }) => {
         numCritical,
         numNonCritical,
         numCriticalCOS,
-        numNonCriticalCOS
+        numNonCriticalCOS,
       ) => {
         if (iHH != '' || numCritical > 0) {
           return 'non__compliant';
@@ -206,7 +207,7 @@ const Done = ({ navigation }) => {
           newLines++;
         }
         const correctiveActionIncrement = Math.floor(
-          correctiveActionLength / 100
+          correctiveActionLength / 100,
         );
         for (let i = 0; i < correctiveActionIncrement; i++) {
           newLines++;
@@ -226,7 +227,7 @@ const Done = ({ navigation }) => {
 
         itemsProcessed.add(referenceDiscrepancy.item);
         const itemGrouping = discrepanciesList.filter(
-          x => x.item === referenceDiscrepancy.item
+          x => x.item === referenceDiscrepancy.item,
         );
 
         let itemCritical = false;
@@ -298,7 +299,7 @@ const Done = ({ navigation }) => {
 
           const newLines = getItemNewLines(
             observationLength,
-            correctiveActionLength
+            correctiveActionLength,
           );
           itemText = itemText + `${discrepancy.item}`;
           for (let i = 0; i < newLines; i++) {
@@ -326,8 +327,8 @@ const Done = ({ navigation }) => {
             form
               .getCheckBox(
                 `item__${parseInt(
-                  referenceDiscrepancy.item
-                )}__only__non__critical`
+                  referenceDiscrepancy.item,
+                )}__only__non__critical`,
               )
               .check();
           }
@@ -376,7 +377,7 @@ const Done = ({ navigation }) => {
         numCritical,
         numNonCritical,
         numCriticalCOS,
-        numNonCriticalCOS
+        numNonCriticalCOS,
       );
       form.getCheckBox(`${finalRating}__1`).check();
       // form.getCheckBox(`${finalRating}__2`).check();
@@ -422,8 +423,10 @@ const Done = ({ navigation }) => {
       .getTextField('date__signed__inspector')
       .setText(moment().format('YYYYMMDD'));
     form.getTextField('date__signed__pic').setText(moment().format('YYYYMMDD'));
-
+    const base64 = await pdfDoc.saveAsBase64();
     const unit8Array = await pdfDoc.save();
+    setBase64Pdf(base64);
+    setPdf(unit8Array);
     return unit8Array;
   };
 
@@ -433,8 +436,8 @@ const Done = ({ navigation }) => {
     const storageRef = ref(
       storage,
       `pdf/${backgroundValues[0]?.text ?? 'inspection'}-${moment().format(
-        'YYYYMMDD'
-      )}.pdf`
+        'YYYYMMDD',
+      )}.pdf`,
     );
     await uploadBytesResumable(storageRef, pdf);
     return storageRef;
@@ -444,6 +447,7 @@ const Done = ({ navigation }) => {
     // upload special array to firestore which triggers email
     const db = getFirestore(firebaseApp);
     const url = await getDownloadURL(storageRef);
+
     await addDoc(collection(db, 'mail'), {
       to: backgroundValues[6]?.text,
       message: {
@@ -495,7 +499,12 @@ const Done = ({ navigation }) => {
         <>
           <View style={styles.signatureContainer}>
             <Signatures />
-            <Buttons navigation={navigation} signDoc={signDoc} main={main} />
+            <Buttons
+              navigation={navigation}
+              signDoc={signDoc}
+              main={main}
+              setLoading={setLoading}
+            />
           </View>
         </>
       );

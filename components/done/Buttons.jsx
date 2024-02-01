@@ -4,7 +4,7 @@ import { AppContext } from '../context/AppContext';
 import * as Network from 'expo-network';
 import ErrorModal from '../inspection/error modal/ErrorModal';
 
-const Buttons = ({ navigation, main, signDoc }) => {
+const Buttons = ({ navigation, main, signDoc, setLoading }) => {
   const {
     inspectorSignature,
     setInspectorSignature,
@@ -12,6 +12,7 @@ const Buttons = ({ navigation, main, signDoc }) => {
     setPICSignature,
     setErrorModalVisible,
     setErrorMessage,
+    pdf,
   } = useContext(AppContext);
   const handleReSign = () => {
     setInspectorSignature(null);
@@ -23,12 +24,29 @@ const Buttons = ({ navigation, main, signDoc }) => {
     if (!networkState.isConnected || !networkState.isInternetReachable) {
       setErrorModalVisible(true);
       setErrorMessage(
-        'The DD 2973 cannot be processed, most likely due to network connectivity issues. Please try again when you establish a stable connection.'
+        'The DD 2973 cannot be processed, most likely due to network connectivity issues. Please try again when you establish a stable connection.',
       );
     } else {
       signDoc()
         .then(pdf => main(pdf))
         .catch(err => console.log(err));
+    }
+  };
+
+  const handleSubmitWithoutSignature = async () => {
+    const networkState = await Network.getNetworkStateAsync();
+    if (!networkState.isConnected || !networkState.isInternetReachable) {
+      setErrorModalVisible(true);
+      setErrorMessage(
+        'The DD 2973 cannot be processed, most likely due to network connectivity issues. Please try again when you establish a stable connection.',
+      );
+    } else {
+      try {
+        setLoading(true);
+        await main(pdf);
+      } catch (error) {
+        console.log(error);
+      }
     }
   };
 
@@ -46,9 +64,20 @@ const Buttons = ({ navigation, main, signDoc }) => {
             </TouchableOpacity>
           </>
         ) : (
-          <TouchableOpacity style={styles.blueButton} onPress={() => navigation.push('review')}>
-            <Text style={styles.buttonText}>review PDF</Text>
-          </TouchableOpacity>
+          <>
+            <TouchableOpacity
+              style={styles.blueButton}
+              onPress={() => navigation.push('review')}
+            >
+              <Text style={styles.buttonText}>review PDF</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={styles.blueButton}
+              onPress={handleSubmitWithoutSignature}
+            >
+              <Text style={styles.buttonText}>send w/o signing</Text>
+            </TouchableOpacity>
+          </>
         )}
       </View>
     </>

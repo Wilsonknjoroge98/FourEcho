@@ -2,7 +2,7 @@
   "expo": {
     "name": "FourEcho",
     "slug": "FourEcho",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "scheme": "acme",
     "icon": "./assets/images/icon.png",
     "web": {
@@ -25,7 +25,7 @@
     },
     "ios": {
       "bundleIdentifier": "com.wilsonknjoroge98.FourEcho",
-      "buildNumber": "14"
+      "buildNumber": "1"
     },
     "android": {
       "package": "com.wilsonknjoroge98.FourEcho",

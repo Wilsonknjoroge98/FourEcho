@@ -5,6 +5,7 @@ import { AppContext } from '../../context/AppContext';
 import HighlightText from '@sanar/react-native-highlight-text';
 import SupportButton from '../../support/SupportButton';
 import SupportModal from '../../support/SupportModal';
+import moment from 'moment/moment';
 
 const WellDone = ({ navigation }) => {
   const {
@@ -50,7 +51,7 @@ const WellDone = ({ navigation }) => {
     setFilterLoading(false);
     setDiscrepancy({});
     setIHH('');
-    setStartTime('');
+    setStartTime(moment().format('h:mm'));
     setInspectorSignature(null);
     setPICSignature(null);
     navigation.replace('background');
@@ -78,8 +79,8 @@ const WellDone = ({ navigation }) => {
         <HighlightText
           style={{ ...styles.confirmationText, fontSize: 25 }}
           highlightStyle={{ backgroundColor: 'yellow' }}
-          searchWords={['DAF365 QUARANTINE']}
-          textToHighlight="Search your military inbox for 'DAF365 QUARANTINE' to find the inspection email from fourxecho@gmail.com"
+          searchWords={['fourxecho@gmail.com']}
+          textToHighlight="Search your inbox for 'fourxecho@gmail.com' to find the inspection."
         />
       </View>
       <View style={{ marginTop: 30 }}>
