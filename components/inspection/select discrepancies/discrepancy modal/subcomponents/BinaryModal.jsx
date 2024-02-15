@@ -16,7 +16,7 @@ const BinaryModal = ({ modalLabel, setModalLabel, setBinaryModal }) => {
       setDiscrepanciesList([...discrepanciesList, discrepancy]);
       setBinaryModal(false);
       setDiscrepancyModalVisible(false);
-      setModalLabel('Corrected on site?');
+      setModalLabel('Description of the observation');
     }
   }, [discrepancy]);
 
@@ -32,7 +32,6 @@ const BinaryModal = ({ modalLabel, setModalLabel, setBinaryModal }) => {
         ...discrepancy,
         repeat: true,
       });
-      setModalLabel('Description of the observation');
     }
   };
 
@@ -48,7 +47,6 @@ const BinaryModal = ({ modalLabel, setModalLabel, setBinaryModal }) => {
         ...discrepancy,
         repeat: false,
       });
-      setModalLabel('Description of the observation');
     }
   };
   return (
