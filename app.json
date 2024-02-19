@@ -2,7 +2,7 @@
   "expo": {
     "name": "FourEcho",
     "slug": "FourEcho",
-    "version": "1.0.5",
+    "version": "2.0.0",
     "scheme": "acme",
     "icon": "./assets/images/icon.png",
     "web": {
