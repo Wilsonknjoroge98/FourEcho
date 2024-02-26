@@ -4,15 +4,12 @@ import BinaryModal from './subcomponents/BinaryModal';
 import FormModal from './subcomponents/FormModal';
 import DiscrepancyExcerpt from './subcomponents/DiscrepancyExerpt';
 import { AppContext } from '../../../context/AppContext';
-import { SafeAreaView } from 'react-native-safe-area-context';
 import { ScrollView } from 'react-native-gesture-handler';
 
 const DiscrepancyModal = ({}) => {
   const { discrepancy, discrepancyModalVisible, setDiscrepancyModalVisible } =
     useContext(AppContext);
-  const [modalLabel, setModalLabel] = useState(
-    'Description of the observation'
-  );
+  const [modalLabel, setModalLabel] = useState('Description of the observation');
   const [binaryModal, setBinaryModal] = useState(false);
 
   const handleCancel = () => {
@@ -29,10 +26,7 @@ const DiscrepancyModal = ({}) => {
         onRequestClose={() => console.log('close')}
       >
         <View>
-          <TouchableOpacity
-            style={styles.cancelButton}
-            onPress={() => handleCancel()}
-          >
+          <TouchableOpacity style={styles.cancelButton} onPress={() => handleCancel()}>
             <Text style={styles.cancelButtonText}>X</Text>
           </TouchableOpacity>
         </View>
@@ -41,6 +35,7 @@ const DiscrepancyModal = ({}) => {
             <View>
               <DiscrepancyExcerpt discrepancy={discrepancy} />
             </View>
+
             <View>
               <Text style={styles.modalLabel}>{modalLabel}</Text>
               {binaryModal ? (
@@ -58,6 +53,16 @@ const DiscrepancyModal = ({}) => {
                 />
               )}
             </View>
+            {modalLabel === 'Imminent Health Hazard?' && (
+              <View>
+                <Text style={styles.ihhText}>
+                  IHH: Emergency such as a fire, flood, extended interruption of electrical or water
+                  service (greater than 2 hours), SEWAGE backup, misuse of POISONOUS OR TOXIC
+                  MATERIALS, onset of an apparent foodborne illness outbreak, gross insanitary
+                  occurrence or condition, or other circumstance that may endanger public health.{' '}
+                </Text>
+              </View>
+            )}
           </View>
         </ScrollView>
       </Modal>
@@ -102,6 +107,13 @@ const styles = StyleSheet.create({
     fontSize: 20,
     textAlign: 'center',
     fontWeight: 'bold',
+  },
+  ihhText: {
+    fontSize: 15,
+    marginTop: 10,
+    marginLeft: 30,
+    marginRight: 30,
+    fontFamily: 'Raj',
   },
 });
 

@@ -21,7 +21,7 @@ const Navigation = ({ navigation }) => {
 
     if (!networkState.isConnected || !networkState.isInternetReachable) {
       setErrorMessage(
-        'The DD 2973 cannot be processed, most likely due to network connectivity issues. Please try again when you establish a stable connection.'
+        'The DD 2973 cannot be processed, most likely due to network connectivity issues. Please try again when you establish a stable connection.',
       );
       setErrorModalVisible(true);
     } else {
@@ -109,13 +109,13 @@ const Navigation = ({ navigation }) => {
             >
               <Text style={styles.navButtonText}>Sanitizing</Text>
             </TouchableOpacity>
-            <TouchableOpacity
+            {/* <TouchableOpacity
               style={prevRoute.name === 'ihh' ? styles.navButtonDisabled : styles.navButton}
               onPress={() => navigation.replace('ihh')}
               disabled={prevRoute.name === 'ihh' ? true : false}
             >
               <Text style={styles.navButtonText}>Imminent Health Hazard</Text>
-            </TouchableOpacity>
+            </TouchableOpacity> */}
 
             <TouchableOpacity
               style={prevRoute.name === 'free text' ? styles.navButtonDisabled : styles.navButton}

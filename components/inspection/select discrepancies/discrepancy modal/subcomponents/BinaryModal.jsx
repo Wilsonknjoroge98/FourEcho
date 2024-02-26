@@ -12,7 +12,7 @@ const BinaryModal = ({ modalLabel, setModalLabel, setBinaryModal }) => {
   } = useContext(AppContext);
 
   useEffect(() => {
-    if (discrepancy.repeat != undefined) {
+    if (discrepancy.ihh != undefined) {
       setDiscrepanciesList([...discrepanciesList, discrepancy]);
       setBinaryModal(false);
       setDiscrepancyModalVisible(false);
@@ -28,9 +28,15 @@ const BinaryModal = ({ modalLabel, setModalLabel, setBinaryModal }) => {
         COS: true,
       });
     } else if (modalLabel === 'Repeat finding?') {
+      setModalLabel('Imminent Health Hazard?');
       setDiscrepancy({
         ...discrepancy,
         repeat: true,
+      });
+    } else if (modalLabel === 'Imminent Health Hazard?') {
+      setDiscrepancy({
+        ...discrepancy,
+        ihh: true,
       });
     }
   };
@@ -43,12 +49,19 @@ const BinaryModal = ({ modalLabel, setModalLabel, setBinaryModal }) => {
         COS: false,
       });
     } else if (modalLabel === 'Repeat finding?') {
+      setModalLabel('Imminent Health Hazard?');
       setDiscrepancy({
         ...discrepancy,
         repeat: false,
       });
+    } else if (modalLabel === 'Imminent Health Hazard?') {
+      setDiscrepancy({
+        ...discrepancy,
+        ihh: false,
+      });
     }
   };
+
   return (
     <>
       <View style={styles.modalButtonContainer}>

@@ -1,5 +1,5 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { Button } from 'react-native';
+import { Button, Text } from 'react-native';
 import Background from '../inspection/background/Background';
 import FindDiscrepancies from '../inspection/find discrepancies/FindDiscrepancies';
 import SelectDiscrepancies from '../inspection/select discrepancies/SelectDiscrepancies';
@@ -13,6 +13,7 @@ import FreeText from '../inspection/free text/FreeText';
 import Done from '../done/Done';
 import Nano from '../inspection/nano/Nano';
 import PdfView from '../done/pdf/PdfView';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 const Stack = createNativeStackNavigator();
 
@@ -26,7 +27,12 @@ const Navigator = () => {
         options={({ navigation }) => ({
           title: '',
           headerRight: () => (
-            <Button onPress={() => navigation.navigate('nav')} title="☰" color="black" />
+            <TouchableOpacity
+              style={{ backgroundColor: '#4dd0e1', padding: 8, borderRadius: 5 }}
+              onPress={() => navigation.navigate('nav')}
+            >
+              <Text>MENU</Text>
+            </TouchableOpacity>
           ),
         })}
       />
@@ -36,7 +42,12 @@ const Navigator = () => {
         options={({ navigation }) => ({
           title: '',
           headerRight: () => (
-            <Button onPress={() => navigation.push('nav')} title="☰" color="black" />
+            <TouchableOpacity
+              style={{ backgroundColor: '#4dd0e1', padding: 10, borderRadius: 5 }}
+              onPress={() => navigation.navigate('nav')}
+            >
+              <Text>MENU</Text>
+            </TouchableOpacity>
           ),
         })}
       />
@@ -46,7 +57,12 @@ const Navigator = () => {
         options={({ navigation }) => ({
           title: '',
           headerRight: () => (
-            <Button onPress={() => navigation.push('nav')} title="☰" color="black" />
+            <TouchableOpacity
+              style={{ backgroundColor: '#4dd0e1', padding: 10, borderRadius: 5 }}
+              onPress={() => navigation.navigate('nav')}
+            >
+              <Text>MENU</Text>
+            </TouchableOpacity>
           ),
         })}
       />
@@ -56,7 +72,12 @@ const Navigator = () => {
         options={({ navigation }) => ({
           title: '',
           headerRight: () => (
-            <Button onPress={() => navigation.push('nav')} title="☰" color="black" />
+            <TouchableOpacity
+              style={{ backgroundColor: '#4dd0e1', padding: 10, borderRadius: 5 }}
+              onPress={() => navigation.navigate('nav')}
+            >
+              <Text>MENU</Text>
+            </TouchableOpacity>
           ),
         })}
       />
@@ -66,7 +87,12 @@ const Navigator = () => {
         options={({ navigation }) => ({
           title: '',
           headerRight: () => (
-            <Button onPress={() => navigation.push('nav')} title="☰" color="black" />
+            <TouchableOpacity
+              style={{ backgroundColor: '#4dd0e1', padding: 10, borderRadius: 5 }}
+              onPress={() => navigation.navigate('nav')}
+            >
+              <Text>MENU</Text>
+            </TouchableOpacity>
           ),
         })}
       />
@@ -76,7 +102,12 @@ const Navigator = () => {
         options={({ navigation }) => ({
           title: '',
           headerRight: () => (
-            <Button onPress={() => navigation.push('nav')} title="☰" color="black" />
+            <TouchableOpacity
+              style={{ backgroundColor: '#4dd0e1', padding: 10, borderRadius: 5 }}
+              onPress={() => navigation.navigate('nav')}
+            >
+              <Text>MENU</Text>
+            </TouchableOpacity>
           ),
         })}
       />
@@ -86,7 +117,12 @@ const Navigator = () => {
         options={({ navigation }) => ({
           title: '',
           headerRight: () => (
-            <Button onPress={() => navigation.push('nav')} title="☰" color="black" />
+            <TouchableOpacity
+              style={{ backgroundColor: '#4dd0e1', padding: 10, borderRadius: 5 }}
+              onPress={() => navigation.navigate('nav')}
+            >
+              <Text>MENU</Text>
+            </TouchableOpacity>
           ),
         })}
       />
@@ -96,7 +132,12 @@ const Navigator = () => {
         options={({ navigation }) => ({
           title: '',
           headerRight: () => (
-            <Button onPress={() => navigation.push('nav')} title="☰" color="black" />
+            <TouchableOpacity
+              style={{ backgroundColor: '#4dd0e1', padding: 10, borderRadius: 5 }}
+              onPress={() => navigation.navigate('nav')}
+            >
+              <Text>MENU</Text>
+            </TouchableOpacity>
           ),
         })}
       />
@@ -114,7 +155,12 @@ const Navigator = () => {
         options={({ navigation }) => ({
           title: '',
           headerRight: () => (
-            <Button onPress={() => navigation.push('nav')} title="☰" color="black" />
+            <TouchableOpacity
+              style={{ backgroundColor: '#4dd0e1', padding: 10, borderRadius: 5 }}
+              onPress={() => navigation.navigate('nav')}
+            >
+              <Text>MENU</Text>
+            </TouchableOpacity>
           ),
         })}
       />
@@ -124,7 +170,12 @@ const Navigator = () => {
         options={({ navigation }) => ({
           title: '',
           headerRight: () => (
-            <Button onPress={() => navigation.push('nav')} title="☰" color="black" />
+            <TouchableOpacity
+              style={{ backgroundColor: '#4dd0e1', padding: 10, borderRadius: 5 }}
+              onPress={() => navigation.navigate('nav')}
+            >
+              <Text>MENU</Text>
+            </TouchableOpacity>
           ),
         })}
       />
@@ -134,20 +185,15 @@ const Navigator = () => {
         options={({ navigation }) => ({
           title: '',
           headerRight: () => (
-            <Button onPress={() => navigation.push('nav')} title="☰" color="black" />
+            <TouchableOpacity
+              style={{ backgroundColor: '#4dd0e1', padding: 10, borderRadius: 5 }}
+              onPress={() => navigation.navigate('nav')}
+            >
+              <Text>MENU</Text>
+            </TouchableOpacity>
           ),
         })}
       />
-      {/* <Stack.Screen
-        name="assistant"
-        component={Assistant}
-        options={({ navigation }) => ({
-          title: '',
-          headerRight: () => (
-            <Button onPress={() => navigation.push('nav')} title="☰" color="black" />
-          ),
-        })}
-      /> */}
     </Stack.Navigator>
   );
 };

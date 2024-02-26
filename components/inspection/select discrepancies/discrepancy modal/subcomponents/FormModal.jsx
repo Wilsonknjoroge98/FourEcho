@@ -1,21 +1,15 @@
 import { useContext, useState, useEffect } from 'react';
-import {
-  TextInput,
-  Text,
-  View,
-  TouchableOpacity,
-  StyleSheet,
-} from 'react-native';
+import { TextInput, Text, View, TouchableOpacity, StyleSheet } from 'react-native';
 import { AppContext } from '../../../../context/AppContext';
 
-const FormModal = ({
-  discrepancy,
-  setBinaryModal,
-  modalLabel,
-  setModalLabel,
-}) => {
+const FormModal = ({ discrepancy, setBinaryModal, modalLabel, setModalLabel }) => {
   const { setDiscrepancy } = useContext(AppContext);
   const [text, setText] = useState('');
+  const [disabled, setDisabled] = useState(true);
+
+  useEffect(() => {
+    text === '' ? setDisabled(true) : setDisabled(false);
+  }, [text]);
 
   const onPress = () => {
     if (modalLabel === 'Description of the observation') {
@@ -46,7 +40,11 @@ const FormModal = ({
         style={styles.textInput}
       />
       <View style={styles.modalButtonContainer}>
-        <TouchableOpacity style={styles.modalButtonSuccess} onPress={onPress}>
+        <TouchableOpacity
+          style={disabled ? styles.modalButtonDisabled : styles.modalButtonSuccess}
+          onPress={onPress}
+          disabled={disabled}
+        >
           <Text style={styles.modalButtonText}>Submit</Text>
         </TouchableOpacity>
       </View>
@@ -62,6 +60,14 @@ const styles = StyleSheet.create({
     width: 150,
     borderColor: 'black',
     backgroundColor: '#76ff03',
+  },
+  modalButtonDisabled: {
+    margin: 10,
+    padding: 20,
+    borderRadius: 15,
+    width: 150,
+    borderColor: 'black',
+    backgroundColor: '#bdbdbd',
   },
   modalButtonContainer: {
     flexDirection: 'row',

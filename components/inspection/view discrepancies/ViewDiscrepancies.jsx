@@ -1,24 +1,24 @@
-import {
-  Text,
-  View,
-  StyleSheet,
-  FlatList,
-  TouchableOpacity,
-  TextInput,
-} from 'react-native';
-import { useContext } from 'react';
+import { Text, View, StyleSheet, FlatList, TouchableOpacity, TextInput } from 'react-native';
+import { useContext, useState } from 'react';
 import { LinearGradient } from 'expo-linear-gradient';
 import { AppContext } from '../../context/AppContext';
 import SelectDropdown from 'react-native-select-dropdown';
+import ConfirmDeleteModal from './ConfirmDeleteModal';
+import DiscrepancyExcerpt from '../select discrepancies/discrepancy modal/subcomponents/DiscrepancyExerpt';
 
 const ViewDiscrepancies = ({ navigation }) => {
   const { setDiscrepanciesList, discrepanciesList } = useContext(AppContext);
+  const [modalVisible, setModalVisible] = useState(false);
+  const [selectedDiscrepancy, setSelectedDiscrepancy] = useState();
+
+  const initiateDelete = item => {
+    setSelectedDiscrepancy(item);
+    setModalVisible(true);
+  };
 
   const handleDelete = item => {
     setDiscrepanciesList(prevDiscrepanciesList => {
-      const updatedDiscrepanciesList = prevDiscrepanciesList.filter(
-        listItem => listItem !== item
-      );
+      const updatedDiscrepanciesList = prevDiscrepanciesList.filter(listItem => listItem !== item);
       return updatedDiscrepanciesList;
     });
   };
@@ -50,108 +50,73 @@ const ViewDiscrepancies = ({ navigation }) => {
 
   const renderItem = ({ item, index }) => {
     return (
-      <View style={styles.discrepancyCard}>
-        <View>
-          <TouchableOpacity
-            style={styles.cancelButton}
-            onPress={() => handleDelete(item)}
-          >
-            <Text style={styles.cancelButtonText}>X</Text>
-          </TouchableOpacity>
+      <>
+        <ConfirmDeleteModal
+          modalVisible={modalVisible}
+          setModalVisible={setModalVisible}
+          handleDelete={handleDelete}
+          selectedDiscrepancy={selectedDiscrepancy}
+        />
+
+        <View style={styles.discrepancyCard}>
+          <View>
+            <TouchableOpacity style={styles.cancelButton} onPress={() => initiateDelete(item)}>
+              <Text style={styles.cancelButtonText}>X</Text>
+            </TouchableOpacity>
+          </View>
+          <Text style={styles.label}>Discrepancy</Text>
+          <DiscrepancyExcerpt discrepancy={item} />
+          <View style={styles.textContentContainer}>
+            <Text style={styles.label}>Observation Details</Text>
+            <TextInput
+              onChangeText={text => {
+                handleTextUpdate(text, index, 'observation');
+              }}
+              value={item.observation}
+              multiline={true}
+              style={styles.textInput}
+            />
+          </View>
+          <View style={styles.textContentContainer}>
+            <Text style={styles.label}>Corrective Action</Text>
+            <TextInput
+              onChangeText={text => {
+                handleTextUpdate(text, index, 'corrective');
+              }}
+              value={item.corrective}
+              multiline={true}
+              style={styles.textInput}
+            />
+          </View>
+          <View style={styles.dropdownContentContainer}>
+            <Text style={styles.dropdownLabel}>Corrected on site?</Text>
+            <SelectDropdown
+              data={['Yes', 'No']}
+              defaultValue={item.COS ? 'Yes' : 'No'}
+              onSelect={text => handleDropdownUpdate(text, index, 'COS')}
+              buttonStyle={item.COS ? styles.dropdownSuccess : styles.dropdownDanger}
+            />
+          </View>
+          <View style={styles.dropdownContentContainer}>
+            <Text style={styles.dropdownLabel}>Repeat Finding?</Text>
+            <SelectDropdown
+              data={['Yes', 'No']}
+              defaultValue={item.repeat ? 'Yes' : 'No'}
+              onSelect={text => handleDropdownUpdate(text, index, 'repeat')}
+              buttonStyle={item.repeat ? styles.dropdownSuccess : styles.dropdownDanger}
+            />
+          </View>
+          <View style={styles.dropdownContentContainer}>
+            <Text style={styles.dropdownLabel}>Imminent Health Hazard?</Text>
+            <SelectDropdown
+              data={['Yes', 'No']}
+              defaultValue={item.ihh ? 'Yes' : 'No'}
+              onSelect={text => handleDropdownUpdate(text, index, 'ihh')}
+              buttonStyle={item.ihh ? styles.dropdownSuccess : styles.dropdownDanger}
+            />
+          </View>
         </View>
-        <Text style={styles.label}>Discrepancy</Text>
-        <View style={styles.paragraph}>
-          <Text>{item.header}</Text>
-        </View>
-        {item.header != item.text && (
-          <>
-            <LinearGradient
-              colors={['#b2ff59', '#ccff90']}
-              style={styles.paragraph}
-            >
-              <Text>{item.text}</Text>
-            </LinearGradient>
-            {item.children && item.children.length !== 0 && (
-              <>
-                <LinearGradient
-                  colors={['#18ffff', '#84ffff']}
-                  style={styles.paragraph}
-                >
-                  <Text>{item.children[0].text}</Text>
-                </LinearGradient>
-                {item.children.children &&
-                  item.children.children.length !== 0 && (
-                    <>
-                      <LinearGradient
-                        colors={['#ffd740', '#ffe57f']}
-                        style={styles.paragraph}
-                      >
-                        <Text>{item.children.children[0].text}</Text>
-                      </LinearGradient>
-                      {item.children.children.children &&
-                        item.children.children.children.length !== 0 && (
-                          <>
-                            <LinearGradient
-                              colors={['#f48fb1', '#f8bbd0']}
-                              style={styles.paragraph}
-                            >
-                              <Text>
-                                {item.children.children.children[0].text}
-                              </Text>
-                            </LinearGradient>
-                          </>
-                        )}
-                    </>
-                  )}
-              </>
-            )}
-          </>
-        )}
-        <View style={styles.textContentContainer}>
-          <Text style={styles.label}>Observation Details</Text>
-          <TextInput
-            onChangeText={text => {
-              handleTextUpdate(text, index, 'observation');
-            }}
-            value={item.observation}
-            multiline={true}
-            style={styles.textInput}
-          />
-        </View>
-        <View style={styles.textContentContainer}>
-          <Text style={styles.label}>Corrective Action</Text>
-          <TextInput
-            onChangeText={text => {
-              handleTextUpdate(text, index, 'corrective');
-            }}
-            value={item.corrective}
-            multiline={true}
-            style={styles.textInput}
-          />
-        </View>
-        <View style={styles.dropdownContentContainer}>
-          <Text style={styles.dropdownLabel}>Corrected on site?</Text>
-          <SelectDropdown
-            data={['Yes', 'No']}
-            defaultValue={item.COS ? 'Yes' : 'No'}
-            onSelect={text => handleDropdownUpdate(text, index, 'COS')}
-            buttonStyle={
-              item.COS ? styles.dropdownSuccess : styles.dropdownDanger
-            }
-          />
-        </View>
-        <View style={styles.dropdownContentContainer}>
-          <Text style={styles.dropdownLabel}>Repeat Finding?</Text>
-          <SelectDropdown
-            data={['Yes', 'No']}
-            defaultValue={item.repeat ? 'Yes' : 'No'}
-            onSelect={text => handleDropdownUpdate(text, index, 'repeat')}
-            buttonStyle={
-              item.repeat ? styles.dropdownSuccess : styles.dropdownDanger
-            }
-          />
-        </View>
-      </View>
+      </>
     );
   };
 
@@ -173,9 +138,7 @@ const ViewDiscrepancies = ({ navigation }) => {
           style={styles.addDiscrepanciesButton}
           onPress={() => navigation.push('find discrepancies')}
         >
-          <Text style={styles.addDiscrepanciesButtonText}>
-            Add Discrepancies
-          </Text>
+          <Text style={styles.addDiscrepanciesButtonText}>Add Discrepancies</Text>
         </TouchableOpacity>
       </View>
     );
