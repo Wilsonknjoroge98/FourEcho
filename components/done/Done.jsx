@@ -1,9 +1,9 @@
 import { useEffect, useContext, useState } from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 import Signatures from './sign/Signatures';
-import { PDFDocument, StandardFonts } from 'pdf-lib';
+import { PDFDocument } from 'pdf-lib';
 import firebaseApp from '../../firebase';
-import { getFirestore, collection, addDoc, increment } from 'firebase/firestore';
+import { getFirestore, collection, addDoc } from 'firebase/firestore';
 import { getStorage, ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
 import axios from 'axios';
 import moment from 'moment/moment';
@@ -17,7 +17,6 @@ const Done = ({ navigation }) => {
     pdf,
     setPdf,
     setBase64Pdf,
-    base64Pdf,
     backgroundValues,
     inspectionTypeOtherText,
     tempValues,
@@ -25,11 +24,12 @@ const Done = ({ navigation }) => {
     sanitizingTempValues,
     discrepanciesList,
     nanoValues,
-    iHH,
     freeText,
     startTime,
     inspectorSignature,
     picSignature,
+    setErrorModalVisible,
+    setErrorMessage,
   } = useContext(AppContext);
   const [loading, setLoading] = useState(true);
   const [finished, setFinished] = useState(false);
@@ -142,13 +142,13 @@ const Done = ({ navigation }) => {
     };
 
     const getComplianceRating = (
-      iHH,
+      IHH,
       numCritical,
       numNonCritical,
       numCriticalCOS,
       numNonCriticalCOS,
     ) => {
-      if (iHH != '' || numCritical > 0) {
+      if (IHH === true || numCritical > 0) {
         return 'non__compliant';
       } else if (numCriticalCOS >= 3 || numNonCritical >= 6) {
         return 'partially__compliant';
@@ -255,9 +255,13 @@ const Done = ({ navigation }) => {
         return parseInt(a.item) - parseInt(b.item);
       });
 
+      let IHH = false;
       const itemsProcessed = new Set();
       for (let i = 0; i < discrepanciesList.length; i++) {
         const referenceDiscrepancy = discrepanciesList[i];
+
+        // if any discrepancy has an imminent health hazard
+        if (referenceDiscrepancy.ihh) IHH = true;
 
         // if the item num has already been processed move on to the next iteration
         if (itemsProcessed.has(referenceDiscrepancy.item)) continue;
@@ -317,7 +321,17 @@ const Done = ({ navigation }) => {
           const conditionalAsterisks = discrepancy?.header?.includes('*') ? '*' : '';
 
           // add discrepancy text to larger discrepancy text
-          let text = `${discrepancy.section}${discrepancy?.children[0]?.uppercase_letter_id}${discrepancy?.children[0]?.number_id}${discrepancy?.children[0]?.children[0]?.lowercase_letter_id}${conditionalAsterisks}: ${conditionalCOS}. ${discrepancy.observation}\n${discrepancy.text}${discrepancy?.children[0]?.text}${discrepancy?.children[0]?.children[0]?.text}${discrepancy?.children[0]?.children[0]?.children[0]?.text}\ncorrective action: ${discrepancy.corrective}\n`;
+          let text = `${discrepancy.section}${discrepancy?.children[0]?.uppercase_letter_id}${
+            discrepancy?.children[0]?.number_id
+          }${
+            discrepancy?.children[0]?.children[0]?.lowercase_letter_id
+          }${conditionalAsterisks}: ${conditionalCOS}. ${
+            discrepancy.ihh ? 'IMMINENT HEALTH HAZARD :' : ''
+          } ${discrepancy.observation}\n${discrepancy.text}${discrepancy?.children[0]?.text}${
+            discrepancy?.children[0]?.children[0]?.text
+          }${discrepancy?.children[0]?.children[0]?.children[0]?.text}\ncorrective action: ${
+            discrepancy.corrective
+          }\n`;
           text = text.replace(/undefined/g, '');
 
           const firstTextChunk =
@@ -370,9 +384,8 @@ const Done = ({ navigation }) => {
       }
 
       // IHH //
-      if (iHH != '') {
+      if (IHH === true) {
         form.getCheckBox('imminent__health__hazard').check();
-        discrepancyText = discrepancyText + `\nIMMINENT HEALTH HAZARD: ${iHH}\n`;
       }
 
       // NANO //
@@ -395,7 +408,7 @@ const Done = ({ navigation }) => {
       form.getTextField('specify__discrepancies').setText(discrepancyText);
 
       const finalRating = getComplianceRating(
-        iHH,
+        IHH,
         numCritical,
         numNonCritical,
         numCriticalCOS,
@@ -413,12 +426,34 @@ const Done = ({ navigation }) => {
       setPdf(unit8Array);
     };
 
-    retrievePdf().then(pdf => fillPdf(pdf).then(() => setLoading(false)));
+    const run = async () => {
+      try {
+        const pdf = await retrievePdf();
+        await fillPdf(pdf);
+        setLoading(false);
+      } catch (error) {
+        const db = getFirestore(firebaseApp);
+        await addDoc(collection(db, 'mail'), {
+          to: ['fourxecho@gmail.com'],
+          message: {
+            subject: 'Error Detected',
+            html: `${error} \n ${discrepanciesList} `,
+          },
+        });
+        setErrorModalVisible(true);
+        setErrorMessage(
+          'The DD 2973 cannot be processed, most likely due an internal error. The issue is being adrressed',
+        );
+        navigation.navigate('nav');
+      }
+    };
+
+    run();
   }, []);
 
   const signDoc = async () => {
     setLoading(true);
-    setActivityLabel('signing PDF...');
+    setActivityLabel('signing PDF');
     const pdfDoc = await PDFDocument.load(pdf);
 
     const inspectorImage = await pdfDoc.embedPng(inspectorSignature);
@@ -489,8 +524,10 @@ const Done = ({ navigation }) => {
           .catch(err => console.log(err));
       })
       .catch(() => {
-        // setErrorModalVisible(true)
-        // setErrorModalMessgae('The DD 2973 cannot be processed, most likely due to network connectivity issues')
+        setErrorModalVisible(true);
+        setErrorMessage(
+          'The DD 2973 cannot be processed, most likely due to network connectivity issues',
+        );
         navigation.navigate('nav');
       });
   };

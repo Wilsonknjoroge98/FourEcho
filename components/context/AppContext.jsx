@@ -23,7 +23,6 @@ export const AppProvider = ({ children }) => {
   const [nanoInfo, setNanoInfo] = useState(false);
   const [errorModalVisible, setErrorModalVisible] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
-  const [iHH, setIHH] = useState('');
   const [startTime, setStartTime] = useState('');
   const [inspectorSignature, setInspectorSignature] = useState(null);
   const [picSignature, setPICSignature] = useState(null);
@@ -39,8 +38,6 @@ export const AppProvider = ({ children }) => {
         setPdf,
         base64Pdf,
         setBase64Pdf,
-        iHH,
-        setIHH,
         startTime,
         setStartTime,
         discrepanciesList,

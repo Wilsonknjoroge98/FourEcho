@@ -11,7 +11,6 @@ const WellDone = ({ navigation }) => {
   const {
     setPdf,
     setBase64Pdf,
-    setIHH,
     setStartTime,
     setDiscrepanciesList,
     backgroundValues,
@@ -50,7 +49,6 @@ const WellDone = ({ navigation }) => {
     setItemId('');
     setFilterLoading(false);
     setDiscrepancy({});
-    setIHH('');
     setStartTime(moment().format('h:mm'));
     setInspectorSignature(null);
     setPICSignature(null);
@@ -65,15 +63,9 @@ const WellDone = ({ navigation }) => {
         <Text style={styles.confirmationText}>
           The DD2973 has been sent to the following emails
         </Text>
-        <Text style={styles.confirmationText}>
-          ‣ {backgroundValues[6]?.text}
-        </Text>
-        <Text style={styles.confirmationText}>
-          ‣ {backgroundValues[10]?.text}
-        </Text>
-        <Text style={styles.confirmationText}>
-          ‣ {backgroundValues[11].text}
-        </Text>
+        <Text style={styles.confirmationText}>‣ {backgroundValues[6]?.text}</Text>
+        <Text style={styles.confirmationText}>‣ {backgroundValues[10]?.text}</Text>
+        <Text style={styles.confirmationText}>‣ {backgroundValues[11].text}</Text>
       </View>
       <View style={styles.textContainer}>
         <HighlightText
@@ -84,10 +76,7 @@ const WellDone = ({ navigation }) => {
         />
       </View>
       <View style={{ marginTop: 30 }}>
-        <TouchableOpacity
-          style={styles.startButton}
-          onPress={handleNewInspection}
-        >
+        <TouchableOpacity style={styles.startButton} onPress={handleNewInspection}>
           <Text style={styles.startButtonText}>Start New Inspection</Text>
         </TouchableOpacity>
       </View>

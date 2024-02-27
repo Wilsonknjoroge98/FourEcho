@@ -1,5 +1,5 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { Button, Text } from 'react-native';
+import { Text } from 'react-native';
 import Background from '../inspection/background/Background';
 import FindDiscrepancies from '../inspection/find discrepancies/FindDiscrepancies';
 import SelectDiscrepancies from '../inspection/select discrepancies/SelectDiscrepancies';
@@ -8,7 +8,6 @@ import Temperature from '../inspection/temperature/Temperature';
 import Sanitizing from '../inspection/sanitizing/Sanitizing';
 import Home from '../home/Home';
 import Nav from './Navigation';
-import IHH from '../inspection/ihh/IHH';
 import FreeText from '../inspection/free text/FreeText';
 import Done from '../done/Done';
 import Nano from '../inspection/nano/Nano';
@@ -99,21 +98,6 @@ const Navigator = () => {
       <Stack.Screen
         name="sanitizing"
         component={Sanitizing}
-        options={({ navigation }) => ({
-          title: '',
-          headerRight: () => (
-            <TouchableOpacity
-              style={{ backgroundColor: '#4dd0e1', padding: 10, borderRadius: 5 }}
-              onPress={() => navigation.navigate('nav')}
-            >
-              <Text>MENU</Text>
-            </TouchableOpacity>
-          ),
-        })}
-      />
-      <Stack.Screen
-        name="ihh"
-        component={IHH}
         options={({ navigation }) => ({
           title: '',
           headerRight: () => (

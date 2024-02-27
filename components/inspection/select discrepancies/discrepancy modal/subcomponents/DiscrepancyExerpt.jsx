@@ -46,8 +46,6 @@ const DiscrepancyExcerpt = ({ discrepancy }) => {
 const styles = StyleSheet.create({
   paragraph: {
     width: 'auto',
-    marginLeft: 30,
-    marginRight: 30,
     marginTop: 5,
     marginBottom: 5,
     borderColor: 'black',

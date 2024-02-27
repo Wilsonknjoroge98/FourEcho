@@ -32,7 +32,7 @@ const DiscrepancyModal = ({}) => {
         </View>
         <ScrollView>
           <View style={styles.modalContainer}>
-            <View>
+            <View style={{ marginRight: 30, marginLeft: 30 }}>
               <DiscrepancyExcerpt discrepancy={discrepancy} />
             </View>
 

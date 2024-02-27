@@ -15,7 +15,9 @@ const ConfirmDeleteModal = ({
     <Modal animationType="slide" visible={modalVisible} onRequestClose={() => console.log('close')}>
       <ScrollView>
         <View style={styles.modalContainer}>
-          <DiscrepancyExcerpt discrepancy={selectedDiscrepancy} />
+          <View style={{ marginRight: 30, marginLeft: 30 }}>
+            <DiscrepancyExcerpt discrepancy={selectedDiscrepancy} />
+          </View>
 
           <View>
             <Text style={styles.modalLabel}>Delete this discrepancy?</Text>

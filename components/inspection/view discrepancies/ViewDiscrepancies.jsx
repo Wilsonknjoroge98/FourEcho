@@ -65,7 +65,10 @@ const ViewDiscrepancies = ({ navigation }) => {
             </TouchableOpacity>
           </View>
           <Text style={styles.label}>Discrepancy</Text>
-          <DiscrepancyExcerpt discrepancy={item} />
+          <View style={{ marginRight: 5, marginLeft: 5 }}>
+            <DiscrepancyExcerpt discrepancy={item} />
+          </View>
+
           <View style={styles.textContentContainer}>
             <Text style={styles.label}>Observation Details</Text>
             <TextInput
