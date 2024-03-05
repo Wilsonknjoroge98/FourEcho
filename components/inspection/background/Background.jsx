@@ -87,6 +87,11 @@ const backgroundFields = [
   },
   {
     type: 'text',
+    displayName: 'Follow-Up Date',
+    formId: 'follow__up__date',
+  },
+  {
+    type: 'text',
     displayName: 'Personal EMAIL (to ensure delivery)',
     formId: 'n/a',
   },
@@ -108,7 +113,7 @@ const BackgroundForm = ({ navigation }) => {
       if (!networkState.isConnected || !networkState.isInternetReachable) {
         setErrorModalVisible(true);
         setErrorMessage(
-          'Poor Network connectivity detected. You can continue to conduct the inspection through the app. However, you will not be able to finish the inspection (sign and send the DD 2973) until a stable connection is established.'
+          'Poor Network connectivity detected. You can continue to conduct the inspection through the app. However, you will not be able to finish the inspection (sign and send the DD 2973) until a stable connection is established.',
         );
       }
     };
@@ -151,7 +156,7 @@ const BackgroundForm = ({ navigation }) => {
                   <InspectionType index={i} handleInput={handleInput} />
                 ) : (
                   <>
-                    {i === 6 || i === 10 || i === 11 ? (
+                    {i === 6 || i === 10 || i === 12 ? (
                       <EmailFields
                         index={i}
                         handleInput={handleInput}

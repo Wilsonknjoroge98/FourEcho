@@ -65,7 +65,7 @@ const WellDone = ({ navigation }) => {
         </Text>
         <Text style={styles.confirmationText}>‣ {backgroundValues[6]?.text}</Text>
         <Text style={styles.confirmationText}>‣ {backgroundValues[10]?.text}</Text>
-        <Text style={styles.confirmationText}>‣ {backgroundValues[11].text}</Text>
+        <Text style={styles.confirmationText}>‣ {backgroundValues[12].text}</Text>
       </View>
       <View style={styles.textContainer}>
         <HighlightText

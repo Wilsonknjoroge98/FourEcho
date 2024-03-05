@@ -56,7 +56,7 @@ const EmailFields = ({ index, handleInput, backgroundValues }) => {
       <TextInput
         style={validEmailPersonal ? styles.textBoxGood : styles.textBoxBad}
         onChangeText={text => validateEmail(text, index)}
-        value={backgroundValues[11]?.text ?? ''}
+        value={backgroundValues[12]?.text ?? ''}
       />
     );
   }

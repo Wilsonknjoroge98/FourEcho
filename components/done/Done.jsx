@@ -83,7 +83,10 @@ const Done = ({ navigation }) => {
         const tempVal = tempValues[i]?.temp;
         const temp = tempValues[i]?.metric === 'C' ? `${tempVal}°C` : `${tempVal}°F`;
 
-        if (tempVal) tempField.setText(temp);
+        if (tempVal) {
+          tempField.setFontSize(8);
+          tempField.setText(temp);
+        }
       }
     };
 
@@ -96,7 +99,10 @@ const Done = ({ navigation }) => {
           const tempField = form.getTextField(`sanitizing__temp__${i + 1}`);
           const tempVal = sanitizingTempValues[i]?.temp;
           const temp = sanitizingTempValues[i]?.metric === 'C' ? `${tempVal}°C` : `${tempVal}°F`;
-          if (tempVal) tempField.setText(temp);
+          if (tempVal) {
+            tempField.setFontSize(8);
+            tempField.setText(temp);
+          }
         }
       }
     };
@@ -502,7 +508,7 @@ const Done = ({ navigation }) => {
     const url = await getDownloadURL(storageRef);
 
     await addDoc(collection(db, 'mail'), {
-      to: [backgroundValues[6]?.text, backgroundValues[10]?.text, backgroundValues[11]?.text],
+      to: [backgroundValues[6]?.text, backgroundValues[10]?.text, backgroundValues[12]?.text],
       message: {
         subject: 'Report from your inspection',
         html: `Hello, your food inspection report can be downloaded using the following url ${url} `,
