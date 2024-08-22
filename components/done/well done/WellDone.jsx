@@ -30,6 +30,7 @@ const WellDone = ({ navigation }) => {
     setDiscrepancy,
     setInspectorSignature,
     setPICSignature,
+    setInspectorEmailMessage,
   } = useContext(AppContext);
   const handleNewInspection = () => {
     setPdf(null);
@@ -52,6 +53,7 @@ const WellDone = ({ navigation }) => {
     setStartTime(moment().format('h:mm'));
     setInspectorSignature(null);
     setPICSignature(null);
+    setInspectorEmailMessage('');
     navigation.replace('background');
   };
 

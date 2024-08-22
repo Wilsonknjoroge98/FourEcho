@@ -1,7 +1,7 @@
 import { useEffect, useContext, useState } from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 import Signatures from './sign/Signatures';
-import { PDFDocument } from 'pdf-lib';
+import { PDFDocument, PDFFont } from 'pdf-lib';
 import firebaseApp from '../../firebase';
 import { getFirestore, collection, addDoc } from 'firebase/firestore';
 import { getStorage, ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
@@ -30,9 +30,12 @@ const Done = ({ navigation }) => {
     picSignature,
     setErrorModalVisible,
     setErrorMessage,
+    inspectorEmailMessage,
+    pageLoading,
+    setPageLoading,
   } = useContext(AppContext);
-  const [loading, setLoading] = useState(true);
-  const [finished, setFinished] = useState(false);
+
+  const [sent, setSent] = useState(false);
   const [activityLabel, setActivityLabel] = useState('preparing PDF');
 
   useEffect(() => {
@@ -47,7 +50,7 @@ const Done = ({ navigation }) => {
       return pdfBytes;
     };
 
-    const fillBackgroundSection = form => {
+    const fillBackgroundSection = (form) => {
       // BACKGROUND FORM //
       for (i = 0; i < backgroundValues.length; i++) {
         const obj = backgroundValues[i];
@@ -74,7 +77,7 @@ const Done = ({ navigation }) => {
       }
     };
 
-    const fillTemperatureSection = form => {
+    const fillTemperatureSection = (form) => {
       // TEMPERATURE FORM //
       for (i = 0; i < tempValues.length; i++) {
         form.getTextField(`temp__item__location__${i + 1}`).setText(tempValues[i]?.description);
@@ -90,7 +93,7 @@ const Done = ({ navigation }) => {
       }
     };
 
-    const fillSanatizingTempSection = form => {
+    const fillSanatizingTempSection = (form) => {
       // SANITIZING TEMP FORM //
       for (i = 0; i < sanitizingTempValues.length; i++) {
         if (sanitizingTempValues[i]?.NA) {
@@ -107,7 +110,7 @@ const Done = ({ navigation }) => {
       }
     };
 
-    const fillSanatizingConcentrationSection = form => {
+    const fillSanatizingConcentrationSection = (form) => {
       // SANITIZING CONCENTRATION FORM //
       for (i = 0; i < sanitizingConcentrationValues.length; i++) {
         if (sanitizingConcentrationValues[i]?.NA) {
@@ -125,7 +128,7 @@ const Done = ({ navigation }) => {
       }
     };
 
-    const fillMetaData = form => {
+    const fillMetaData = (form) => {
       form.getTextField('todays__date__1').setText(moment().format('YYYYMMDD'));
       form.getTextField('todays__date__2').setText(moment().format('YYYYMMDD'));
 
@@ -136,7 +139,7 @@ const Done = ({ navigation }) => {
 
     // ensure item is critical
     // there are sometimes non critical discrepancy within critical item groupings
-    const checkNonCritical = dict => {
+    const checkNonCritical = (dict) => {
       // check the non critical property
       if (dict.noncritical) return true;
       // recursively search through children to ensure that there are no noncritical items
@@ -159,7 +162,11 @@ const Done = ({ navigation }) => {
       } else if (numCriticalCOS >= 3 || numNonCritical >= 6) {
         return 'partially__compliant';
       } else {
-        if (numCriticalCOS != 0 || numNonCriticalCOS > 4) {
+        if (
+          (numCriticalCOS != 0 && numCriticalCOS <= 2) ||
+          (numNonCritical != 0 && numNonCritical <= 5) ||
+          numNonCriticalCOS > 4
+        ) {
           return 'substantially__compliant';
         } else {
           return 'fully__compliant';
@@ -196,7 +203,7 @@ const Done = ({ navigation }) => {
       return newLines;
     };
 
-    const fillPdf = async pdf => {
+    const fillPdf = async (pdf) => {
       const pdfDoc = await PDFDocument.load(pdf);
       const form = pdfDoc.getForm();
 
@@ -274,7 +281,7 @@ const Done = ({ navigation }) => {
 
         itemsProcessed.add(referenceDiscrepancy.item);
         // creates a list of all of the selected discrepancies that have the current discrepancies item number
-        const itemGrouping = discrepanciesList.filter(x => x.item === referenceDiscrepancy.item);
+        const itemGrouping = discrepanciesList.filter((x) => x.item === referenceDiscrepancy.item);
 
         let itemCritical = false;
         let itemCriticalCount = 0;
@@ -436,7 +443,7 @@ const Done = ({ navigation }) => {
       try {
         const pdf = await retrievePdf();
         await fillPdf(pdf);
-        setLoading(false);
+        setPageLoading(false);
       } catch (error) {
         const db = getFirestore(firebaseApp);
         await addDoc(collection(db, 'mail'), {
@@ -447,9 +454,7 @@ const Done = ({ navigation }) => {
           },
         });
         setErrorModalVisible(true);
-        setErrorMessage(
-          'The DD 2973 cannot be processed, most likely due an internal error. The issue is being adrressed',
-        );
+        setErrorMessage('The DD 2973 cannot be processed, most likely due to a network error');
         navigation.navigate('nav');
       }
     };
@@ -458,7 +463,7 @@ const Done = ({ navigation }) => {
   }, []);
 
   const signDoc = async () => {
-    setLoading(true);
+    setPageLoading(true);
     setActivityLabel('signing PDF');
     const pdfDoc = await PDFDocument.load(pdf);
 
@@ -491,7 +496,7 @@ const Done = ({ navigation }) => {
     return unit8Array;
   };
 
-  const uploadPdf = async pdf => {
+  const uploadPdf = async (pdf) => {
     // upload unit8Array to google cloud storage bucket
     const storage = getStorage();
     const storageRef = ref(
@@ -502,54 +507,54 @@ const Done = ({ navigation }) => {
     return storageRef;
   };
 
-  const sendEmail = async storageRef => {
+  const sendEmail = async (storageRef) => {
     // upload special array to firestore which triggers email
     const db = getFirestore(firebaseApp);
     const url = await getDownloadURL(storageRef);
+    let emailBody = `<div> <h4> Hello, your food inspection report can be downloaded using the following url: <h4> </div> <p> ${url} </p> `;
+
+    if (inspectorEmailMessage != '') {
+      emailBody += `<div> <H4>Message from Inspector:<h4>: ${inspectorEmailMessage}  </div>`;
+    }
 
     await addDoc(collection(db, 'mail'), {
       to: [backgroundValues[6]?.text, backgroundValues[10]?.text, backgroundValues[12]?.text],
       message: {
         subject: 'Report from your inspection',
-        html: `Hello, your food inspection report can be downloaded using the following url ${url} `,
+        html: emailBody,
       },
     });
   };
 
-  const main = pdf => {
-    setActivityLabel('uploading PDF');
-    uploadPdf(pdf)
-      .then(storageRef => {
-        setActivityLabel('sending emails');
-        sendEmail(storageRef)
-          .then(() => {
-            setLoading(false);
-            setActivityLabel('preparing PDF');
-            setFinished(true);
-          })
-          .catch(err => console.log(err));
-      })
-      .catch(() => {
-        setErrorModalVisible(true);
-        setErrorMessage(
-          'The DD 2973 cannot be processed, most likely due to network connectivity issues',
-        );
-        navigation.navigate('nav');
-      });
+  const sendDoc = async (pdf) => {
+    try {
+      setPageLoading(true);
+
+      setActivityLabel('uploading PDF');
+
+      const storageRef = await uploadPdf(pdf);
+
+      setActivityLabel('sending emails');
+
+      await sendEmail(storageRef);
+
+      setPageLoading(false);
+      setActivityLabel('preparing PDF');
+      setSent(true);
+    } catch (error) {
+      setErrorMessage(
+        'The DD 2973 cannot be processed, most likely due to network connectivity issues',
+      );
+    }
   };
 
-  if (!finished) {
-    if (!loading) {
+  if (!sent) {
+    if (!pageLoading) {
       return (
         <>
           <View style={styles.signatureContainer}>
             <Signatures />
-            <Buttons
-              navigation={navigation}
-              signDoc={signDoc}
-              main={main}
-              setLoading={setLoading}
-            />
+            <Buttons navigation={navigation} signDoc={signDoc} sendDoc={sendDoc} sent={sent} />
           </View>
         </>
       );
@@ -559,7 +564,7 @@ const Done = ({ navigation }) => {
           <View style={styles.contentContainer}>
             <Text style={styles.indicatorText}>{activityLabel}</Text>
             <View style={{ height: '30%' }}>
-              <WaveIndicator size={100} animating={loading} />
+              <WaveIndicator size={100} animating={pageLoading} />
             </View>
           </View>
         </View>

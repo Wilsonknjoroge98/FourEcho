@@ -30,6 +30,9 @@ export const AppProvider = ({ children }) => {
   const [nanoValues, setNanoValues] = useState([]);
   const [supportModalVisible, setSupportModalVisible] = useState(false);
   const [validEmailPersonal, setValidEmailPersonal] = useState(false);
+  const [inspectorEmailMessage, setInspectorEmailMessage] = useState('');
+  const [pageLoading, setPageLoading] = useState(false);
+  const [inspectorMessageModalVisible, setInspectorMessageModalVisible] = useState(false);
 
   return (
     <AppContext.Provider
@@ -88,6 +91,12 @@ export const AppProvider = ({ children }) => {
         setErrorMessage,
         supportModalVisible,
         setSupportModalVisible,
+        inspectorEmailMessage,
+        setInspectorEmailMessage,
+        pageLoading,
+        setPageLoading,
+        inspectorMessageModalVisible,
+        setInspectorMessageModalVisible,
       }}
     >
       {children}
