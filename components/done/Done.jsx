@@ -1,7 +1,7 @@
 import { useEffect, useContext, useState } from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 import Signatures from './sign/Signatures';
-import { PDFDocument, PDFFont } from 'pdf-lib';
+import { PDFDocument, StandardFonts, PDFFont } from 'pdf-lib';
 import firebaseApp from '../../firebase';
 import { getFirestore, collection, addDoc } from 'firebase/firestore';
 import { getStorage, ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
@@ -50,19 +50,19 @@ const Done = ({ navigation }) => {
       return pdfBytes;
     };
 
-    const fillBackgroundSection = (form) => {
+    const fillBackgroundSection = (form, filterUnexpectedCharacters) => {
       // BACKGROUND FORM //
       for (i = 0; i < backgroundValues.length; i++) {
         const obj = backgroundValues[i];
         if (obj?.type === 'text') {
           if (obj?.formid === 'facility__name') {
-            form.getTextField(obj?.formid)?.setText(obj?.text);
-            form.getTextField('facility__name__2').setText(obj?.text);
+            form.getTextField(obj?.formid)?.setText(filterUnexpectedCharacters(obj?.text));
+            form.getTextField('facility__name__2').setText(filterUnexpectedCharacters(obj?.text));
             // form.getTextField('facility__name__3').setText(obj?.text);
             // form.getTextField('facility__name__4').setText(obj?.text);
           } else {
             if (obj.formid != 'n/a') {
-              form.getTextField(obj?.formid).setText(obj?.text);
+              form.getTextField(obj?.formid).setText(filterUnexpectedCharacters(obj?.text));
             }
           }
         } else if (obj?.type === 'select') {
@@ -71,16 +71,20 @@ const Done = ({ navigation }) => {
           form.getCheckBox(`${obj?.formid(obj?.text)}__3`)?.check();
           // form.getCheckBox(`${obj?.formid(obj.text)}__4`).check();
           if (inspectionTypeOtherText != '') {
-            form.getTextField('inspection__type__other__specify').setText(inspectionTypeOtherText);
+            form
+              .getTextField('inspection__type__other__specify')
+              .setText(filterUnexpectedCharacters(inspectionTypeOtherText));
           }
         }
       }
     };
 
-    const fillTemperatureSection = (form) => {
+    const fillTemperatureSection = (form, filterUnexpectedCharacters) => {
       // TEMPERATURE FORM //
       for (i = 0; i < tempValues.length; i++) {
-        form.getTextField(`temp__item__location__${i + 1}`).setText(tempValues[i]?.description);
+        form
+          .getTextField(`temp__item__location__${i + 1}`)
+          .setText(filterUnexpectedCharacters(tempValues[i]?.description));
 
         const tempField = form.getTextField(`temp__temp__${i + 1}`);
         const tempVal = tempValues[i]?.temp;
@@ -88,12 +92,12 @@ const Done = ({ navigation }) => {
 
         if (tempVal) {
           tempField.setFontSize(8);
-          tempField.setText(temp);
+          tempField.setText(filterUnexpectedCharacters(temp));
         }
       }
     };
 
-    const fillSanatizingTempSection = (form) => {
+    const fillSanatizingTempSection = (form, filterUnexpectedCharacters) => {
       // SANITIZING TEMP FORM //
       for (i = 0; i < sanitizingTempValues.length; i++) {
         if (sanitizingTempValues[i]?.NA) {
@@ -104,20 +108,20 @@ const Done = ({ navigation }) => {
           const temp = sanitizingTempValues[i]?.metric === 'C' ? `${tempVal}°C` : `${tempVal}°F`;
           if (tempVal) {
             tempField.setFontSize(8);
-            tempField.setText(temp);
+            tempField.setText(filterUnexpectedCharacters(temp));
           }
         }
       }
     };
 
-    const fillSanatizingConcentrationSection = (form) => {
+    const fillSanatizingConcentrationSection = (form, filterUnexpectedCharacters) => {
       // SANITIZING CONCENTRATION FORM //
       for (i = 0; i < sanitizingConcentrationValues.length; i++) {
         if (sanitizingConcentrationValues[i]?.NA) {
           form.getCheckBox(`sanitizing__concentration__NA__${i + 1}`).check();
         } else {
           const ppm = sanitizingConcentrationValues[i]?.ppm;
-          form.getTextField(`sanitizing__ppm__${i + 1}`).setText(ppm);
+          form.getTextField(`sanitizing__ppm__${i + 1}`).setText(filterUnexpectedCharacters(ppm));
           const solution = sanitizingConcentrationValues[i]?.solution;
           if (solution === 'Quats') {
             form.getCheckBox(`sanitizing__quats__${i + 1}`).check();
@@ -187,7 +191,7 @@ const Done = ({ navigation }) => {
 
     const getItemNewLines = (firstTextChunk, secondTextChunk, thirdTextChunk) => {
       // max number of characters per line in discrepancy text field
-      const MAX_LINE_LENGTH = 75;
+      const MAX_LINE_LENGTH = 50;
       // automatically start with 4 new lines (3 /n chars in discrepancy text plus one more for margin)
       let newLines = 4;
       // first chunk -> discrepancy id, conditional cos, and observation
@@ -205,13 +209,25 @@ const Done = ({ navigation }) => {
 
     const fillPdf = async (pdf) => {
       const pdfDoc = await PDFDocument.load(pdf);
+      const helveticaFont = await pdfDoc.embedFont(StandardFonts.Helvetica);
+
+      const filterUnexpectedCharacters = (text) => {
+        const unicodePoints = helveticaFont.getCharacterSet();
+        if (!text) return '';
+        const characters = text.split('');
+        const filtered = characters.filter(
+          (char) => char == '\n' || unicodePoints.includes(char.charCodeAt(0)),
+        );
+        return filtered.join('');
+      };
+
       const form = pdfDoc.getForm();
 
       fillMetaData(form);
-      fillBackgroundSection(form);
-      fillTemperatureSection(form);
-      fillSanatizingTempSection(form);
-      fillSanatizingConcentrationSection(form);
+      fillBackgroundSection(form, filterUnexpectedCharacters);
+      fillTemperatureSection(form, filterUnexpectedCharacters);
+      fillSanatizingTempSection(form, filterUnexpectedCharacters);
+      fillSanatizingConcentrationSection(form, filterUnexpectedCharacters);
 
       // DISCREPANCIES //
       const uniqueDiscrepancies = new Set([
@@ -286,11 +302,11 @@ const Done = ({ navigation }) => {
         let itemCritical = false;
         let itemCriticalCount = 0;
         let itemCOSCount = 0;
-        // loop through the discrancies that have the current item number
+        // loop through the discrepancies that have the current item number
         for (let i = 0; i < itemGrouping.length; i++) {
           const discrepancy = itemGrouping[i];
 
-          // check the item on the form on the first iteration
+          // check the item box on the form during the first iteration
           if (i === 0) form.getCheckBox(`item__${discrepancy.item}`).check();
 
           // if item grouping does not have a critical finding yet
@@ -307,9 +323,9 @@ const Done = ({ navigation }) => {
 
           // critical discrepancies within non critical item groupings
           if (uniqueDiscrepancies.has(discrepancy.section)) {
-            const formId = discrepancy.section.replace(/[-.]/g, '');
+            const feildId = discrepancy.section.replace(/[-.]/g, '');
             // check the unique discrepancy section on the form
-            form.getCheckBox(formId).check();
+            form.getCheckBox(feildId).check();
           }
 
           // address the unique swing discrepancy withing item grouping 2
@@ -327,7 +343,7 @@ const Done = ({ navigation }) => {
 
           // the burden for marking repeat is 1 item within the group so
           // we do not have to track the count, simply mark repeat after
-          // encoutering one
+          // encoutering one repeat discrepancy
           if (discrepancy.repeat) form.getCheckBox(`item__${discrepancy.item}__R`).check();
 
           // conditional asterkisks to put after the seciton number in the discrepancy text block
@@ -373,7 +389,7 @@ const Done = ({ navigation }) => {
             itemText = itemText + `\n`;
           }
 
-          form.getTextField('item__text').setText(itemText);
+          form.getTextField('item__text').setText(filterUnexpectedCharacters(itemText));
         }
 
         // determine if all discrepancies belonging to a critical item grouping
@@ -418,7 +434,9 @@ const Done = ({ navigation }) => {
         .getTextField('number__of__non__critical')
         .setText(`${numNonCritical + numNonCriticalCOS}`);
 
-      form.getTextField('specify__discrepancies').setText(discrepancyText);
+      form
+        .getTextField('specify__discrepancies')
+        .setText(filterUnexpectedCharacters(discrepancyText));
 
       const finalRating = getComplianceRating(
         IHH,
@@ -435,14 +453,21 @@ const Done = ({ navigation }) => {
       const unit8Array = await pdfDoc.save();
       // save pdf as base64
       const base64 = await pdfDoc.saveAsBase64();
+
       setBase64Pdf(base64);
       setPdf(unit8Array);
     };
 
     const run = async () => {
       try {
+        setActivityLabel('retrieving PDF');
+        setPageLoading(true);
+
         const pdf = await retrievePdf();
+
+        setActivityLabel('filling PDF');
         await fillPdf(pdf);
+
         setPageLoading(false);
       } catch (error) {
         const db = getFirestore(firebaseApp);
@@ -456,6 +481,7 @@ const Done = ({ navigation }) => {
         setErrorModalVisible(true);
         setErrorMessage('The DD 2973 cannot be processed, most likely due to a network error');
         navigation.navigate('nav');
+        console.log(error);
       }
     };
 
@@ -542,9 +568,8 @@ const Done = ({ navigation }) => {
       setActivityLabel('preparing PDF');
       setSent(true);
     } catch (error) {
-      setErrorMessage(
-        'The DD 2973 cannot be processed, most likely due to network connectivity issues',
-      );
+      setErrorMessage('The DD 2973 cannot be sent, most likely due to network connectivity issues');
+      setPageLoading(false);
     }
   };
 

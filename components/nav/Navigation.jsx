@@ -46,18 +46,6 @@ const Navigation = ({ navigation }) => {
         </View>
         <View style={styles.listContainer}>
           <View>
-            {/* <LinearGradient
-              colors={['#4ae02e', '#2EE06B', '#A3E02E']}
-              end={{ x: 0.1, y: 0.7 }}
-              style={prevRoute.name === 'assistant' ? styles.navButtonDisabled : styles.hawkButton}
-            >
-              <TouchableOpacity
-                onPress={() => navigation.replace('assistant')}
-                disabled={prevRoute.name === 'assistant' ? true : false}
-              >
-                <Text style={{ ...styles.navButtonText, fontSize: 25 }}>AI assistant</Text>
-              </TouchableOpacity>
-            </LinearGradient> */}
             <TouchableOpacity
               style={prevRoute.name === 'background' ? styles.navButtonDisabled : styles.navButton}
               onPress={() => navigation.replace('background')}
@@ -109,13 +97,6 @@ const Navigation = ({ navigation }) => {
             >
               <Text style={styles.navButtonText}>Sanitizing</Text>
             </TouchableOpacity>
-            {/* <TouchableOpacity
-              style={prevRoute.name === 'ihh' ? styles.navButtonDisabled : styles.navButton}
-              onPress={() => navigation.replace('ihh')}
-              disabled={prevRoute.name === 'ihh' ? true : false}
-            >
-              <Text style={styles.navButtonText}>Imminent Health Hazard</Text>
-            </TouchableOpacity> */}
 
             <TouchableOpacity
               style={prevRoute.name === 'free text' ? styles.navButtonDisabled : styles.navButton}

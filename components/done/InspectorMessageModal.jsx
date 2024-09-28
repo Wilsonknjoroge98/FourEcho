@@ -52,34 +52,27 @@ const InspectorMessageModal = ({ sendDoc }) => {
 const styles = StyleSheet.create({
   modalContainer: {
     flex: 1,
-    marginTop: 300,
-    marginLeft: 50,
-    marginRight: 50,
+    marginTop: 200,
+    marginLeft: 10,
+    marginRight: 10,
     marginBottom: 400,
-  },
-  modalButtonSuccess: {
-    margin: 10,
-    padding: 20,
-    borderRadius: 15,
-    width: 150,
-    borderColor: 'black',
-    backgroundColor: '#76ff03',
-  },
-  modalButtonDisabled: {
-    margin: 10,
-    padding: 20,
-    borderRadius: 15,
-    width: 150,
-    borderColor: 'black',
-    backgroundColor: '#bdbdbd',
   },
   modalButtonContainer: {
     flexDirection: 'row',
     justifyContent: 'center',
   },
+  modalButtonSuccess: {
+    margin: 10,
+    padding: 20,
+    borderRadius: 15,
+    width: 300,
+    borderColor: 'black',
+    backgroundColor: '#76ff03',
+  },
   modalButtonText: {
     textAlign: 'center',
     fontFamily: 'Raj',
+    fontSize: 25,
   },
   textInput: {
     borderColor: 'black',
@@ -103,7 +96,6 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     padding: 20,
   },
-
   modalLabel: {
     fontSize: 22,
     margin: 10,

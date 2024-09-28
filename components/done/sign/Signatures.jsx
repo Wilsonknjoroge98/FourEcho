@@ -8,12 +8,8 @@ const Signatures = () => {
   const inspectorRef = useRef();
   const PICRef = useRef();
 
-  const {
-    inspectorSignature,
-    setInspectorSignature,
-    picSignature,
-    setPICSignature,
-  } = useContext(AppContext);
+  const { inspectorSignature, setInspectorSignature, picSignature, setPICSignature } =
+    useContext(AppContext);
   return (
     <>
       <View style={{ height: 215 }}>
@@ -21,7 +17,7 @@ const Signatures = () => {
         {inspectorSignature === null ? (
           <Signature
             ref={inspectorRef}
-            onOK={img => setInspectorSignature(img)}
+            onOK={(img) => setInspectorSignature(img)}
             descriptionText={''}
             maxWidth={0.5}
             webStyle={`
@@ -43,7 +39,7 @@ const Signatures = () => {
         {picSignature === null ? (
           <Signature
             ref={PICRef}
-            onOK={img => setPICSignature(img)}
+            onOK={(img) => setPICSignature(img)}
             descriptionText={''}
             maxWidth={0.5}
             webStyle={`

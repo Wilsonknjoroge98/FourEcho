@@ -39,7 +39,6 @@ const Buttons = ({ navigation, sendDoc, signDoc }) => {
         setPdf(pdf);
         setPageLoading(false);
         setInspectorMessageModalVisible(true);
-        // main(pdf);
       } catch (error) {
         setErrorModalVisible(true);
         setErrorMessage('The DD 2973 cannot be signed due to an unexpected error');
@@ -59,7 +58,6 @@ const Buttons = ({ navigation, sendDoc, signDoc }) => {
       try {
         setPageLoading(true);
         setPdf(pdf);
-        // await main(pdf);
         setPageLoading(false);
         setInspectorMessageModalVisible(true);
       } catch (error) {

@@ -74,7 +74,7 @@ const WellDone = ({ navigation }) => {
           style={{ ...styles.confirmationText, fontSize: 25 }}
           highlightStyle={{ backgroundColor: 'yellow' }}
           searchWords={['fourxecho@gmail.com']}
-          textToHighlight="Search your inbox for 'fourxecho@gmail.com' to find the inspection."
+          textToHighlight='Search your inbox for fourxecho@gmail.com to find the inspection.'
         />
       </View>
       <View style={{ marginTop: 30 }}>
